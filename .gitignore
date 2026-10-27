@@ -36,3 +36,10 @@ chroma_db/
 
 # IDE
 .idea/
+# Dataset files
+data/*.csv
+datasets/*.csv
+
+# Saved model artifacts
+*.joblib
+models/saved/
