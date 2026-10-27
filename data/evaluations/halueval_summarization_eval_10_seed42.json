@@ -1,0 +1,1580 @@
+{
+  "benchmark_name": "HaluEval",
+  "task": "summarization",
+  "evaluated_samples": 10,
+  "total_requested": 10,
+  "seed": 42,
+  "evidence_source": "context",
+  "metrics": {
+    "total_evaluated": 10,
+    "accuracy": 0.5,
+    "precision": 0.7222,
+    "recall": 0.5833,
+    "macro_f1": 0.4505,
+    "weighted_f1": 0.4176,
+    "confusion_matrix": {
+      "hallucinated": {
+        "hallucinated": 4,
+        "faithful": 0
+      },
+      "faithful": {
+        "hallucinated": 5,
+        "faithful": 1
+      }
+    },
+    "per_class": {
+      "hallucinated": {
+        "precision": 0.4444,
+        "recall": 1.0,
+        "f1": 0.6154,
+        "support": 4
+      },
+      "faithful": {
+        "precision": 1.0,
+        "recall": 0.1667,
+        "f1": 0.2857,
+        "support": 6
+      }
+    },
+    "abstention_count": 1,
+    "abstention_rate": 0.1,
+    "avg_latency_ms": 2980.95
+  },
+  "dataset_report": {
+    "task": "summarization",
+    "file": "C:\\Users\\sesha\\OneDrive\\Desktop\\TRUTHGUARD\\HaluEval-main\\data\\summarization_data.json",
+    "total_raw_processed": 10,
+    "valid_examples_extracted": 10,
+    "skipped_records": 0,
+    "skip_reasons": {},
+    "label_distribution": {
+      "hallucinated": 4,
+      "faithful": 6
+    },
+    "sampling_strategy": "balanced_sampled",
+    "seed": 42
+  },
+  "total_duration_seconds": 0.0,
+  "predictions": [
+    {
+      "example_id": "halueval_summ_0",
+      "task": "summarization",
+      "query": "Summarize the document accurately:",
+      "response": "A video showing the final moments of Germanwings Flight 9525 has been recovered by investigators from the wreckage site. Marseille prosecutor Brice Robin urged anyone who might have more footage to turn it over immediately. Andreas Lubitz, the co-pilot accused of deliberately crashing the plane, had a history of severe depression and suicidal tendencies.",
+      "context": "Marseille, France (CNN)The French prosecutor leading an investigation into the crash of Germanwings Flight 9525 insisted Wednesday that he was not aware of any video footage from on board the plane. Marseille prosecutor Brice Robin told CNN that \"so ...",
+      "context_type": "document",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": false,
+      "total_claims": 3,
+      "supported_claims": 0,
+      "contradicted_claims": 2,
+      "insufficient_claims": 1,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "A video showing the final moments of Germanwings Flight 9525 has been recovered by investigators from the wreckage site.",
+          "verdict": "Contradicted",
+          "confidence": 0.9989,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Paris Match and Bild reported that the video was recovered from a phone at the wreckage site",
+              "nli_label": "neutral",
+              "entailment": 0.0004,
+              "contradiction": 0.0028,
+              "neutral": 0.9968
+            },
+            {
+              "passage": "\" Robin's comments follow claims by two magazines, German daily Bild and French Paris Match, of a cell phone video showing the harrowing final seconds from on board Germanwings Flight 9525 as it crashed into the French Alps",
+              "nli_label": "neutral",
+              "entailment": 0.0006,
+              "contradiction": 0.0139,
+              "neutral": 0.9855
+            },
+            {
+              "passage": "Marseille, France (CNN)The French prosecutor leading an investigation into the crash of Germanwings Flight 9525 insisted Wednesday that he was not aware of any video footage from on board the plane",
+              "nli_label": "contradiction",
+              "entailment": 0.0,
+              "contradiction": 0.9985,
+              "neutral": 0.0015
+            },
+            {
+              "passage": "An official with France's accident investigation agency, the BEA, said the agency is not aware of any such video",
+              "nli_label": "contradiction",
+              "entailment": 0.0,
+              "contradiction": 0.9989,
+              "neutral": 0.0011
+            },
+            {
+              "passage": "Who was the captain of Germanwings Flight 9525? CNN's Margot Haddad reported from Marseille and Pamela Brown from Dusseldorf, while Laura Smith-Spark wrote from London",
+              "nli_label": "neutral",
+              "entailment": 0.0005,
+              "contradiction": 0.0083,
+              "neutral": 0.9913
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_002",
+          "normalized_claim": "Marseille prosecutor Brice Robin urged anyone who might have more footage to turn it over immediately.",
+          "verdict": "Contradicted",
+          "confidence": 0.9583,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Marseille prosecutor Brice Robin told CNN that \"so far no videos were used in the crash investigation",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0014,
+              "neutral": 0.9984
+            },
+            {
+              "passage": "\" He added, \"A person who has such a video needs to immediately give it to the investigators",
+              "nli_label": "neutral",
+              "entailment": 0.0006,
+              "contradiction": 0.0003,
+              "neutral": 0.999
+            },
+            {
+              "passage": "Marseille, France (CNN)The French prosecutor leading an investigation into the crash of Germanwings Flight 9525 insisted Wednesday that he was not aware of any video footage from on board the plane",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0051,
+              "neutral": 0.9947
+            },
+            {
+              "passage": "\" Robin's comments follow claims by two magazines, German daily Bild and French Paris Match, of a cell phone video showing the harrowing final seconds from on board Germanwings Flight 9525 as it crashed into the French Alps",
+              "nli_label": "contradiction",
+              "entailment": 0.0,
+              "contradiction": 0.9583,
+              "neutral": 0.0417
+            },
+            {
+              "passage": "Overall we can say many things of the investigation weren't revealed by the investigation at the beginning,\" he said",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0031,
+              "neutral": 0.9968
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_003",
+          "normalized_claim": "Andreas Lubitz, the co-pilot accused of deliberately crashing the plane, had a history of severe depression and suicidal tendencies.",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9993,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "What was mental state of Germanwings co-pilot? German airline Lufthansa confirmed Tuesday that co-pilot Andreas Lubitz had battled depression years before he took the controls of Germanwings Flight 9525, which he's accused of deliberately crashing last week in the French Alps",
+              "nli_label": "neutral",
+              "entailment": 0.001,
+              "contradiction": 0.0001,
+              "neutral": 0.9989
+            },
+            {
+              "passage": "\" Earlier, a spokesman for the prosecutor's office in Dusseldorf, Christoph Kumpa, said medical records reveal Lubitz suffered from suicidal tendencies at some point before his aviation career and underwent psychotherapy before he got his pilot's license",
+              "nli_label": "neutral",
+              "entailment": 0.0007,
+              "contradiction": 0.0054,
+              "neutral": 0.9939
+            },
+            {
+              "passage": "Lubitz told his Lufthansa flight training school in 2009 that he had a \"previous episode of severe depression,\" the airline said Tuesday",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0004,
+              "neutral": 0.9993
+            },
+            {
+              "passage": "The announcement indicates that Lufthansa, the parent company of Germanwings, knew of Lubitz's battle with depression, allowed him to continue training and ultimately put him in the cockpit",
+              "nli_label": "neutral",
+              "entailment": 0.0003,
+              "contradiction": 0.0007,
+              "neutral": 0.9991
+            },
+            {
+              "passage": "The details about Lubitz's correspondence with the flight school during his training were among several developments as investigators continued to delve into what caused the crash and Lubitz's possible motive for downing the jet",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0013,
+              "neutral": 0.9985
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Paris Match and Bild reported that the video was recovered from a phone at the wreckage site",
+      "latency_ms": 15387.33
+    },
+    {
+      "example_id": "halueval_summ_1",
+      "task": "summarization",
+      "query": "Summarize the document accurately:",
+      "response": "Membership gives the ICC jurisdiction over alleged crimes committed in Palestinian territories since last June. Israel and the United States opposed the move, which could open the door to war crimes investigations against Israelis.\n",
+      "context": "The Palestinian Authority officially became the 123rd member of the International Criminal Court on Wednesday, a step that gives the court jurisdiction over alleged crimes in Palestinian territories. The formal accession was marked with a ceremony at...",
+      "context_type": "document",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": true,
+      "total_claims": 2,
+      "supported_claims": 0,
+      "contradicted_claims": 0,
+      "insufficient_claims": 1,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Membership gives the ICC jurisdiction over alleged crimes committed in Palestinian territories since last June.",
+          "verdict": "Conflicting Evidence",
+          "confidence": 0.9822,
+          "inference_reason": "CONFLICTING_SOURCES",
+          "evidence": [
+            {
+              "passage": "\" Later that month, the ICC opened a preliminary examination into the situation in Palestinian territories, paving the way for possible war crimes investigations against Israelis",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0017,
+              "neutral": 0.9981
+            },
+            {
+              "passage": "The Palestinian Authority officially became the 123rd member of the International Criminal Court on Wednesday, a step that gives the court jurisdiction over alleged crimes in Palestinian territories",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0006,
+              "neutral": 0.9993
+            },
+            {
+              "passage": "\"As we have said repeatedly, we do not believe that Palestine is a state and therefore we do not believe that it is eligible to join the ICC,\" the State Department said in a statement",
+              "nli_label": "contradiction",
+              "entailment": 0.0,
+              "contradiction": 0.9746,
+              "neutral": 0.0254
+            },
+            {
+              "passage": "The Palestinians signed the ICC's founding Rome Statute in January, when they also accepted its jurisdiction over alleged crimes committed \"in the occupied Palestinian territory, including East Jerusalem, since June 13, 2014",
+              "nli_label": "entailment",
+              "entailment": 0.9897,
+              "contradiction": 0.0015,
+              "neutral": 0.0088
+            },
+            {
+              "passage": "As members of the court, Palestinians may be subject to counter-charges as well",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0009,
+              "neutral": 0.9991
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_002",
+          "normalized_claim": "Israel and the United States opposed the move, which could open the door to war crimes investigations against Israelis.",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9994,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "Israel and the United States, neither of which is an ICC member, opposed the Palestinians' efforts to join the body",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0027,
+              "neutral": 0.9972
+            },
+            {
+              "passage": "\"What's objectionable is the attempts to undermine international justice, not Palestine's decision to join a treaty to which over 100 countries around the world are members",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0014,
+              "neutral": 0.9985
+            },
+            {
+              "passage": "\"We will continue to oppose actions against Israel at the ICC as counterproductive to the cause of peace,\" it said",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0004,
+              "neutral": 0.9994
+            },
+            {
+              "passage": "\" Later that month, the ICC opened a preliminary examination into the situation in Palestinian territories, paving the way for possible war crimes investigations against Israelis",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0016,
+              "neutral": 0.9984
+            },
+            {
+              "passage": "The inquiry will include alleged war crimes committed since June",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0034,
+              "neutral": 0.9964
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "\" Later that month, the ICC opened a preliminary examination into the situation in Palestinian territories, paving the way for possible war crimes investigations against Israelis",
+      "latency_ms": 1013.78
+    },
+    {
+      "example_id": "halueval_summ_2",
+      "task": "summarization",
+      "query": "Summarize the document accurately:",
+      "response": "Amnesty's annual death penalty report catalogs encouraging signs, but setbacks in numbers of those sentenced to death. Organization claims that governments around the world are using the threat of terrorism to advance executions. The number of executions worldwide has gone down by almost 22% compared with 2013, but death sentences up by 28%.\n",
+      "context": "Governments around the world are using the threat of terrorism -- real or perceived -- to advance executions, Amnesty International alleges in its annual report on the death penalty. \"The dark trend of governments using the death penalty in a futile ...",
+      "context_type": "document",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": false,
+      "total_claims": 3,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 1,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Amnesty's annual death penalty report catalogs encouraging signs, but setbacks in numbers of those sentenced to death.",
+          "verdict": "Contradicted",
+          "confidence": 0.9871,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "\" While the report notes some encouraging signs, it also highlights a marked increase in the number of people sentenced to death in 2014",
+              "nli_label": "neutral",
+              "entailment": 0.0008,
+              "contradiction": 0.0005,
+              "neutral": 0.9987
+            },
+            {
+              "passage": "\" Amnesty estimates that at least 19,094 people were believed to be on death row at the end of 2014",
+              "nli_label": "neutral",
+              "entailment": 0.0005,
+              "contradiction": 0.0011,
+              "neutral": 0.9984
+            },
+            {
+              "passage": "Governments around the world are using the threat of terrorism -- real or perceived -- to advance executions, Amnesty International alleges in its annual report on the death penalty",
+              "nli_label": "neutral",
+              "entailment": 0.0013,
+              "contradiction": 0.0057,
+              "neutral": 0.9931
+            },
+            {
+              "passage": "\"The dark trend of governments using the death penalty in a futile attempt to tackle real or imaginary threats to state security and public safety was stark last year,\" said Salil Shetty, Amnesty's Secretary General in a release",
+              "nli_label": "contradiction",
+              "entailment": 0.0002,
+              "contradiction": 0.9871,
+              "neutral": 0.0126
+            },
+            {
+              "passage": "\" The report also highlights the imperfections in the judiciary processes that lead to many sentenced to death",
+              "nli_label": "neutral",
+              "entailment": 0.0005,
+              "contradiction": 0.0003,
+              "neutral": 0.9993
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_002",
+          "normalized_claim": "Organization claims that governments around the world are using the threat of terrorism to advance executions.",
+          "verdict": "Conflicting Evidence",
+          "confidence": 0.9646,
+          "inference_reason": "CONFLICTING_SOURCES",
+          "evidence": [
+            {
+              "passage": "Governments around the world are using the threat of terrorism -- real or perceived -- to advance executions, Amnesty International alleges in its annual report on the death penalty",
+              "nli_label": "entailment",
+              "entailment": 0.9888,
+              "contradiction": 0.0007,
+              "neutral": 0.0105
+            },
+            {
+              "passage": "\"The dark trend of governments using the death penalty in a futile attempt to tackle real or imaginary threats to state security and public safety was stark last year,\" said Salil Shetty, Amnesty's Secretary General in a release",
+              "nli_label": "neutral",
+              "entailment": 0.0104,
+              "contradiction": 0.0116,
+              "neutral": 0.978
+            },
+            {
+              "passage": "On one hand, the number of executions worldwide has gone down by almost 22% on the previous year",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.013,
+              "neutral": 0.9868
+            },
+            {
+              "passage": "\" The report, \"Death Sentences and Executions 2014,\" cites the example of Pakistan lifting a six-year moratorium on the execution of civilians following the horrific attack on a school in Peshawar in December",
+              "nli_label": "contradiction",
+              "entailment": 0.0084,
+              "contradiction": 0.9403,
+              "neutral": 0.0513
+            },
+            {
+              "passage": "China is also mentioned, as having used the death penalty as a tool in its \"Strike Hard\" campaign against terrorism in the restive far-western province of Xinjiang",
+              "nli_label": "neutral",
+              "entailment": 0.0509,
+              "contradiction": 0.1977,
+              "neutral": 0.7514
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_003",
+          "normalized_claim": "The number of executions worldwide has gone down by almost 22% compared with 2013, but death sentences up by 28%.",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9995,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "On one hand, the number of executions worldwide has gone down by almost 22% on the previous year",
+              "nli_label": "neutral",
+              "entailment": 0.0003,
+              "contradiction": 0.0003,
+              "neutral": 0.9994
+            },
+            {
+              "passage": "The United States has the dubious distinction of being the only country in the Americas to conduct executions, but the number of convicts put to death here fell slightly, from 39 in 2013 to 35 in 2014",
+              "nli_label": "neutral",
+              "entailment": 0.1772,
+              "contradiction": 0.1106,
+              "neutral": 0.7122
+            },
+            {
+              "passage": "Sub-Saharan Africa, for example, saw a 28% fall in reported cases, and executions recorded in the Middle East and North Africa were down 23% compared to 2013",
+              "nli_label": "neutral",
+              "entailment": 0.1074,
+              "contradiction": 0.0352,
+              "neutral": 0.8574
+            },
+            {
+              "passage": "At least 607 people were executed around the world in 2014, compared to 778 in 2013",
+              "nli_label": "neutral",
+              "entailment": 0.0148,
+              "contradiction": 0.0145,
+              "neutral": 0.9707
+            },
+            {
+              "passage": "\"The long-term trend is definitely positive -- we are seeing a decrease in the number of executions (worldwide),\" Audrey Gaughran, Amnesty's Director of Global Issues, told CNN",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0004,
+              "neutral": 0.9995
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "\" While the report notes some encouraging signs, it also highlights a marked increase in the number of people sentenced to death in 2014",
+      "latency_ms": 1749.73
+    },
+    {
+      "example_id": "halueval_summ_3",
+      "task": "summarization",
+      "query": "Summarize the document accurately:",
+      "response": "Amnesty International releases its annual review of the death penalty worldwide; much of it makes for grim reading. Salil Shetty: Countries that use executions to deal with problems are on the wrong side of history.\n",
+      "context": "On May 28, 2014, some 7,000 people gathered in a stadium in China's northwestern Xinjiang region. But they had not come to watch the local football team or any other grand sporting event. Instead, the authorities paraded scores of prisoners dressed i...",
+      "context_type": "document",
+      "ground_truth": "faithful",
+      "predicted_label": "faithful",
+      "is_correct": true,
+      "is_abstention": false,
+      "total_claims": 3,
+      "supported_claims": 2,
+      "contradicted_claims": 0,
+      "insufficient_claims": 1,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Amnesty International releases its annual review of the death penalty worldwide",
+          "verdict": "Supported",
+          "confidence": 0.996,
+          "inference_reason": "EVIDENCE_ENTAILED",
+          "evidence": [
+            {
+              "passage": "Today, Amnesty International releases its annual review of the death penalty worldwide",
+              "nli_label": "entailment",
+              "entailment": 0.996,
+              "contradiction": 0.0002,
+              "neutral": 0.0038
+            },
+            {
+              "passage": "At Amnesty International, we have campaigned for an end to the death penalty for decades",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0007,
+              "neutral": 0.9992
+            },
+            {
+              "passage": "A sharp spike in death sentences recorded in 2014 -- up more than 500 on the previous year -- can also be attributed to governments using the death penalty as a political tool",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0012,
+              "neutral": 0.9986
+            },
+            {
+              "passage": "It is high time that world leaders stop using the death penalty as an easy way out when times get tough",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0008,
+              "neutral": 0.999
+            },
+            {
+              "passage": "Last year, we recorded executions in 22 countries, down by almost a half from 20 years ago",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0006,
+              "neutral": 0.9992
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_002",
+          "normalized_claim": "much of it makes for grim reading.",
+          "verdict": "Supported",
+          "confidence": 0.9956,
+          "inference_reason": "EVIDENCE_ENTAILED",
+          "evidence": [
+            {
+              "passage": "Much of it makes for grim reading",
+              "nli_label": "entailment",
+              "entailment": 0.9956,
+              "contradiction": 0.0006,
+              "neutral": 0.0039
+            },
+            {
+              "passage": "\" But it was also indicative of a trend that was starkly evident last year around the world -- governments using the death penalty in a misguided, and often cynical, attempt to tackle crime and terrorism",
+              "nli_label": "neutral",
+              "entailment": 0.0024,
+              "contradiction": 0.0001,
+              "neutral": 0.9975
+            },
+            {
+              "passage": "Despite the troubling developments we recorded last year, there was still much good news to be found",
+              "nli_label": "neutral",
+              "entailment": 0.0036,
+              "contradiction": 0.0079,
+              "neutral": 0.9886
+            },
+            {
+              "passage": "A sharp spike in death sentences recorded in 2014 -- up more than 500 on the previous year -- can also be attributed to governments using the death penalty as a political tool",
+              "nli_label": "neutral",
+              "entailment": 0.0012,
+              "contradiction": 0.0001,
+              "neutral": 0.9987
+            },
+            {
+              "passage": "Other countries made use of executions in similarly flawed attempts to address -- or appear to address -- crime rates",
+              "nli_label": "neutral",
+              "entailment": 0.0011,
+              "contradiction": 0.0001,
+              "neutral": 0.9988
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_003",
+          "normalized_claim": "Salil Shetty: Countries that use executions to deal with problems are on the wrong side of history.",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.998,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "Other countries made use of executions in similarly flawed attempts to address -- or appear to address -- crime rates",
+              "nli_label": "neutral",
+              "entailment": 0.0007,
+              "contradiction": 0.0012,
+              "neutral": 0.998
+            },
+            {
+              "passage": "In a year when abhorrent summary executions by armed groups were branded on the global consciousness as never before, governments are themselves resorting to more executions in a knee-jerk reaction to terrorism",
+              "nli_label": "neutral",
+              "entailment": 0.003,
+              "contradiction": 0.0056,
+              "neutral": 0.9914
+            },
+            {
+              "passage": "Those governments that still execute need to realize that they are on the wrong side of history",
+              "nli_label": "neutral",
+              "entailment": 0.0082,
+              "contradiction": 0.0026,
+              "neutral": 0.9892
+            },
+            {
+              "passage": "Last year, we recorded executions in 22 countries, down by almost a half from 20 years ago",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0043,
+              "neutral": 0.9955
+            },
+            {
+              "passage": "Executions were recorded in only three countries in sub-Saharan Africa -- Equatorial Guinea, Somalia and Sudan -- and the number of people put to death went down by more than a quarter",
+              "nli_label": "neutral",
+              "entailment": 0.0003,
+              "contradiction": 0.0039,
+              "neutral": 0.9958
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Today, Amnesty International releases its annual review of the death penalty worldwide",
+      "latency_ms": 1617.38
+    },
+    {
+      "example_id": "halueval_summ_4",
+      "task": "summarization",
+      "query": "Summarize the document accurately:",
+      "response": "Anne Frank and her sister Margot were found alive in the Bergen-Belsen concentration camp after new research was released by the Anne Frank House. Witnesses at the camp stated that they saw the sisters alive as late as February 7, contradicting the date of death previously believed. The sisters endured terrible living conditions and disease, but ultimately survived the Holocaust.",
+      "context": "Seventy years ago, Anne Frank died of typhus in a Nazi concentration camp at the age of 15. Just two weeks after her supposed death on March 31, 1945, the Bergen-Belsen concentration camp where she had been imprisoned was liberated -- timing that sho...",
+      "context_type": "document",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": false,
+      "total_claims": 3,
+      "supported_claims": 0,
+      "contradicted_claims": 2,
+      "insufficient_claims": 1,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Anne Frank and her sister Margot were found alive in the Bergen-Belsen concentration camp after new research was released by the Anne Frank House.",
+          "verdict": "Contradicted",
+          "confidence": 0.9998,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "But new research released by the Anne Frank House shows that Anne and her older sister, Margot Frank, died at least a month earlier than previously thought",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9998,
+              "neutral": 0.0002
+            },
+            {
+              "passage": "That same year, Anne and Margot were separated from their mother and sent away to work as slave labor at the Bergen-Belsen camp in Germany",
+              "nli_label": "contradiction",
+              "entailment": 0.0109,
+              "contradiction": 0.55,
+              "neutral": 0.4391
+            },
+            {
+              "passage": "Read more about Anne Frank's cousin, a keeper of her legacy",
+              "nli_label": "neutral",
+              "entailment": 0.002,
+              "contradiction": 0.3408,
+              "neutral": 0.6572
+            },
+            {
+              "passage": "\" Listen to Anne Frank's friends describe her concentration camp experience",
+              "nli_label": "contradiction",
+              "entailment": 0.0003,
+              "contradiction": 0.9588,
+              "neutral": 0.0409
+            },
+            {
+              "passage": "Margot died before Anne",
+              "nli_label": "contradiction",
+              "entailment": 0.0004,
+              "contradiction": 0.998,
+              "neutral": 0.0015
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_002",
+          "normalized_claim": "Witnesses at the camp stated that they saw the sisters alive as late as February 7, contradicting the date of death previously believed.",
+          "verdict": "Contradicted",
+          "confidence": 0.9311,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "They concluded that it's unlikely the sisters survived until March, because witnesses at the camp said the sisters both had symptoms before February 7",
+              "nli_label": "contradiction",
+              "entailment": 0.0205,
+              "contradiction": 0.9311,
+              "neutral": 0.0484
+            },
+            {
+              "passage": "The sisters stayed in a section of the overcrowded camp with no lighting, little water and no latrine",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0012,
+              "neutral": 0.9987
+            },
+            {
+              "passage": "But new research released by the Anne Frank House shows that Anne and her older sister, Margot Frank, died at least a month earlier than previously thought",
+              "nli_label": "neutral",
+              "entailment": 0.0004,
+              "contradiction": 0.0024,
+              "neutral": 0.9973
+            },
+            {
+              "passage": "They concluded that Anne and Margot probably did not survive to March 1945 -- contradicting the date of death which had previously been determined by Dutch authorities",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0058,
+              "neutral": 0.994
+            },
+            {
+              "passage": "The exact dates of death for Anne and Margot remain unclear",
+              "nli_label": "neutral",
+              "entailment": 0.0003,
+              "contradiction": 0.001,
+              "neutral": 0.9988
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_003",
+          "normalized_claim": "The sisters endured terrible living conditions and disease, but ultimately survived the Holocaust.",
+          "verdict": "Insufficient Evidence",
+          "confidence": null,
+          "inference_reason": "NON_VERIFIABLE_CLAIM",
+          "evidence": [
+            {
+              "passage": "They concluded that it's unlikely the sisters survived until March, because witnesses at the camp said the sisters both had symptoms before February 7",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0506,
+              "neutral": 0.9492
+            },
+            {
+              "passage": "The sisters stayed in a section of the overcrowded camp with no lighting, little water and no latrine",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0006,
+              "neutral": 0.9992
+            },
+            {
+              "passage": "Read more about Anne Frank's cousin, a keeper of her legacy",
+              "nli_label": "neutral",
+              "entailment": 0.0004,
+              "contradiction": 0.0022,
+              "neutral": 0.9974
+            },
+            {
+              "passage": "They concluded that Anne and Margot probably did not survive to March 1945 -- contradicting the date of death which had previously been determined by Dutch authorities",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0043,
+              "neutral": 0.9955
+            },
+            {
+              "passage": "But new research released by the Anne Frank House shows that Anne and her older sister, Margot Frank, died at least a month earlier than previously thought",
+              "nli_label": "contradiction",
+              "entailment": 0.0002,
+              "contradiction": 0.9318,
+              "neutral": 0.0679
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "But new research released by the Anne Frank House shows that Anne and her older sister, Margot Frank, died at least a month earlier than previously thought",
+      "latency_ms": 1397.86
+    },
+    {
+      "example_id": "halueval_summ_5",
+      "task": "summarization",
+      "query": "Summarize the document accurately:",
+      "response": "Duke University has uncovered a scandal in which a group of students were caught hanging a noose from a tree near a student union. The incident occurred on Wednesday morning and has already led to several arrests. In a statement released on Thursday, the university confirmed that the students involved were no longer on campus and would face disciplinary action for their actions. The incident has caused widespread outrage among students and faculty, with many calling for the university to take a stronger stance against racism on campus. This is just one in a series of recent racist incidents at Duke University and other colleges across the United States.",
+      "context": "A Duke student has admitted to hanging a noose made of rope from a tree near a student union, university officials said Thursday. The prestigious private school didn't identify the student, citing federal privacy laws. In a news release, it said the ...",
+      "context_type": "document",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": false,
+      "total_claims": 5,
+      "supported_claims": 0,
+      "contradicted_claims": 3,
+      "insufficient_claims": 2,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Duke University has uncovered a scandal in which a group of students were caught hanging a noose from a tree near a student union.",
+          "verdict": "Contradicted",
+          "confidence": 0.626,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "A Duke student has admitted to hanging a noose made of rope from a tree near a student union, university officials said Thursday",
+              "nli_label": "contradiction",
+              "entailment": 0.0343,
+              "contradiction": 0.626,
+              "neutral": 0.3396
+            },
+            {
+              "passage": "The student was identified during an investigation by campus police and the office of student affairs and admitted to placing the noose on the tree early Wednesday, the university said",
+              "nli_label": "neutral",
+              "entailment": 0.0022,
+              "contradiction": 0.0016,
+              "neutral": 0.9962
+            },
+            {
+              "passage": "A statement issued by Duke said there was a previous report of hate speech directed at students on campus",
+              "nli_label": "neutral",
+              "entailment": 0.0017,
+              "contradiction": 0.2254,
+              "neutral": 0.7729
+            },
+            {
+              "passage": "Duke University is a private college with about 15,000 students in Durham, North Carolina",
+              "nli_label": "neutral",
+              "entailment": 0.0004,
+              "contradiction": 0.02,
+              "neutral": 0.9796
+            },
+            {
+              "passage": "At a forum held on the steps of Duke Chapel, close to where the noose was discovered at 2 a",
+              "nli_label": "neutral",
+              "entailment": 0.0114,
+              "contradiction": 0.0245,
+              "neutral": 0.9641
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_002",
+          "normalized_claim": "The incident occurred on Wednesday morning and has already led to several arrests.",
+          "verdict": "Contradicted",
+          "confidence": 0.7824,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Criminal investigations into the incident are ongoing as well",
+              "nli_label": "neutral",
+              "entailment": 0.0,
+              "contradiction": 0.0031,
+              "neutral": 0.9969
+            },
+            {
+              "passage": "Officials are still trying to determine if other people were involved",
+              "nli_label": "contradiction",
+              "entailment": 0.0,
+              "contradiction": 0.7824,
+              "neutral": 0.2176
+            },
+            {
+              "passage": "The incident is one of several recent racist events to affect college students",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0004,
+              "neutral": 0.9995
+            },
+            {
+              "passage": "The student was identified during an investigation by campus police and the office of student affairs and admitted to placing the noose on the tree early Wednesday, the university said",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0004,
+              "neutral": 0.9994
+            },
+            {
+              "passage": "In the news release, the vice president for student affairs called the noose incident a \"cowardly act",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0008,
+              "neutral": 0.9991
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_003",
+          "normalized_claim": "In a statement released on Thursday, the university confirmed that the students involved were no longer on campus and would face disciplinary action for their actions.",
+          "verdict": "Contradicted",
+          "confidence": 0.998,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "In a news release, it said the student was no longer on campus and will face student conduct review",
+              "nli_label": "neutral",
+              "entailment": 0.0017,
+              "contradiction": 0.0013,
+              "neutral": 0.997
+            },
+            {
+              "passage": "Two students were expelled",
+              "nli_label": "neutral",
+              "entailment": 0.0099,
+              "contradiction": 0.0004,
+              "neutral": 0.9897
+            },
+            {
+              "passage": "A statement issued by Duke said there was a previous report of hate speech directed at students on campus",
+              "nli_label": "contradiction",
+              "entailment": 0.0,
+              "contradiction": 0.9968,
+              "neutral": 0.0031
+            },
+            {
+              "passage": "The incident is one of several recent racist events to affect college students",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0051,
+              "neutral": 0.9948
+            },
+            {
+              "passage": "A Duke student has admitted to hanging a noose made of rope from a tree near a student union, university officials said Thursday",
+              "nli_label": "contradiction",
+              "entailment": 0.0,
+              "contradiction": 0.998,
+              "neutral": 0.0019
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_004",
+          "normalized_claim": "The incident has caused widespread outrage among students and faculty, with many calling for the university to take a stronger stance against racism on campus.",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9996,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "The incident is one of several recent racist events to affect college students",
+              "nli_label": "neutral",
+              "entailment": 0.0003,
+              "contradiction": 0.0002,
+              "neutral": 0.9995
+            },
+            {
+              "passage": "A statement issued by Duke said there was a previous report of hate speech directed at students on campus",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0003,
+              "neutral": 0.9996
+            },
+            {
+              "passage": "In a news release, it said the student was no longer on campus and will face student conduct review",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0003,
+              "neutral": 0.9996
+            },
+            {
+              "passage": "Two students were expelled",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0004,
+              "neutral": 0.9995
+            },
+            {
+              "passage": "In the news release, the vice president for student affairs called the noose incident a \"cowardly act",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0004,
+              "neutral": 0.9994
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_005",
+          "normalized_claim": "This is just one in a series of recent racist incidents at Duke University and other colleges across the United States.",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9996,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "The incident is one of several recent racist events to affect college students",
+              "nli_label": "neutral",
+              "entailment": 0.0005,
+              "contradiction": 0.0001,
+              "neutral": 0.9994
+            },
+            {
+              "passage": "A statement issued by Duke said there was a previous report of hate speech directed at students on campus",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0004,
+              "neutral": 0.9994
+            },
+            {
+              "passage": "Duke University is a private college with about 15,000 students in Durham, North Carolina",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0016,
+              "neutral": 0.9983
+            },
+            {
+              "passage": "Last month a fraternity at the University of Oklahoma had its charter removed after a video surfaced showing members using the N-word and referring to lynching in a chant",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0008,
+              "neutral": 0.999
+            },
+            {
+              "passage": "Two students were expelled",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0002,
+              "neutral": 0.9996
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "A Duke student has admitted to hanging a noose made of rope from a tree near a student union, university officials said Thursday",
+      "latency_ms": 2265.82
+    },
+    {
+      "example_id": "halueval_summ_6",
+      "task": "summarization",
+      "query": "Summarize the document accurately:",
+      "response": "Robert Schuller, the televangelist founder of the \"Hour of Power,\" died at the age of 88 after years of battling cancer. His son Bobby Schuller Jr. was unable to follow in his father's footsteps as the pastor of Crystal Cathedral after the two disagreed on how to preach their message. Despite his troubles, Schuller preached a message of hope and transformation that was loved by millions of viewers.",
+      "context": "The Rev. Robert H. Schuller, California televangelist and founder of the television ministry \"Hour of Power,\" died Thursday, according to his family. He was 88 years old. Schuller, also the founder of Crystal Cathedral megachurch, had been diagnosed ...",
+      "context_type": "document",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": false,
+      "total_claims": 3,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 2,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Robert Schuller, the televangelist founder of the \"Hour of Power,\" died at the age of 88 after years of battling cancer.",
+          "verdict": "Contradicted",
+          "confidence": 0.5053,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Schuller, California televangelist and founder of the television ministry \"Hour of Power,\" died Thursday, according to his family",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0005,
+              "neutral": 0.9994
+            },
+            {
+              "passage": "Eventually, Schuller's grandson, also named Bobby, took over \"Hour of Power,\" though at a different church",
+              "nli_label": "neutral",
+              "entailment": 0.0006,
+              "contradiction": 0.0175,
+              "neutral": 0.9818
+            },
+            {
+              "passage": "The show, which ran for decades, reached millions, making Schuller a televangelist before the term became tarnished by the sins of his many successors",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.002,
+              "neutral": 0.9978
+            },
+            {
+              "passage": "Schuller, also the founder of Crystal Cathedral megachurch, had been diagnosed with esophageal cancer in August 2013, a release from \"Hour of Power\" said",
+              "nli_label": "neutral",
+              "entailment": 0.0003,
+              "contradiction": 0.3255,
+              "neutral": 0.6742
+            },
+            {
+              "passage": "\" In 1970, Schuller began broadcasting \"Hour of Power,\" believed to be one of the first, if not the very first, Sunday service to be shown regularly on television",
+              "nli_label": "contradiction",
+              "entailment": 0.0003,
+              "contradiction": 0.5053,
+              "neutral": 0.4943
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_002",
+          "normalized_claim": "His son Bobby Schuller Jr. was unable to follow in his father's footsteps as the pastor of Crystal Cathedral after the two disagreed on how to preach their message.",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9989,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "Eventually, Schuller's grandson, also named Bobby, took over \"Hour of Power,\" though at a different church",
+              "nli_label": "neutral",
+              "entailment": 0.0009,
+              "contradiction": 0.003,
+              "neutral": 0.996
+            },
+            {
+              "passage": "Bobby Schuller Jr",
+              "nli_label": "neutral",
+              "entailment": 0.0007,
+              "contradiction": 0.0061,
+              "neutral": 0.9932
+            },
+            {
+              "passage": "During the 1980s and 1990s, Schuller's star continued to rise, with presidents stopping by the Crystal Cathedral -- often during campaigns, it should be said -- and future megachurch pastors like Rick Warren and Bill Hybels seeking his advice",
+              "nli_label": "neutral",
+              "entailment": 0.0004,
+              "contradiction": 0.0041,
+              "neutral": 0.9955
+            },
+            {
+              "passage": "\"  He tried to install his only son, Bobby Jr",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0009,
+              "neutral": 0.9989
+            },
+            {
+              "passage": "Schuller, also the founder of Crystal Cathedral megachurch, had been diagnosed with esophageal cancer in August 2013, a release from \"Hour of Power\" said",
+              "nli_label": "neutral",
+              "entailment": 0.0003,
+              "contradiction": 0.0012,
+              "neutral": 0.9985
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_003",
+          "normalized_claim": "Despite his troubles, Schuller preached a message of hope and transformation that was loved by millions of viewers.",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9997,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "The show, which ran for decades, reached millions, making Schuller a televangelist before the term became tarnished by the sins of his many successors",
+              "nli_label": "neutral",
+              "entailment": 0.0029,
+              "contradiction": 0.0002,
+              "neutral": 0.9969
+            },
+            {
+              "passage": "\"And he preached an uplifting message about personal transformation and uplift and hope",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0002,
+              "neutral": 0.9997
+            },
+            {
+              "passage": "\"And Schuller was a master at that",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0004,
+              "neutral": 0.9995
+            },
+            {
+              "passage": "Schuller's life followed an almost Shakespearean arc",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0006,
+              "neutral": 0.9993
+            },
+            {
+              "passage": "He was a great Dad and a great man of God,\" said Schuller's daughter-in-law, Donna Schuller, in a Twitter message",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0004,
+              "neutral": 0.9995
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Schuller, California televangelist and founder of the television ministry \"Hour of Power,\" died Thursday, according to his family",
+      "latency_ms": 2530.13
+    },
+    {
+      "example_id": "halueval_summ_7",
+      "task": "summarization",
+      "query": "Summarize the document accurately:",
+      "response": "Theia, a bully breed mix, was apparently hit by a car, whacked with a hammer and buried in a field. \"She's a true miracle dog and she deserves a good life,\" says Sara Mellado, who is looking for a home for Theia.\n",
+      "context": "Never mind cats having nine lives. A stray pooch in Washington State has used up at least three of her own after being hit by a car, apparently whacked on the head with a hammer in a misguided mercy killing and then buried in a field -- only to survi...",
+      "context_type": "document",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": false,
+      "total_claims": 3,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 1,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Theia, a bully breed mix, was apparently hit by a car, whacked with a hammer and buried in a field.",
+          "verdict": "Contradicted",
+          "confidence": 0.9779,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "That's according to Washington State University, where the dog -- a friendly white-and-black bully breed mix now named Theia -- has been receiving care at the Veterinary Teaching Hospital",
+              "nli_label": "contradiction",
+              "entailment": 0.0002,
+              "contradiction": 0.9779,
+              "neutral": 0.0218
+            },
+            {
+              "passage": "A stray pooch in Washington State has used up at least three of her own after being hit by a car, apparently whacked on the head with a hammer in a misguided mercy killing and then buried in a field -- only to survive",
+              "nli_label": "neutral",
+              "entailment": 0.0009,
+              "contradiction": 0.0019,
+              "neutral": 0.9971
+            },
+            {
+              "passage": "Theia is not the only animal to apparently rise from the grave in recent weeks",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0814,
+              "neutral": 0.9185
+            },
+            {
+              "passage": "\" Theia is only one year old but the dog's brush with death did not leave her unscathed",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0007,
+              "neutral": 0.9991
+            },
+            {
+              "passage": "Four days after her apparent death, the dog managed to stagger to a nearby farm, dirt-covered and emaciated, where she was found by a worker who took her to a vet for help",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.002,
+              "neutral": 0.9978
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_002",
+          "normalized_claim": "\"She's a true miracle dog",
+          "verdict": "Conflicting Evidence",
+          "confidence": 0.9932,
+          "inference_reason": "CONFLICTING_SOURCES",
+          "evidence": [
+            {
+              "passage": "\"She's a true miracle dog and she deserves a good life",
+              "nli_label": "entailment",
+              "entailment": 0.9878,
+              "contradiction": 0.0006,
+              "neutral": 0.0116
+            },
+            {
+              "passage": "\" Theia is only one year old but the dog's brush with death did not leave her unscathed",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9986,
+              "neutral": 0.0013
+            },
+            {
+              "passage": "\" She is dedicated to making sure Theia gets the medical attention she needs, Mellado adds, and wants to \"make sure she gets placed in a family where this will never happen to her again!\" Any additional funds raised will be \"paid forward\" to help other animals",
+              "nli_label": "neutral",
+              "entailment": 0.0009,
+              "contradiction": 0.0006,
+              "neutral": 0.9985
+            },
+            {
+              "passage": "Four days after her apparent death, the dog managed to stagger to a nearby farm, dirt-covered and emaciated, where she was found by a worker who took her to a vet for help",
+              "nli_label": "neutral",
+              "entailment": 0.0005,
+              "contradiction": 0.0093,
+              "neutral": 0.9902
+            },
+            {
+              "passage": "\"Considering everything that she's been through, she's incredibly gentle and loving,\" Mellado said, according to WSU News",
+              "nli_label": "neutral",
+              "entailment": 0.0006,
+              "contradiction": 0.0002,
+              "neutral": 0.9992
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_003",
+          "normalized_claim": "she deserves a good life,\" says Sara Mellado, who is looking for a home for Theia.",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9996,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "\" She is dedicated to making sure Theia gets the medical attention she needs, Mellado adds, and wants to \"make sure she gets placed in a family where this will never happen to her again!\" Any additional funds raised will be \"paid forward\" to help other animals",
+              "nli_label": "neutral",
+              "entailment": 0.0008,
+              "contradiction": 0.0037,
+              "neutral": 0.9954
+            },
+            {
+              "passage": "\"Considering everything that she's been through, she's incredibly gentle and loving,\" Mellado said, according to WSU News",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0009,
+              "neutral": 0.9989
+            },
+            {
+              "passage": "She was taken in by Moses Lake, Washington, resident Sara Mellado",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.003,
+              "neutral": 0.9968
+            },
+            {
+              "passage": "\"She's a true miracle dog and she deserves a good life",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0003,
+              "neutral": 0.9996
+            },
+            {
+              "passage": "On the fundraising page, Mellado writes, \"She is in desperate need of extensive medical procedures to fix her nasal damage and reset her jaw",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0071,
+              "neutral": 0.9927
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "That's according to Washington State University, where the dog -- a friendly white-and-black bully breed mix now named Theia -- has been receiving care at the Veterinary Teaching Hospital",
+      "latency_ms": 1661.78
+    },
+    {
+      "example_id": "halueval_summ_8",
+      "task": "summarization",
+      "query": "Summarize the document accurately:",
+      "response": "Mohammad Javad Zarif has spent more time with John Kerry than any other foreign minister. He once participated in a takeover of the Iranian Consulate in San Francisco. The Iranian foreign minister tweets in English.\n",
+      "context": "If you've been following the news lately, there are certain things you doubtless know about Mohammad Javad Zarif. He is, of course, the Iranian foreign minister. He has been U.S. Secretary of State John Kerry's opposite number in securing a breakthro...",
+      "context_type": "document",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": false,
+      "total_claims": 3,
+      "supported_claims": 1,
+      "contradicted_claims": 2,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Mohammad Javad Zarif has spent more time with John Kerry than any other foreign minister.",
+          "verdict": "Contradicted",
+          "confidence": 0.8458,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "In fact, he has now spent more time with Kerry than any other foreign minister in the world",
+              "nli_label": "neutral",
+              "entailment": 0.0004,
+              "contradiction": 0.0016,
+              "neutral": 0.998
+            },
+            {
+              "passage": "If you've been following the news lately, there are certain things you doubtless know about Mohammad Javad Zarif",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.001,
+              "neutral": 0.9989
+            },
+            {
+              "passage": "Zarif was nominated to be foreign minister by Ahmadinejad's successor, Hassan Rouhami",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0077,
+              "neutral": 0.9923
+            },
+            {
+              "passage": "He is, of course, the Iranian foreign minister",
+              "nli_label": "neutral",
+              "entailment": 0.0003,
+              "contradiction": 0.0003,
+              "neutral": 0.9994
+            },
+            {
+              "passage": "Zarif left the country in 1977, received his undergraduate degree from San Francisco State University in 1981, his master's in international relations from the University of Denver in 1984 and his doctorate from the University of Denver in 1988",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.8458,
+              "neutral": 0.1541
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_002",
+          "normalized_claim": "He once participated in a takeover of the Iranian Consulate in San Francisco.",
+          "verdict": "Supported",
+          "confidence": 0.9926,
+          "inference_reason": "EVIDENCE_ENTAILED",
+          "evidence": [
+            {
+              "passage": "Early in the Iranian Revolution, Zarif was among the students who took over the Iranian Consulate in San Francisco",
+              "nli_label": "entailment",
+              "entailment": 0.9926,
+              "contradiction": 0.0001,
+              "neutral": 0.0072
+            },
+            {
+              "passage": "And the Iranian Diplomacy website says he was born in in 1961",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0081,
+              "neutral": 0.9918
+            },
+            {
+              "passage": "He is, of course, the Iranian foreign minister",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0017,
+              "neutral": 0.9982
+            },
+            {
+              "passage": "The first sentence of his official biography, perhaps in a nod to the powers that be in Tehran, says Zarif was \"born to a religious traditional family in Tehran in 1959",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0058,
+              "neutral": 0.9941
+            },
+            {
+              "passage": "In response, the Iranian ambassador to the United Nations offered him a job",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0026,
+              "neutral": 0.9972
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_003",
+          "normalized_claim": "The Iranian foreign minister tweets in English.",
+          "verdict": "Contradicted",
+          "confidence": 0.9976,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "He is, of course, the Iranian foreign minister",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0054,
+              "neutral": 0.9945
+            },
+            {
+              "passage": "The aim, says the website Iranian",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9891,
+              "neutral": 0.0108
+            },
+            {
+              "passage": "\" The reference was likely to former Iranian President Mahmoud Ahmadinejad, who had left office the previous month",
+              "nli_label": "contradiction",
+              "entailment": 0.0,
+              "contradiction": 0.9976,
+              "neutral": 0.0024
+            },
+            {
+              "passage": "And the Iranian Diplomacy website says he was born in in 1961",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9923,
+              "neutral": 0.0076
+            },
+            {
+              "passage": "\"Iran never denied it,\" Zarif tweeted back",
+              "nli_label": "neutral",
+              "entailment": 0.0015,
+              "contradiction": 0.0027,
+              "neutral": 0.9958
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "In fact, he has now spent more time with Kerry than any other foreign minister in the world",
+      "latency_ms": 1700.37
+    },
+    {
+      "example_id": "halueval_summ_9",
+      "task": "summarization",
+      "query": "Summarize the document accurately:",
+      "response": "Bob Barker returned to host \"The Price Is Right\" on Wednesday. Barker, 91, had retired as host in 2007.\n",
+      "context": "For the first time in eight years, a TV legend returned to doing what he does best. Contestants told to \"come on down!\" on the April 1 edition of \"The Price Is Right\" encountered not host Drew Carey but another familiar face in charge of the proceedi...",
+      "context_type": "document",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": false,
+      "total_claims": 2,
+      "supported_claims": 0,
+      "contradicted_claims": 2,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Bob Barker returned to host \"The Price Is Right\" on Wednesday.",
+          "verdict": "Contradicted",
+          "confidence": 0.9767,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "For the first time in eight years, a TV legend returned to doing what he does best",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.002,
+              "neutral": 0.9978
+            },
+            {
+              "passage": "Contestants told to \"come on down!\" on the April 1 edition of \"The Price Is Right\" encountered not host Drew Carey but another familiar face in charge of the proceedings",
+              "nli_label": "contradiction",
+              "entailment": 0.0002,
+              "contradiction": 0.8823,
+              "neutral": 0.1175
+            },
+            {
+              "passage": "Instead, there was Bob Barker, who hosted the TV game show for 35 years before stepping down in 2007",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.3924,
+              "neutral": 0.6075
+            },
+            {
+              "passage": "Looking spry at 91, Barker handled the first price-guessing game of the show, the classic \"Lucky Seven,\" before turning hosting duties over to Carey, who finished up",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9767,
+              "neutral": 0.0232
+            },
+            {
+              "passage": "Despite being away from the show for most of the past eight years, Barker didn't seem to miss a beat",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0022,
+              "neutral": 0.9976
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_002",
+          "normalized_claim": "Barker, 91, had retired as host in 2007.",
+          "verdict": "Contradicted",
+          "confidence": 0.8482,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "For the first time in eight years, a TV legend returned to doing what he does best",
+              "nli_label": "contradiction",
+              "entailment": 0.0009,
+              "contradiction": 0.7711,
+              "neutral": 0.228
+            },
+            {
+              "passage": "Contestants told to \"come on down!\" on the April 1 edition of \"The Price Is Right\" encountered not host Drew Carey but another familiar face in charge of the proceedings",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.104,
+              "neutral": 0.8958
+            },
+            {
+              "passage": "Instead, there was Bob Barker, who hosted the TV game show for 35 years before stepping down in 2007",
+              "nli_label": "contradiction",
+              "entailment": 0.0082,
+              "contradiction": 0.8482,
+              "neutral": 0.1436
+            },
+            {
+              "passage": "Looking spry at 91, Barker handled the first price-guessing game of the show, the classic \"Lucky Seven,\" before turning hosting duties over to Carey, who finished up",
+              "nli_label": "neutral",
+              "entailment": 0.0008,
+              "contradiction": 0.1634,
+              "neutral": 0.8358
+            },
+            {
+              "passage": "Despite being away from the show for most of the past eight years, Barker didn't seem to miss a beat",
+              "nli_label": "contradiction",
+              "entailment": 0.0002,
+              "contradiction": 0.638,
+              "neutral": 0.3618
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "For the first time in eight years, a TV legend returned to doing what he does best",
+      "latency_ms": 485.36
+    }
+  ]
+}

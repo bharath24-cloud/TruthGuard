@@ -1,0 +1,1104 @@
+{
+  "benchmark_name": "HaluEval",
+  "task": "qa",
+  "evaluated_samples": 20,
+  "total_requested": 20,
+  "seed": 42,
+  "evidence_source": "context",
+  "metrics": {
+    "total_evaluated": 20,
+    "accuracy": 0.5,
+    "precision": 0.7368,
+    "recall": 0.5455,
+    "macro_f1": 0.4048,
+    "weighted_f1": 0.381,
+    "confusion_matrix": {
+      "hallucinated": {
+        "hallucinated": 9,
+        "faithful": 0
+      },
+      "faithful": {
+        "hallucinated": 10,
+        "faithful": 1
+      }
+    },
+    "per_class": {
+      "hallucinated": {
+        "precision": 0.4737,
+        "recall": 1.0,
+        "f1": 0.6429,
+        "support": 9
+      },
+      "faithful": {
+        "precision": 1.0,
+        "recall": 0.0909,
+        "f1": 0.1667,
+        "support": 11
+      }
+    },
+    "abstention_count": 6,
+    "abstention_rate": 0.3,
+    "avg_latency_ms": 572.76
+  },
+  "dataset_report": {
+    "task": "qa",
+    "file": "C:\\Users\\sesha\\OneDrive\\Desktop\\TRUTHGUARD\\HaluEval-main\\data\\qa_data.json",
+    "total_raw_processed": 20,
+    "valid_examples_extracted": 20,
+    "skipped_records": 0,
+    "skip_reasons": {},
+    "label_distribution": {
+      "hallucinated": 9,
+      "faithful": 11
+    },
+    "sampling_strategy": "balanced_sampled",
+    "seed": 42
+  },
+  "total_duration_seconds": 0.0,
+  "predictions": [
+    {
+      "example_id": "halueval_qa_0",
+      "task": "qa",
+      "query": "Which magazine was started first Arthur's Magazine or First for Women?",
+      "response": "First for Women was started first.",
+      "context": "Arthur's Magazine (1844–1846) was an American literary periodical published in Philadelphia in the 19th century.First for Women is a woman's magazine published by Bauer Media Group in the USA....",
+      "context_type": "knowledge",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": false,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "First for Women was started first.",
+          "verdict": "Contradicted",
+          "confidence": 0.998,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Arthur's Magazine (1844–1846) was an American literary periodical published in Philadelphia in the 19th century",
+              "nli_label": "contradiction",
+              "entailment": 0.0,
+              "contradiction": 0.998,
+              "neutral": 0.0019
+            },
+            {
+              "passage": "First for Women is a woman's magazine published by Bauer Media Group in the USA",
+              "nli_label": "neutral",
+              "entailment": 0.0008,
+              "contradiction": 0.0006,
+              "neutral": 0.9986
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Arthur's Magazine (1844–1846) was an American literary periodical published in Philadelphia in the 19th century",
+      "latency_ms": 7039.88
+    },
+    {
+      "example_id": "halueval_qa_1",
+      "task": "qa",
+      "query": "The Oberoi family is part of a hotel company that has a head office in what city?",
+      "response": "Delhi",
+      "context": "The Oberoi family is an Indian family that is famous for its involvement in hotels, namely through The Oberoi Group.The Oberoi Group is a hotel company with its head office in Delhi....",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "faithful",
+      "is_correct": true,
+      "is_abstention": false,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "contradicted_claims": 0,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "The Oberoi family is part of a hotel company that has a head office in what city: The answer is Delhi.",
+          "verdict": "Supported",
+          "confidence": 0.9901,
+          "inference_reason": "EVIDENCE_ENTAILED",
+          "evidence": [
+            {
+              "passage": "The Oberoi family is an Indian family that is famous for its involvement in hotels, namely through The Oberoi Group",
+              "nli_label": "neutral",
+              "entailment": 0.0009,
+              "contradiction": 0.0002,
+              "neutral": 0.9989
+            },
+            {
+              "passage": "The Oberoi Group is a hotel company with its head office in Delhi",
+              "nli_label": "entailment",
+              "entailment": 0.9901,
+              "contradiction": 0.0001,
+              "neutral": 0.0098
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "The Oberoi family is an Indian family that is famous for its involvement in hotels, namely through The Oberoi Group",
+      "latency_ms": 155.19
+    },
+    {
+      "example_id": "halueval_qa_2",
+      "task": "qa",
+      "query": "Musician and satirist Allie Goertz wrote a song about the \"The Simpsons\" character Milhouse, who Matt Groening named after who?",
+      "response": "President Richard Nixon",
+      "context": "Allison Beth \"Allie\" Goertz (born March 2, 1991) is an American musician. Goertz is known for her satirical songs based on various pop culture topics. Her videos are posted on YouTube under the name of Cossbysweater.Milhouse Mussolini van Houten is a...",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": false,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Musician and satirist Allie Goertz wrote a song about the \"The Simpsons\" character Milhouse, who Matt Groening named after who: The answer is President Richard Nixon.",
+          "verdict": "Contradicted",
+          "confidence": 0.983,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Allison Beth \"Allie\" Goertz (born March 2, 1991) is an American musician",
+              "nli_label": "neutral",
+              "entailment": 0.0008,
+              "contradiction": 0.0015,
+              "neutral": 0.9977
+            },
+            {
+              "passage": "Goertz is known for her satirical songs based on various pop culture topics",
+              "nli_label": "neutral",
+              "entailment": 0.0131,
+              "contradiction": 0.0175,
+              "neutral": 0.9695
+            },
+            {
+              "passage": "Her videos are posted on YouTube under the name of Cossbysweater",
+              "nli_label": "contradiction",
+              "entailment": 0.0055,
+              "contradiction": 0.983,
+              "neutral": 0.0115
+            },
+            {
+              "passage": "Milhouse Mussolini van Houten is a fictional character featured in the animated television series \"The Simpsons\", voiced by Pamela Hayden, and created by Matt Groening who named the character after President Richard Nixon's middle name",
+              "nli_label": "neutral",
+              "entailment": 0.0071,
+              "contradiction": 0.0039,
+              "neutral": 0.989
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Allison Beth \"Allie\" Goertz (born March 2, 1991) is an American musician",
+      "latency_ms": 344.33
+    },
+    {
+      "example_id": "halueval_qa_3",
+      "task": "qa",
+      "query": " What nationality was James Henry Miller's wife?",
+      "response": "American",
+      "context": "Margaret \"Peggy\" Seeger (born June 17, 1935) is an American folksinger. She is also well known in Britain, where she has lived for more than 30 years, and was married to the singer and songwriter Ewan MacColl until his death in 1989.James Henry Mille...",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": false,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "What nationality was James Henry Miller's wife: The answer is American.",
+          "verdict": "Contradicted",
+          "confidence": 0.9992,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Margaret \"Peggy\" Seeger (born June 17, 1935) is an American folksinger",
+              "nli_label": "neutral",
+              "entailment": 0.0011,
+              "contradiction": 0.0274,
+              "neutral": 0.9715
+            },
+            {
+              "passage": "She is also well known in Britain, where she has lived for more than 30 years, and was married to the singer and songwriter Ewan MacColl until his death in 1989",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9992,
+              "neutral": 0.0007
+            },
+            {
+              "passage": "James Henry Miller (25 January 1915 – 22 October 1989), better known by his stage name Ewan MacColl, was an English folk singer, songwriter, communist, labour activist, actor, poet, playwright and record producer",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.169,
+              "neutral": 0.8308
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Margaret \"Peggy\" Seeger (born June 17, 1935) is an American folksinger",
+      "latency_ms": 205.12
+    },
+    {
+      "example_id": "halueval_qa_4",
+      "task": "qa",
+      "query": "Cadmium Chloride is slightly soluble in this chemical, it is also called what?",
+      "response": "water with a hint of alcohol",
+      "context": " It is a hygroscopic solid that is highly soluble in water and slightly soluble in alcohol.Ethanol, also called alcohol, ethyl alcohol, and drinking alcohol, is a compound and simple alcohol with the chemical formula C2H5OH ....",
+      "context_type": "knowledge",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": true,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 0,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "water with a hint of alcohol",
+          "verdict": "Conflicting Evidence",
+          "confidence": 0.9868,
+          "inference_reason": "CONFLICTING_SOURCES",
+          "evidence": [
+            {
+              "passage": "It is a hygroscopic solid that is highly soluble in water and slightly soluble in alcohol",
+              "nli_label": "entailment",
+              "entailment": 0.9787,
+              "contradiction": 0.0003,
+              "neutral": 0.0209
+            },
+            {
+              "passage": "Ethanol, also called alcohol, ethyl alcohol, and drinking alcohol, is a compound and simple alcohol with the chemical formula C2H5OH",
+              "nli_label": "contradiction",
+              "entailment": 0.0004,
+              "contradiction": 0.9948,
+              "neutral": 0.0048
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "It is a hygroscopic solid that is highly soluble in water and slightly soluble in alcohol",
+      "latency_ms": 130.88
+    },
+    {
+      "example_id": "halueval_qa_5",
+      "task": "qa",
+      "query": "Which tennis player won more Grand Slam titles, Henri Leconte or Jonathan Stark?",
+      "response": "Henri Leconte won more Grand Slam titles.",
+      "context": "Jonathan Stark (born April 3, 1971) is a former professional tennis player from the United States. During his career he won two Grand Slam doubles titles (the 1994 French Open Men's Doubles and the 1995 Wimbledon Championships Mixed Doubles). He reac...",
+      "context_type": "knowledge",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": true,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 0,
+      "insufficient_claims": 1,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Henri Leconte won more Grand Slam titles.",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9983,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "Jonathan Stark (born April 3, 1971) is a former professional tennis player from the United States",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0194,
+              "neutral": 0.9804
+            },
+            {
+              "passage": "During his career he won two Grand Slam doubles titles (the 1994 French Open Men's Doubles and the 1995 Wimbledon Championships Mixed Doubles)",
+              "nli_label": "neutral",
+              "entailment": 0.0004,
+              "contradiction": 0.0013,
+              "neutral": 0.9983
+            },
+            {
+              "passage": "He reached the men's singles final at the French Open in 1988, won the French Open men's doubles title in 1984, and helped France win the Davis Cup in 1991",
+              "nli_label": "neutral",
+              "entailment": 0.0013,
+              "contradiction": 0.0035,
+              "neutral": 0.9951
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Jonathan Stark (born April 3, 1971) is a former professional tennis player from the United States",
+      "latency_ms": 179.44
+    },
+    {
+      "example_id": "halueval_qa_6",
+      "task": "qa",
+      "query": "Which genus of moth in the world's seventh-largest country contains only one species?",
+      "response": "The Indogrammodes genus of moths found in India has only one species.",
+      "context": "Indogrammodes is a genus of moths of the Crambidae family. It contains only one species, Indogrammodes pectinicornalis, which is found in India.India, officially the Republic of India (\"Bhārat Gaṇarājya\"), is a country in South Asia. It is the sevent...",
+      "context_type": "knowledge",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": false,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "The Indogrammodes genus of moths found in India has only one species.",
+          "verdict": "Contradicted",
+          "confidence": 0.9943,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Indogrammodes is a genus of moths of the Crambidae family",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0031,
+              "neutral": 0.9968
+            },
+            {
+              "passage": "It contains only one species, Indogrammodes pectinicornalis, which is found in India",
+              "nli_label": "neutral",
+              "entailment": 0.003,
+              "contradiction": 0.0002,
+              "neutral": 0.9968
+            },
+            {
+              "passage": "India, officially the Republic of India (\"Bhārat Gaṇarājya\"), is a country in South Asia",
+              "nli_label": "neutral",
+              "entailment": 0.0006,
+              "contradiction": 0.1171,
+              "neutral": 0.8823
+            },
+            {
+              "passage": "It is the seventh-largest country by area, the second-most populous country (with over 1",
+              "nli_label": "contradiction",
+              "entailment": 0.0002,
+              "contradiction": 0.9905,
+              "neutral": 0.0093
+            },
+            {
+              "passage": "2 billion people), and the most populous democracy in the world",
+              "nli_label": "contradiction",
+              "entailment": 0.0002,
+              "contradiction": 0.9943,
+              "neutral": 0.0055
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Indogrammodes is a genus of moths of the Crambidae family",
+      "latency_ms": 233.27
+    },
+    {
+      "example_id": "halueval_qa_7",
+      "task": "qa",
+      "query": "Who was once considered the best kick boxer in the world, however he has been involved in a number of controversies relating to his \"unsportsmanlike conducts\" in the sport and crimes of violence outside of the ring.",
+      "response": "Badr Hari",
+      "context": " Fighters from around world on the roster include Badr Hari, Peter Aerts, Peter Graham, Dewey Cooper, Zabit Samedov. It was considered as one of the biggest kickboxing and MMA promotion in Middle East.Badr Hari (Arabic: بدر هاري‎ ‎ ; born 8 December ...",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": true,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 0,
+      "insufficient_claims": 1,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Who was once considered the best kick boxer in the world, however he has been involved in a number of controversies relating to his \"unsportsmanlike conducts\" in the sport and crimes of violence outside of the ring.: The answer is Badr Hari.",
+          "verdict": "Insufficient Evidence",
+          "confidence": null,
+          "inference_reason": "NON_VERIFIABLE_CLAIM",
+          "evidence": [
+            {
+              "passage": "Fighters from around world on the roster include Badr Hari, Peter Aerts, Peter Graham, Dewey Cooper, Zabit Samedov",
+              "nli_label": "neutral",
+              "entailment": 0.0004,
+              "contradiction": 0.0013,
+              "neutral": 0.9983
+            },
+            {
+              "passage": "It was considered as one of the biggest kickboxing and MMA promotion in Middle East",
+              "nli_label": "neutral",
+              "entailment": 0.0004,
+              "contradiction": 0.002,
+              "neutral": 0.9976
+            },
+            {
+              "passage": "Badr Hari (Arabic: بدر هاري‎ ‎ ; born 8 December 1984) is a Moroccan-Dutch super heavyweight kickboxer from Amsterdam, fighting out of Mike's Gym in Oostzaan",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0009,
+              "neutral": 0.9989
+            },
+            {
+              "passage": "Hari has been a prominent figure in the world of kickboxing and was once considered the best kickboxer in the world, however he has been involved in a number of controversies relating to his \"unsportsmanlike conducts\" in the sport and crimes of violence outside of the ring",
+              "nli_label": "neutral",
+              "entailment": 0.3747,
+              "contradiction": 0.0244,
+              "neutral": 0.6009
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Fighters from around world on the roster include Badr Hari, Peter Aerts, Peter Graham, Dewey Cooper, Zabit Samedov",
+      "latency_ms": 363.68
+    },
+    {
+      "example_id": "halueval_qa_8",
+      "task": "qa",
+      "query": "The Dutch-Belgian television series that \"House of Anubis\" was based on first aired in what year?",
+      "response": "2006",
+      "context": "House of Anubis is a mystery television series developed for Nickelodeon based on the Dutch-Belgian television series \"Het Huis Anubis\". It first aired in September 2006 and the last episode was broadcast on December 4, 2009....",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": true,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 0,
+      "insufficient_claims": 1,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "The Dutch-Belgian television series that \"House of Anubis\" was based on first aired in what year: The answer is 2006.",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9975,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "House of Anubis is a mystery television series developed for Nickelodeon based on the Dutch-Belgian television series \"Het Huis Anubis\"",
+              "nli_label": "neutral",
+              "entailment": 0.0008,
+              "contradiction": 0.0017,
+              "neutral": 0.9975
+            },
+            {
+              "passage": "It first aired in September 2006 and the last episode was broadcast on December 4, 2009",
+              "nli_label": "neutral",
+              "entailment": 0.002,
+              "contradiction": 0.0135,
+              "neutral": 0.9845
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "House of Anubis is a mystery television series developed for Nickelodeon based on the Dutch-Belgian television series \"Het Huis Anubis\"",
+      "latency_ms": 162.65
+    },
+    {
+      "example_id": "halueval_qa_9",
+      "task": "qa",
+      "query": "What is the length of the track where the 2013 Liqui Moly Bathurst 12 Hour was staged?",
+      "response": "6.213 km long",
+      "context": "The 2013 Liqui Moly Bathurst 12 Hour was an endurance race for a variety of GT and touring car classes, including: GT3 cars, GT4 cars, Group 3E Series Production Cars and Dubai 24 Hour cars. The event, which was staged at the Mount Panorama Circuit, ...",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": false,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "What is the length of the track where the 2013 Liqui Moly Bathurst 12 Hour was staged: The answer is 6.213 km long.",
+          "verdict": "Contradicted",
+          "confidence": 0.9244,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "The 2013 Liqui Moly Bathurst 12 Hour was an endurance race for a variety of GT and touring car classes, including: GT3 cars, GT4 cars, Group 3E Series Production Cars and Dubai 24 Hour cars",
+              "nli_label": "neutral",
+              "entailment": 0.002,
+              "contradiction": 0.0145,
+              "neutral": 0.9835
+            },
+            {
+              "passage": "The event, which was staged at the Mount Panorama Circuit, near Bathurst, in New South Wales, Australia on 10 February 2013, was the eleventh running of the Bathurst 12 Hour",
+              "nli_label": "neutral",
+              "entailment": 0.001,
+              "contradiction": 0.0136,
+              "neutral": 0.9854
+            },
+            {
+              "passage": "Mount Panorama Circuit is a motor racing track located in Bathurst, New South Wales, Australia",
+              "nli_label": "neutral",
+              "entailment": 0.0043,
+              "contradiction": 0.0075,
+              "neutral": 0.9882
+            },
+            {
+              "passage": "213 km long track is technically a street circuit, and is a public road, with normal speed restrictions, when no racing events are being run, and there are many residences which can only be accessed from the circuit",
+              "nli_label": "contradiction",
+              "entailment": 0.0003,
+              "contradiction": 0.9244,
+              "neutral": 0.0753
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "The 2013 Liqui Moly Bathurst 12 Hour was an endurance race for a variety of GT and touring car classes, including: GT3 cars, GT4 cars, Group 3E Series Production Cars and Dubai 24 Hour cars",
+      "latency_ms": 272.97
+    },
+    {
+      "example_id": "halueval_qa_10",
+      "task": "qa",
+      "query": "Fast Cars, Danger, Fire and Knives includes guest appearances from which hip hop record executive?",
+      "response": "Jaime Meline",
+      "context": " Vocals are handled by Aesop Rock, with guest appearances from Camu Tao and Metro of S.A. Smash and Definitive Jux label head El-P.Jaime Meline (born March 2, 1975), better known by his stage name El-P (shortened from El Producto), is an American hip...",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": false,
+      "total_claims": 2,
+      "supported_claims": 0,
+      "contradicted_claims": 2,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Fast Cars, Danger, Fire",
+          "verdict": "Contradicted",
+          "confidence": 0.999,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Vocals are handled by Aesop Rock, with guest appearances from Camu Tao and Metro of S",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.998,
+              "neutral": 0.0019
+            },
+            {
+              "passage": "Smash and Definitive Jux label head El-P",
+              "nli_label": "contradiction",
+              "entailment": 0.0004,
+              "contradiction": 0.999,
+              "neutral": 0.0006
+            },
+            {
+              "passage": "Jaime Meline (born March 2, 1975), better known by his stage name El-P (shortened from El Producto), is an American hip hop recording artist, record producer, and record executive",
+              "nli_label": "contradiction",
+              "entailment": 0.0004,
+              "contradiction": 0.9941,
+              "neutral": 0.0056
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_002",
+          "normalized_claim": "Knives includes guest appearances from which hip hop record executive: The answer is Jaime Meline.",
+          "verdict": "Contradicted",
+          "confidence": 0.9984,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Vocals are handled by Aesop Rock, with guest appearances from Camu Tao and Metro of S",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9984,
+              "neutral": 0.0015
+            },
+            {
+              "passage": "Smash and Definitive Jux label head El-P",
+              "nli_label": "contradiction",
+              "entailment": 0.0108,
+              "contradiction": 0.9802,
+              "neutral": 0.009
+            },
+            {
+              "passage": "Jaime Meline (born March 2, 1975), better known by his stage name El-P (shortened from El Producto), is an American hip hop recording artist, record producer, and record executive",
+              "nli_label": "neutral",
+              "entailment": 0.0251,
+              "contradiction": 0.0514,
+              "neutral": 0.9235
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Vocals are handled by Aesop Rock, with guest appearances from Camu Tao and Metro of S",
+      "latency_ms": 387.63
+    },
+    {
+      "example_id": "halueval_qa_11",
+      "task": "qa",
+      "query": "Gunmen from Laredo starred which narrator of \"Frontier\"?",
+      "response": "Although Walter Darwin Coy was part of the cast, the narrator of \"Frontier\" was actually Richard Boone.",
+      "context": "Gunmen from Laredo is a 1959 American western film produced and directed by Wallace MacDonald, which stars Robert Knapp, Maureen Hingert, and Walter Coy.Walter Darwin Coy (January 31, 1909 – December 11, 1974) was an American stage, radio, film, and,...",
+      "context_type": "knowledge",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": false,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Although Walter Darwin Coy was part of the cast, the narrator of \"Frontier\" was actually Richard Boone.",
+          "verdict": "Contradicted",
+          "confidence": 0.9932,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Gunmen from Laredo is a 1959 American western film produced and directed by Wallace MacDonald, which stars Robert Knapp, Maureen Hingert, and Walter Coy",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9932,
+              "neutral": 0.0067
+            },
+            {
+              "passage": "Walter Darwin Coy (January 31, 1909 – December 11, 1974) was an American stage, radio, film, and, principally, television actor, originally from Great Falls, Montana",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0236,
+              "neutral": 0.9763
+            },
+            {
+              "passage": "He was best known for narrating the NBC western anthology series, \"Frontier\", which aired early Sunday evenings in the 1955–1956 season",
+              "nli_label": "neutral",
+              "entailment": 0.0004,
+              "contradiction": 0.2587,
+              "neutral": 0.7408
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Gunmen from Laredo is a 1959 American western film produced and directed by Wallace MacDonald, which stars Robert Knapp, Maureen Hingert, and Walter Coy",
+      "latency_ms": 202.66
+    },
+    {
+      "example_id": "halueval_qa_12",
+      "task": "qa",
+      "query": "Where did the form of music played by Die Rhöner Säuwäntzt originate?",
+      "response": "United States",
+      "context": "Die Rhöner Säuwäntzt are a Skiffle-Bluesband from Eichenzell-Lütter in Hessen, Germany. Originating as a term in the United States in the first half of the 20th century, it became popular again in the UK in the 1950s, where it was associated with art...",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": false,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Where did the form of music played by Die Rhöner Säuwäntzt originate: The answer is United States.",
+          "verdict": "Contradicted",
+          "confidence": 0.9994,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Die Rhöner Säuwäntzt are a Skiffle-Bluesband from Eichenzell-Lütter in Hessen, Germany",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9994,
+              "neutral": 0.0005
+            },
+            {
+              "passage": "Originating as a term in the United States in the first half of the 20th century, it became popular again in the UK in the 1950s, where it was associated with artists such as Lonnie Donegan, The Vipers Skiffle Group, Ken Colyer and Chas McDevitt",
+              "nli_label": "neutral",
+              "entailment": 0.0645,
+              "contradiction": 0.073,
+              "neutral": 0.8626
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Die Rhöner Säuwäntzt are a Skiffle-Bluesband from Eichenzell-Lütter in Hessen, Germany",
+      "latency_ms": 249.12
+    },
+    {
+      "example_id": "halueval_qa_13",
+      "task": "qa",
+      "query": "In which American football game was Malcolm Smith named Most Valuable player?",
+      "response": "Super Bowl XLVIII",
+      "context": " Smith was named the Most Valuable Player of Super Bowl XLVIII after they defeated the Denver Broncos.Super Bowl XLVIII was an American football game between the American Football Conference (AFC) champion Denver Broncos and National Football Confere...",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": true,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 0,
+      "insufficient_claims": 1,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "In which American football game was Malcolm Smith named Most Valuable player: The answer is Super Bowl XLVIII.",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9961,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "Smith was named the Most Valuable Player of Super Bowl XLVIII after they defeated the Denver Broncos",
+              "nli_label": "neutral",
+              "entailment": 0.0596,
+              "contradiction": 0.0021,
+              "neutral": 0.9383
+            },
+            {
+              "passage": "Super Bowl XLVIII was an American football game between the American Football Conference (AFC) champion Denver Broncos and National Football Conference (NFC) champion Seattle Seahawks to decide the National Football League (NFL) champion for the 2013 season",
+              "nli_label": "neutral",
+              "entailment": 0.0003,
+              "contradiction": 0.0036,
+              "neutral": 0.9961
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Smith was named the Most Valuable Player of Super Bowl XLVIII after they defeated the Denver Broncos",
+      "latency_ms": 179.34
+    },
+    {
+      "example_id": "halueval_qa_14",
+      "task": "qa",
+      "query": "What U.S Highway gives access to Zilpo Road, and is also known as Midland Trail?",
+      "response": "It's actually Zilpo Road that is known as Midland Trail, not US 60.",
+      "context": " The nine mile byway starts south of Morehead, Kentucky and can be accessed by U.S. Highway 60.Morehead is a home rule-class city located along US 60 (the historic Midland Trail) and Interstate 64 in Rowan County, Kentucky, in the United States....",
+      "context_type": "knowledge",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": false,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "It's actually Zilpo Road that is known as Midland Trail, not US 60.",
+          "verdict": "Contradicted",
+          "confidence": 0.9996,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "The nine mile byway starts south of Morehead, Kentucky and can be accessed by U",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9894,
+              "neutral": 0.0104
+            },
+            {
+              "passage": "Highway 60",
+              "nli_label": "contradiction",
+              "entailment": 0.0004,
+              "contradiction": 0.992,
+              "neutral": 0.0076
+            },
+            {
+              "passage": "Morehead is a home rule-class city located along US 60 (the historic Midland Trail) and Interstate 64 in Rowan County, Kentucky, in the United States",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9996,
+              "neutral": 0.0003
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "The nine mile byway starts south of Morehead, Kentucky and can be accessed by U",
+      "latency_ms": 190.5
+    },
+    {
+      "example_id": "halueval_qa_15",
+      "task": "qa",
+      "query": "The 1988 American comedy film, The Great Outdoors, starred a four-time Academy Award nominee, who received a star on the Hollywood Walk of Fame in what year?",
+      "response": "Annette Bening received her Hollywood star in 1988.",
+      "context": "The Great Outdoors is a 1988 American comedy film directed by Howard Deutch, and written and produced by John Hughes. It stars Dan Aykroyd, John Candy, Stephanie Faracy and Annette Bening in her film debut.Annette Carol Bening (born May 29, 1958) is ...",
+      "context_type": "knowledge",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": false,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Annette Bening received her Hollywood star in 1988.",
+          "verdict": "Contradicted",
+          "confidence": 0.9995,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "The Great Outdoors is a 1988 American comedy film directed by Howard Deutch, and written and produced by John Hughes",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9995,
+              "neutral": 0.0004
+            },
+            {
+              "passage": "It stars Dan Aykroyd, John Candy, Stephanie Faracy and Annette Bening in her film debut",
+              "nli_label": "neutral",
+              "entailment": 0.0017,
+              "contradiction": 0.0189,
+              "neutral": 0.9794
+            },
+            {
+              "passage": "Annette Carol Bening (born May 29, 1958) is an American actress",
+              "nli_label": "neutral",
+              "entailment": 0.0057,
+              "contradiction": 0.0376,
+              "neutral": 0.9567
+            },
+            {
+              "passage": "She is a four-time Academy Award nominee; for \"The Grifters\" (1990), \"American Beauty\" (1999), \"Being Julia\" (2004) and \"The Kids Are All Right\" (2010)",
+              "nli_label": "contradiction",
+              "entailment": 0.0066,
+              "contradiction": 0.9487,
+              "neutral": 0.0447
+            },
+            {
+              "passage": "In 2006, she received a star on the Hollywood Walk of Fame",
+              "nli_label": "contradiction",
+              "entailment": 0.0004,
+              "contradiction": 0.9902,
+              "neutral": 0.0094
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "The Great Outdoors is a 1988 American comedy film directed by Howard Deutch, and written and produced by John Hughes",
+      "latency_ms": 279.53
+    },
+    {
+      "example_id": "halueval_qa_16",
+      "task": "qa",
+      "query": "What are the names of the current members of  American heavy metal band who wrote the music for  Hurt Locker The Musical? ",
+      "response": "Hetfield and Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo.",
+      "context": " The Playbills, which describe the musical as having \"explosions, negligible storytelling, camouflage and tits\", also state that the musical's cast included actors such as Taye Diggs (who would go on to play the role of Hedwig in the summer of 2015) ...",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": true,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 0,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo.",
+          "verdict": "Conflicting Evidence",
+          "confidence": 0.9828,
+          "inference_reason": "CONFLICTING_SOURCES",
+          "evidence": [
+            {
+              "passage": "The Playbills, which describe the musical as having \"explosions, negligible storytelling, camouflage and tits\", also state that the musical's cast included actors such as Taye Diggs (who would go on to play the role of Hedwig in the summer of 2015) and that the music was written by Metallica and Stephen R",
+              "nli_label": "neutral",
+              "entailment": 0.0019,
+              "contradiction": 0.1801,
+              "neutral": 0.818
+            },
+            {
+              "passage": "Schwartz, which is the real name of \"Hedwig\" songwriter Stephen Trask",
+              "nli_label": "contradiction",
+              "entailment": 0.0003,
+              "contradiction": 0.9803,
+              "neutral": 0.0193
+            },
+            {
+              "passage": "Metallica's current lineup comprises founding members Hetfield and Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo",
+              "nli_label": "entailment",
+              "entailment": 0.9852,
+              "contradiction": 0.0044,
+              "neutral": 0.0104
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "The Playbills, which describe the musical as having \"explosions, negligible storytelling, camouflage and tits\", also state that the musical's cast included actors such as Taye Diggs (who would go on to play the role of Hedwig in the summer of 2015) and that the music was written by Metallica and Stephen R",
+      "latency_ms": 232.69
+    },
+    {
+      "example_id": "halueval_qa_17",
+      "task": "qa",
+      "query": "Human Error\" is the season finale of the third season of a tv show that aired on what network?",
+      "response": "\"Human Error\" was actually the season finale of the fourth season of \"House\" and aired on NBC.",
+      "context": "\"Human Error\" is the twenty-fourth episode and season finale of the third season of \"House\" and the seventieth episode overall.House (also called House, M.D.) is an American television medical drama that originally ran on the Fox network for eight se...",
+      "context_type": "knowledge",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": false,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "\"Human Error\" was actually the season finale of the fourth season of \"House\" and aired on NBC.",
+          "verdict": "Contradicted",
+          "confidence": 0.9906,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "\"Human Error\" is the twenty-fourth episode and season finale of the third season of \"House\" and the seventieth episode overall",
+              "nli_label": "neutral",
+              "entailment": 0.0011,
+              "contradiction": 0.0344,
+              "neutral": 0.9645
+            },
+            {
+              "passage": "House (also called House, M",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.001,
+              "neutral": 0.9988
+            },
+            {
+              "passage": ") is an American television medical drama that originally ran on the Fox network for eight seasons, from November 16, 2004 to May 21, 2012",
+              "nli_label": "contradiction",
+              "entailment": 0.0,
+              "contradiction": 0.9906,
+              "neutral": 0.0094
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "\"Human Error\" is the twenty-fourth episode and season finale of the third season of \"House\" and the seventieth episode overall",
+      "latency_ms": 186.04
+    },
+    {
+      "example_id": "halueval_qa_18",
+      "task": "qa",
+      "query": "Dua Lipa, an English singer, songwriter and model, the album spawned the number-one single \"New Rules\" is a song by English singer Dua Lipa from her eponymous debut studio album, released in what year?",
+      "response": "The album was released in 2018.",
+      "context": " Her self-titled debut studio album was released on 2 June 2017.\"New Rules\" is a song by English singer Dua Lipa from her eponymous debut studio album (2017)....",
+      "context_type": "knowledge",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": false,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "The album was released in 2018.",
+          "verdict": "Contradicted",
+          "confidence": 0.9994,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Her self-titled debut studio album was released on 2 June 2017",
+              "nli_label": "contradiction",
+              "entailment": 0.0002,
+              "contradiction": 0.9994,
+              "neutral": 0.0004
+            },
+            {
+              "passage": "\"New Rules\" is a song by English singer Dua Lipa from her eponymous debut studio album (2017)",
+              "nli_label": "contradiction",
+              "entailment": 0.0002,
+              "contradiction": 0.999,
+              "neutral": 0.0009
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Her self-titled debut studio album was released on 2 June 2017",
+      "latency_ms": 129.5
+    },
+    {
+      "example_id": "halueval_qa_19",
+      "task": "qa",
+      "query": "American politician Joe Heck ran unsuccessfully against Democrat Catherine Cortez Masto, a woman who previously served as the 32nd Attorney General of where?",
+      "response": "Nevada",
+      "context": "Joseph John “Joe” Heck (born October 30, 1961) is an American politician, physician, and U.S. Army Brigadier General who had served as the U.S. Representative for Nevada's 3rd congressional district from 2011 to 2017. He ran unsuccessfully against De...",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": false,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "American politician Joe Heck ran unsuccessfully against Democrat Catherine Cortez Masto, a woman who previously served as the 32nd Attorney General of where: The answer is Nevada.",
+          "verdict": "Contradicted",
+          "confidence": 0.7859,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Joseph John “Joe” Heck (born October 30, 1961) is an American politician, physician, and U",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0113,
+              "neutral": 0.9885
+            },
+            {
+              "passage": "Army Brigadier General who had served as the U",
+              "nli_label": "contradiction",
+              "entailment": 0.0204,
+              "contradiction": 0.7859,
+              "neutral": 0.1938
+            },
+            {
+              "passage": "Representative for Nevada's 3rd congressional district from 2011 to 2017",
+              "nli_label": "neutral",
+              "entailment": 0.0053,
+              "contradiction": 0.0391,
+              "neutral": 0.9557
+            },
+            {
+              "passage": "He ran unsuccessfully against Democrat Catherine Cortez Masto in the general election for the open Nevada United States Senate seat in 2016",
+              "nli_label": "neutral",
+              "entailment": 0.0018,
+              "contradiction": 0.0008,
+              "neutral": 0.9974
+            },
+            {
+              "passage": "She previously served as the 32nd Attorney General of Nevada from 2007 to 2015",
+              "nli_label": "neutral",
+              "entailment": 0.0021,
+              "contradiction": 0.0096,
+              "neutral": 0.9883
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Joseph John “Joe” Heck (born October 30, 1961) is an American politician, physician, and U",
+      "latency_ms": 330.8
+    }
+  ]
+}

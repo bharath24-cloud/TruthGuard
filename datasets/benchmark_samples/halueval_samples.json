@@ -1,0 +1,32 @@
+[
+  {
+    "id": "halu_001",
+    "claim": "Python was conceived in the late 1980s by Guido van Rossum.",
+    "evidence": "Python was conceived in the late 1980s by Guido van Rossum at Centrum Wiskunde & Informatica (CWI) in the Netherlands.",
+    "label": "faithful"
+  },
+  {
+    "id": "halu_002",
+    "claim": "Python was created by James Gosling at Sun Microsystems in 1995.",
+    "evidence": "Java was developed by James Gosling at Sun Microsystems and released in 1995, while Python was created by Guido van Rossum.",
+    "label": "hallucinated"
+  },
+  {
+    "id": "halu_003",
+    "claim": "The Eiffel Tower was completed in 1889 for the World's Fair in Paris.",
+    "evidence": "Constructed from 1887 to 1889, the Eiffel Tower was built as the centerpiece of the 1889 World's Fair in Paris, France.",
+    "label": "faithful"
+  },
+  {
+    "id": "halu_004",
+    "claim": "The Eiffel Tower is located in Berlin, Germany.",
+    "evidence": "The Eiffel Tower is a wrought-iron lattice tower located on the Champ de Mars in Paris, France.",
+    "label": "hallucinated"
+  },
+  {
+    "id": "halu_005",
+    "claim": "DNA has a double helix structure discovered by Watson and Crick.",
+    "evidence": "In 1953, James Watson and Francis Crick published the double-helix structure of the DNA molecule.",
+    "label": "faithful"
+  }
+]

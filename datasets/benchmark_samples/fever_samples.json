@@ -1,0 +1,62 @@
+[
+  {
+    "id": "fever_001",
+    "claim": "Roman Atwood is a content creator.",
+    "evidence": "Roman Bernard Atwood (born May 28, 1983) is an American YouTube personality and content creator.",
+    "label": "SUPPORTS"
+  },
+  {
+    "id": "fever_002",
+    "claim": "The Great Wall of China is visible from the Moon with the naked eye.",
+    "evidence": "The Great Wall of China cannot be seen from the Moon with the naked human eye without optical magnification.",
+    "label": "REFUTES"
+  },
+  {
+    "id": "fever_003",
+    "claim": "Murda Beatz has produced hit records.",
+    "evidence": "Murda Beatz is a Canadian record producer who produced hit songs for Travis Scott and Drake.",
+    "label": "SUPPORTS"
+  },
+  {
+    "id": "fever_004",
+    "claim": "Albert Einstein won the Nobel Prize in Literature in 1921.",
+    "evidence": "Albert Einstein was awarded the 1921 Nobel Prize in Physics for his explanation of the photoelectric effect.",
+    "label": "REFUTES"
+  },
+  {
+    "id": "fever_005",
+    "claim": "Nikola Tesla was born in Croatia in 1856.",
+    "evidence": "Nikola Tesla was an inventor born on 10 July 1856 in Smiljan, in the Austrian Empire (modern-day Croatia).",
+    "label": "SUPPORTS"
+  },
+  {
+    "id": "fever_006",
+    "claim": "The solar system contains twenty planets.",
+    "evidence": "There are eight recognized planets in the Solar System: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.",
+    "label": "REFUTES"
+  },
+  {
+    "id": "fever_007",
+    "claim": "Ada Lovelace worked on Charles Babbage's Analytical Engine.",
+    "evidence": "Ada Lovelace is chiefly known for her work on Charles Babbage's mechanical general-purpose computer, the Analytical Engine.",
+    "label": "SUPPORTS"
+  },
+  {
+    "id": "fever_008",
+    "claim": "Shakira was born in Buenos Aires, Argentina.",
+    "evidence": "Shakira Isabel Mebarak Ripoll was born on 2 February 1977 in Barranquilla, Colombia.",
+    "label": "REFUTES"
+  },
+  {
+    "id": "fever_009",
+    "claim": "The speed of light in vacuum is approximately 300,000 kilometers per second.",
+    "evidence": "The speed of light in vacuum is exactly 299,792,458 metres per second (approximately 300,000 km/s).",
+    "label": "SUPPORTS"
+  },
+  {
+    "id": "fever_010",
+    "claim": "Alexander Fleming discovered penicillin in 1928.",
+    "evidence": "In 1928, Scottish physician and microbiologist Alexander Fleming discovered penicillin at St Mary's Hospital in London.",
+    "label": "SUPPORTS"
+  }
+]

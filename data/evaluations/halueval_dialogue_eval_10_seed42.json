@@ -1,0 +1,712 @@
+{
+  "benchmark_name": "HaluEval",
+  "task": "dialogue",
+  "evaluated_samples": 10,
+  "total_requested": 10,
+  "seed": 42,
+  "evidence_source": "context",
+  "metrics": {
+    "total_evaluated": 10,
+    "accuracy": 0.4,
+    "precision": 0.2,
+    "recall": 0.5,
+    "macro_f1": 0.2857,
+    "weighted_f1": 0.2286,
+    "confusion_matrix": {
+      "hallucinated": {
+        "hallucinated": 4,
+        "faithful": 0
+      },
+      "faithful": {
+        "hallucinated": 6,
+        "faithful": 0
+      }
+    },
+    "per_class": {
+      "hallucinated": {
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1": 0.5714,
+        "support": 4
+      },
+      "faithful": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      }
+    },
+    "abstention_count": 3,
+    "abstention_rate": 0.3,
+    "avg_latency_ms": 1102.33
+  },
+  "dataset_report": {
+    "task": "dialogue",
+    "file": "C:\\Users\\sesha\\OneDrive\\Desktop\\TRUTHGUARD\\HaluEval-main\\data\\dialogue_data.json",
+    "total_raw_processed": 10,
+    "valid_examples_extracted": 10,
+    "skipped_records": 0,
+    "skip_reasons": {},
+    "label_distribution": {
+      "hallucinated": 4,
+      "faithful": 6
+    },
+    "sampling_strategy": "balanced_sampled",
+    "seed": 42
+  },
+  "total_duration_seconds": 11.07,
+  "predictions": [
+    {
+      "id": "halueval_dial_0",
+      "example_id": "halueval_dial_0",
+      "task": "dialogue",
+      "query": "[Human]: Do you like Iron Man [Assistant]: Sure do! Robert Downey Jr. is a favorite. [Human]: Yes i like him too did you know he also was in Zodiac a crime fiction film. ",
+      "claim_or_question": "[Human]: Do you like Iron Man [Assistant]: Sure do! Robert Downey Jr. is a favorite. [Human]: Yes i like him too did you know he also was in Zodiac a crime fiction film. ",
+      "response": "I'm not a fan of crime movies, but I did know that RDJ starred in Zodiac with Tom Hanks.",
+      "context": "Iron Man is starring Robert Downey Jr.Robert Downey Jr. starred in Zodiac (Crime Fiction Film)Zodiac (Crime Fiction Film) is starring Jake Gyllenhaal...",
+      "context_type": "knowledge",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": false,
+      "abstention": false,
+      "hallucination_score": 1.0,
+      "hallucination_detected": true,
+      "total_claims": 2,
+      "num_claims": 2,
+      "supported_claims": 0,
+      "contradicted_claims": 2,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "I'm not a fan of crime movies,",
+          "verdict": "Contradicted",
+          "confidence": 0.9837,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Iron Man is starring Robert Downey Jr",
+              "nli_label": "contradiction",
+              "entailment": 0.0003,
+              "contradiction": 0.9837,
+              "neutral": 0.016
+            },
+            {
+              "passage": "Robert Downey Jr",
+              "nli_label": "contradiction",
+              "entailment": 0.0006,
+              "contradiction": 0.8376,
+              "neutral": 0.1618
+            },
+            {
+              "passage": "starred in Zodiac (Crime Fiction Film)Zodiac (Crime Fiction Film) is starring Jake Gyllenhaal",
+              "nli_label": "contradiction",
+              "entailment": 0.0003,
+              "contradiction": 0.9294,
+              "neutral": 0.0703
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_002",
+          "normalized_claim": "I did know that RDJ starred in Zodiac with Tom Hanks.",
+          "verdict": "Contradicted",
+          "confidence": 0.9992,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Iron Man is starring Robert Downey Jr",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9992,
+              "neutral": 0.0008
+            },
+            {
+              "passage": "Robert Downey Jr",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9947,
+              "neutral": 0.0051
+            },
+            {
+              "passage": "starred in Zodiac (Crime Fiction Film)Zodiac (Crime Fiction Film) is starring Jake Gyllenhaal",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9976,
+              "neutral": 0.0024
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Iron Man is starring Robert Downey Jr",
+      "evidence_text": "Iron Man is starring Robert Downey Jr",
+      "explanation": "0/2 claims supported, 2 contradicted. Contradiction found against reference context.",
+      "latency_ms": 8644.84
+    },
+    {
+      "id": "halueval_dial_1",
+      "example_id": "halueval_dial_1",
+      "task": "dialogue",
+      "query": "[Human]: Could you recommend any books like The Secret Life of Bees? [Assistant]: Yes, its a great teen book, have you heard about A walk to remember ? It is also a great teen drama [Human]: I think I have.. is that one with Hunt Lowry? ",
+      "claim_or_question": "[Human]: Could you recommend any books like The Secret Life of Bees? [Assistant]: Yes, its a great teen book, have you heard about A walk to remember ? It is also a great teen drama [Human]: I think I have.. is that one with Hunt Lowry? ",
+      "response": "yes and he also produced White Oleander and it was released in 1999",
+      "context": "The Secret Life of Bees has genre Teen drama. Teen drama has examples: A Walk to RememberA Walk to Remember is produced by Hunt LowryHunt Lowry produced A Walk to Remember. A Walk to Remember is a/an Film...",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": true,
+      "abstention": true,
+      "hallucination_score": 0.5,
+      "hallucination_detected": true,
+      "total_claims": 2,
+      "num_claims": 2,
+      "supported_claims": 0,
+      "contradicted_claims": 0,
+      "insufficient_claims": 2,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "he also produced White Oleander",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9986,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "The Secret Life of Bees has genre Teen drama",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0017,
+              "neutral": 0.9981
+            },
+            {
+              "passage": "Teen drama has examples: A Walk to RememberA Walk to Remember is produced by Hunt LowryHunt Lowry produced A Walk to Remember",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0013,
+              "neutral": 0.9986
+            },
+            {
+              "passage": "A Walk to Remember is a/an Film",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0019,
+              "neutral": 0.9979
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_002",
+          "normalized_claim": "it was released in 1999",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9995,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "The Secret Life of Bees has genre Teen drama",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0025,
+              "neutral": 0.9974
+            },
+            {
+              "passage": "Teen drama has examples: A Walk to RememberA Walk to Remember is produced by Hunt LowryHunt Lowry produced A Walk to Remember",
+              "nli_label": "neutral",
+              "entailment": 0.0002,
+              "contradiction": 0.0003,
+              "neutral": 0.9995
+            },
+            {
+              "passage": "A Walk to Remember is a/an Film",
+              "nli_label": "neutral",
+              "entailment": 0.0001,
+              "contradiction": 0.0003,
+              "neutral": 0.9995
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "The Secret Life of Bees has genre Teen drama",
+      "evidence_text": "The Secret Life of Bees has genre Teen drama",
+      "explanation": "0/2 claims supported, 0 contradicted",
+      "latency_ms": 364.39
+    },
+    {
+      "id": "halueval_dial_2",
+      "example_id": "halueval_dial_2",
+      "task": "dialogue",
+      "query": "[Human]: Do you like Michael Jackson? [Assistant]: I do he was very talented and an all around performer. He wrote Dancing on the Dream which is one of my favorites.  [Human]: Yes, he was very talented indeed. He also won Grammy of the Year, possibly more than once ",
+      "claim_or_question": "[Human]: Do you like Michael Jackson? [Assistant]: I do he was very talented and an all around performer. He wrote Dancing on the Dream which is one of my favorites.  [Human]: Yes, he was very talented indeed. He also won Grammy of the Year, possibly more than once ",
+      "response": "Yes, Healing the World is one of my favorite songs and the music video was very touching.",
+      "context": "Michael Jackson wrote Dancing the DreamDancing the Dream is written by Michael Jackson. Michael Jackson : `Award Won`: Grammy Award for Album of the YearMichael Jackson : `~Lyricist`: Heal the World...",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": false,
+      "abstention": false,
+      "hallucination_score": 1.0,
+      "hallucination_detected": true,
+      "total_claims": 1,
+      "num_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Yes, Healing the World is one of my favorite songs and the music video was very touching.",
+          "verdict": "Contradicted",
+          "confidence": 0.9736,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Michael Jackson wrote Dancing the DreamDancing the Dream is written by Michael Jackson",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9736,
+              "neutral": 0.0263
+            },
+            {
+              "passage": "Michael Jackson : `Award Won`: Grammy Award for Album of the YearMichael Jackson : `~Lyricist`: Heal the World",
+              "nli_label": "neutral",
+              "entailment": 0.0004,
+              "contradiction": 0.0005,
+              "neutral": 0.9992
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Michael Jackson wrote Dancing the DreamDancing the Dream is written by Michael Jackson",
+      "evidence_text": "Michael Jackson wrote Dancing the DreamDancing the Dream is written by Michael Jackson",
+      "explanation": "0/1 claims supported, 1 contradicted. Contradiction found against reference context.",
+      "latency_ms": 203.48
+    },
+    {
+      "id": "halueval_dial_3",
+      "example_id": "halueval_dial_3",
+      "task": "dialogue",
+      "query": "[Human]: Could you recommend books similar to Dead to the World? ",
+      "claim_or_question": "[Human]: Could you recommend books similar to Dead to the World? ",
+      "response": "Do you like this book because of it's author Charlaine Harris?",
+      "context": "Dead to the World is written by Charlaine Harris...",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": true,
+      "abstention": true,
+      "hallucination_score": 0.5,
+      "hallucination_detected": true,
+      "total_claims": 1,
+      "num_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 0,
+      "insufficient_claims": 1,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Do you like this book because of it's author Charlaine Harris?",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9959,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "Dead to the World is written by Charlaine Harris",
+              "nli_label": "neutral",
+              "entailment": 0.0022,
+              "contradiction": 0.002,
+              "neutral": 0.9959
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Dead to the World is written by Charlaine Harris",
+      "evidence_text": "Dead to the World is written by Charlaine Harris",
+      "explanation": "0/1 claims supported, 0 contradicted",
+      "latency_ms": 144.83
+    },
+    {
+      "id": "halueval_dial_4",
+      "example_id": "halueval_dial_4",
+      "task": "dialogue",
+      "query": "[Human]: Could you recommend a good movie with Ryan Reynolds? [Assistant]: Sure! He starred in X-Men Origins:Wolverine, and Turbo. The Proposal was a great movie too. [Human]: Who else was starring in Turbo, I think I saw there Snoop Dog? ",
+      "claim_or_question": "[Human]: Could you recommend a good movie with Ryan Reynolds? [Assistant]: Sure! He starred in X-Men Origins:Wolverine, and Turbo. The Proposal was a great movie too. [Human]: Who else was starring in Turbo, I think I saw there Snoop Dog? ",
+      "response": "Actually, Snoop Dog wasn't in Turbo. But you should check out Green Lantern, a great movie with Ryan Reynolds.",
+      "context": "Ryan Reynolds starred in TurboTurbo is starring Snoop DoggSnoop Dogg starred in Turbo...",
+      "context_type": "knowledge",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": false,
+      "abstention": false,
+      "hallucination_score": 1.0,
+      "hallucination_detected": true,
+      "total_claims": 2,
+      "num_claims": 2,
+      "supported_claims": 0,
+      "contradicted_claims": 2,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Actually, Snoop Dog wasn't in Turbo.",
+          "verdict": "Contradicted",
+          "confidence": 0.9997,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Ryan Reynolds starred in TurboTurbo is starring Snoop DoggSnoop Dogg starred in Turbo",
+              "nli_label": "contradiction",
+              "entailment": 0.0,
+              "contradiction": 0.9997,
+              "neutral": 0.0003
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_002",
+          "normalized_claim": "But you should check out Green Lantern, a great movie with Ryan Reynolds.",
+          "verdict": "Contradicted",
+          "confidence": 0.9859,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Ryan Reynolds starred in TurboTurbo is starring Snoop DoggSnoop Dogg starred in Turbo",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9859,
+              "neutral": 0.014
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Ryan Reynolds starred in TurboTurbo is starring Snoop DoggSnoop Dogg starred in Turbo",
+      "evidence_text": "Ryan Reynolds starred in TurboTurbo is starring Snoop DoggSnoop Dogg starred in Turbo",
+      "explanation": "0/2 claims supported, 2 contradicted. Contradiction found against reference context.",
+      "latency_ms": 252.71
+    },
+    {
+      "id": "halueval_dial_5",
+      "example_id": "halueval_dial_5",
+      "task": "dialogue",
+      "query": "[Human]: I like Home Alone could you give me recommendations based on this one [Human]: I need recommendations based on the movie Home Alone [Assistant]: Do you like it because it's a family film? [Human]: because it is funny ",
+      "claim_or_question": "[Human]: I like Home Alone could you give me recommendations based on this one [Human]: I need recommendations based on the movie Home Alone [Assistant]: Do you like it because it's a family film? [Human]: because it is funny ",
+      "response": "Okay, then you'll love The Lion King.",
+      "context": "Home Alone is written by John Hughes. John Hughes wrote Ferris Bueller's Day Off...",
+      "context_type": "knowledge",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": false,
+      "abstention": false,
+      "hallucination_score": 1.0,
+      "hallucination_detected": true,
+      "total_claims": 1,
+      "num_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Okay, then you'll love The Lion King.",
+          "verdict": "Contradicted",
+          "confidence": 0.9997,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Home Alone is written by John Hughes",
+              "nli_label": "contradiction",
+              "entailment": 0.0,
+              "contradiction": 0.9997,
+              "neutral": 0.0002
+            },
+            {
+              "passage": "John Hughes wrote Ferris Bueller's Day Off",
+              "nli_label": "contradiction",
+              "entailment": 0.0,
+              "contradiction": 0.9997,
+              "neutral": 0.0003
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Home Alone is written by John Hughes",
+      "evidence_text": "Home Alone is written by John Hughes",
+      "explanation": "0/1 claims supported, 1 contradicted. Contradiction found against reference context.",
+      "latency_ms": 150.21
+    },
+    {
+      "id": "halueval_dial_6",
+      "example_id": "halueval_dial_6",
+      "task": "dialogue",
+      "query": "[Human]: Could you recommend any good books by Neal Stephenson? [Assistant]: He Wrote Zodiac [Human]: Could you tell me about books similar to Zodiac? That book is vaguely familar. ",
+      "claim_or_question": "[Human]: Could you recommend any good books by Neal Stephenson? [Assistant]: He Wrote Zodiac [Human]: Could you tell me about books similar to Zodiac? That book is vaguely familar. ",
+      "response": "Snow Crash is similar to Zodiac.",
+      "context": "Neal Stephenson wrote ZodiacZodiac is written by Neal StephensonNeal Stephenson wrote The System of the World...",
+      "context_type": "knowledge",
+      "ground_truth": "hallucinated",
+      "predicted_label": "hallucinated",
+      "is_correct": true,
+      "is_abstention": true,
+      "abstention": true,
+      "hallucination_score": 0.5,
+      "hallucination_detected": true,
+      "total_claims": 1,
+      "num_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 0,
+      "insufficient_claims": 1,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Snow Crash is similar to Zodiac.",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.8288,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "Neal Stephenson wrote ZodiacZodiac is written by Neal StephensonNeal Stephenson wrote The System of the World",
+              "nli_label": "neutral",
+              "entailment": 0.0019,
+              "contradiction": 0.1693,
+              "neutral": 0.8288
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Neal Stephenson wrote ZodiacZodiac is written by Neal StephensonNeal Stephenson wrote The System of the World",
+      "evidence_text": "Neal Stephenson wrote ZodiacZodiac is written by Neal StephensonNeal Stephenson wrote The System of the World",
+      "explanation": "0/1 claims supported, 0 contradicted",
+      "latency_ms": 195.29
+    },
+    {
+      "id": "halueval_dial_7",
+      "example_id": "halueval_dial_7",
+      "task": "dialogue",
+      "query": "[Human]: I like the movie \"The Martian\", could you recommend a movie similar to it? [Assistant]: Do you like The Martian because it stars Matt Damon? [Human]: I like the movie because of its story line. [Assistant]: Matt Damon also starred in The Bourne Ultimatum which is Crime Fiction Film [Human]: I have not seen that movie yet. i do like Crime Fiction so I think that is a great choice. Thank you ",
+      "claim_or_question": "[Human]: I like the movie \"The Martian\", could you recommend a movie similar to it? [Assistant]: Do you like The Martian because it stars Matt Damon? [Human]: I like the movie because of its story line. [Assistant]: Matt Damon also starred in The Bourne Ultimatum which is Crime Fiction Film [Human]: I have not seen that movie yet. i do like Crime Fiction so I think that is a great choice. Thank you ",
+      "response": "Hope you enjoy!",
+      "context": "The Martian is starring Matt Damon...",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": false,
+      "abstention": false,
+      "hallucination_score": 0.5833,
+      "hallucination_detected": true,
+      "total_claims": 6,
+      "num_claims": 6,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 5,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "In response to '[Human]: I like the movie \"The Martian\", could you recommend a movie similar to it?",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9938,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "The Martian is starring Matt Damon",
+              "nli_label": "neutral",
+              "entailment": 0.0027,
+              "contradiction": 0.0035,
+              "neutral": 0.9938
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_002",
+          "normalized_claim": "[Assistant]: Do you like The Martian because it stars Matt Damon?",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9949,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "The Martian is starring Matt Damon",
+              "nli_label": "neutral",
+              "entailment": 0.0043,
+              "contradiction": 0.0007,
+              "neutral": 0.9949
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_003",
+          "normalized_claim": "[Human]: I like the movie because of its story line.",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.9994,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "The Martian is starring Matt Damon",
+              "nli_label": "neutral",
+              "entailment": 0.0005,
+              "contradiction": 0.0002,
+              "neutral": 0.9994
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_004",
+          "normalized_claim": "[Assistant]: Matt Damon also starred in The Bourne Ultimatum which is Crime Fiction Film [Human]: I have not seen that movie yet.",
+          "verdict": "Insufficient Evidence",
+          "confidence": 0.6648,
+          "inference_reason": "NEUTRAL_NLI_UNCERTAIN",
+          "evidence": [
+            {
+              "passage": "The Martian is starring Matt Damon",
+              "nli_label": "neutral",
+              "entailment": 0.001,
+              "contradiction": 0.3342,
+              "neutral": 0.6648
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_005",
+          "normalized_claim": "i do like Crime Fiction so I think that is a great choice.",
+          "verdict": "Insufficient Evidence",
+          "confidence": null,
+          "inference_reason": "NON_VERIFIABLE_CLAIM",
+          "evidence": [
+            {
+              "passage": "The Martian is starring Matt Damon",
+              "nli_label": "neutral",
+              "entailment": 0.0003,
+              "contradiction": 0.0012,
+              "neutral": 0.9985
+            }
+          ]
+        },
+        {
+          "claim_id": "claim_006",
+          "normalized_claim": "Thank you', Hope you enjoy!.",
+          "verdict": "Contradicted",
+          "confidence": 0.9288,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "The Martian is starring Matt Damon",
+              "nli_label": "contradiction",
+              "entailment": 0.0064,
+              "contradiction": 0.9288,
+              "neutral": 0.0648
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "The Martian is starring Matt Damon",
+      "evidence_text": "The Martian is starring Matt Damon",
+      "explanation": "0/6 claims supported, 1 contradicted. Contradiction found against reference context.",
+      "latency_ms": 744.38
+    },
+    {
+      "id": "halueval_dial_8",
+      "example_id": "halueval_dial_8",
+      "task": "dialogue",
+      "query": "[Human]: Do you know anything about the author Harper Lee? [Assistant]: He wrote To Kill a Mockingbird, and Go set a Watchman. [Human]: I like that book. Do you think its along the same lines as Dark Shadow?  ",
+      "claim_or_question": "[Human]: Do you know anything about the author Harper Lee? [Assistant]: He wrote To Kill a Mockingbird, and Go set a Watchman. [Human]: I like that book. Do you think its along the same lines as Dark Shadow?  ",
+      "response": "I would say drama written by Raina Telgemeir is more on the same page as Dark Shadows.",
+      "context": "Harper Lee wrote To Kill a MockingbirdTo Kill a Mockingbird : `Subject`: Drama. Drama has examples: Dark ShadowsDark Shadows is written by Seth Grahame-Smith...",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": false,
+      "abstention": false,
+      "hallucination_score": 1.0,
+      "hallucination_detected": true,
+      "total_claims": 1,
+      "num_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "I would say drama written by Raina Telgemeir is more on the same page as Dark Shadows.",
+          "verdict": "Contradicted",
+          "confidence": 0.9995,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Harper Lee wrote To Kill a MockingbirdTo Kill a Mockingbird : `Subject`: Drama",
+              "nli_label": "contradiction",
+              "entailment": 0.0,
+              "contradiction": 0.9995,
+              "neutral": 0.0005
+            },
+            {
+              "passage": "Drama has examples: Dark ShadowsDark Shadows is written by Seth Grahame-Smith",
+              "nli_label": "contradiction",
+              "entailment": 0.0001,
+              "contradiction": 0.9989,
+              "neutral": 0.001
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Harper Lee wrote To Kill a MockingbirdTo Kill a Mockingbird : `Subject`: Drama",
+      "evidence_text": "Harper Lee wrote To Kill a MockingbirdTo Kill a Mockingbird : `Subject`: Drama",
+      "explanation": "0/1 claims supported, 1 contradicted. Contradiction found against reference context.",
+      "latency_ms": 172.81
+    },
+    {
+      "id": "halueval_dial_9",
+      "example_id": "halueval_dial_9",
+      "task": "dialogue",
+      "query": "[Human]: I like Pulp Fiction. What do you think about it? [Assistant]: I love it. It was written by  Roger Avary [Human]: I heard he also wrote The Rules of Attraction. Do you know who is in that movie? ",
+      "claim_or_question": "[Human]: I like Pulp Fiction. What do you think about it? [Assistant]: I love it. It was written by  Roger Avary [Human]: I heard he also wrote The Rules of Attraction. Do you know who is in that movie? ",
+      "response": " Fred Savage is in it",
+      "context": "Pulp Fiction is written by Roger AvaryRoger Avary wrote The Rules of Attraction. The Rules of Attraction is starring Swoosie KurtzThe Rules of Attraction is starring Fred Savage...",
+      "context_type": "knowledge",
+      "ground_truth": "faithful",
+      "predicted_label": "hallucinated",
+      "is_correct": false,
+      "is_abstention": false,
+      "abstention": false,
+      "hallucination_score": 1.0,
+      "hallucination_detected": true,
+      "total_claims": 1,
+      "num_claims": 1,
+      "supported_claims": 0,
+      "contradicted_claims": 1,
+      "insufficient_claims": 0,
+      "claims": [
+        {
+          "claim_id": "claim_001",
+          "normalized_claim": "Fred Savage is in it",
+          "verdict": "Contradicted",
+          "confidence": 0.9959,
+          "inference_reason": "CONTRADICTORY_EVIDENCE",
+          "evidence": [
+            {
+              "passage": "Pulp Fiction is written by Roger AvaryRoger Avary wrote The Rules of Attraction",
+              "nli_label": "contradiction",
+              "entailment": 0.0002,
+              "contradiction": 0.9959,
+              "neutral": 0.0039
+            },
+            {
+              "passage": "The Rules of Attraction is starring Swoosie KurtzThe Rules of Attraction is starring Fred Savage",
+              "nli_label": "neutral",
+              "entailment": 0.4959,
+              "contradiction": 0.3565,
+              "neutral": 0.1476
+            }
+          ]
+        }
+      ],
+      "top_evidence_snippet": "Pulp Fiction is written by Roger AvaryRoger Avary wrote The Rules of Attraction",
+      "evidence_text": "Pulp Fiction is written by Roger AvaryRoger Avary wrote The Rules of Attraction",
+      "explanation": "0/1 claims supported, 1 contradicted. Contradiction found against reference context.",
+      "latency_ms": 150.37
+    }
+  ]
+}

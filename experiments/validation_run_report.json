@@ -1,0 +1,422 @@
+{
+  "timestamp": "2026-10-18 00:15:52",
+  "health": {
+    "status": "healthy",
+    "project": "TruthGuard",
+    "version": "1.0.0",
+    "ollama": {
+      "status": "online",
+      "message": "Ollama service is online",
+      "base_url": "http://localhost:11434",
+      "default_model": "qwen3:8b"
+    },
+    "hardware": {
+      "cuda_available": false,
+      "device_count": 0,
+      "device_name": "CPU",
+      "active_device": "cpu",
+      "nli_device": "cpu",
+      "embedding_device": "cpu"
+    },
+    "system_memory": {
+      "total_gb": 15.32,
+      "available_gb": 2.21,
+      "used_percent": 85.6
+    },
+    "models": {
+      "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "nli_model": "cross-encoder/nli-deberta-v3-small"
+    }
+  },
+  "verification_run": {
+    "id": "cbd881f4-20e5-4b7f-a2de-1dd420f58caf",
+    "question": "What elements did Marie Curie discover and how many Nobel Prizes did she win?",
+    "original_answer": "Marie Curie discovered radium in 1898 and won five Nobel Prizes. She was the greatest human ever born.",
+    "corrected_answer": null,
+    "model_used": "qwen3:8b",
+    "evidence_source": "documents",
+    "total_claims": 3,
+    "verifiable_claims": 2,
+    "supported_claims": 0,
+    "contradicted_claims": 1,
+    "insufficient_claims": 1,
+    "conflicting_claims": 1,
+    "hallucination_score": 0.65,
+    "unsupported_claim_rate": 1.0,
+    "contradiction_rate": 0.5,
+    "verification_coverage": 0.6667,
+    "evidence_availability": 1.0,
+    "latency_ms": 578.4,
+    "created_at": "2026-10-17T18:44:45.057630",
+    "claims": [
+      {
+        "claim_id": "claim_001",
+        "original_text": "Marie Curie discovered radium in 1898",
+        "normalized_claim": "Marie Curie discovered radium in 1898",
+        "start_offset": 0,
+        "end_offset": 37,
+        "claim_type": "factual",
+        "verifiable": true,
+        "verdict": "Conflicting Evidence",
+        "confidence": 0.9982,
+        "confidence_calibrated": true,
+        "inference_reason": "CONFLICTING_SOURCES",
+        "evidence_source_used": "documents",
+        "explanation": "Discrepancy identified between indexed documents. 'marie_curie_reference.txt' provides supporting evidence, whereas 'BenchmarkRef_9' presents contradicting statements. Manual review of conflicting source material is recommended.",
+        "evidence_list": [
+          {
+            "chunk_id": "cc2a38f9-993d-40c4-840e-1a8fefb4b7ca",
+            "document_name": "marie_curie_reference.txt",
+            "page_number": 1,
+            "passage_text": "Marie Sklodowska Curie was a Polish and naturalized-French physicist and chemist.\nIn 1898, Marie and her husband Pierre Curie discovered the radioactive elements polonium and radium.\nMarie Curie was awarded two Nobel Prizes: the 1903 Nobel Prize in Physics and the 1911 Nobel Prize in Chemistry.\nShe was born in Warsaw, Poland on 7 November 1867 and died in 1934 in France.",
+            "similarity_score": 0.7454,
+            "nli_label": "entailment",
+            "entailment_prob": 0.9965,
+            "contradiction_prob": 0.0003,
+            "neutral_prob": 0.0031,
+            "source_type": "document"
+          },
+          {
+            "chunk_id": "eval_chunk_9",
+            "document_name": "BenchmarkRef_9",
+            "page_number": 1,
+            "passage_text": "In 1928, Scottish physician and microbiologist Alexander Fleming discovered penicillin at St Mary's Hospital in London.",
+            "similarity_score": 0.3029,
+            "nli_label": "contradiction",
+            "entailment_prob": 0.0,
+            "contradiction_prob": 0.9999,
+            "neutral_prob": 0.0001,
+            "source_type": "document"
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_002",
+        "original_text": "won five Nobel Prizes.",
+        "normalized_claim": "won five Nobel Prizes.",
+        "start_offset": 42,
+        "end_offset": 64,
+        "claim_type": "factual",
+        "verifiable": true,
+        "verdict": "Contradicted",
+        "confidence": 0.9971,
+        "confidence_calibrated": true,
+        "inference_reason": "CONTRADICTORY_EVIDENCE",
+        "evidence_source_used": "documents",
+        "explanation": "Claim is Contradicted (confidence: 99.7%). Directly refuted by document 'marie_curie_reference.txt' [DOCUMENT], page 1. Ground truth source states: \"Marie Sklodowska Curie was a Polish and naturalized-French physicist and chemist.\nIn 1898, Marie and her husband Pierre Curie discovered the radioactive elements polonium and radium.\nMarie Curie was a...\"",
+        "evidence_list": [
+          {
+            "chunk_id": "cc2a38f9-993d-40c4-840e-1a8fefb4b7ca",
+            "document_name": "marie_curie_reference.txt",
+            "page_number": 1,
+            "passage_text": "Marie Sklodowska Curie was a Polish and naturalized-French physicist and chemist.\nIn 1898, Marie and her husband Pierre Curie discovered the radioactive elements polonium and radium.\nMarie Curie was awarded two Nobel Prizes: the 1903 Nobel Prize in Physics and the 1911 Nobel Prize in Chemistry.\nShe was born in Warsaw, Poland on 7 November 1867 and died in 1934 in France.",
+            "similarity_score": 0.4287,
+            "nli_label": "contradiction",
+            "entailment_prob": 0.0006,
+            "contradiction_prob": 0.9971,
+            "neutral_prob": 0.0023,
+            "source_type": "document"
+          },
+          {
+            "chunk_id": "eval_chunk_3",
+            "document_name": "BenchmarkRef_3",
+            "page_number": 1,
+            "passage_text": "Albert Einstein was awarded the 1921 Nobel Prize in Physics for his explanation of the photoelectric effect.",
+            "similarity_score": 0.3837,
+            "nli_label": "neutral",
+            "entailment_prob": 0.0001,
+            "contradiction_prob": 0.0122,
+            "neutral_prob": 0.9877,
+            "source_type": "document"
+          },
+          {
+            "chunk_id": "eval_chunk_4",
+            "document_name": "BenchmarkRef_4",
+            "page_number": 1,
+            "passage_text": "Nikola Tesla was an inventor born on 10 July 1856 in Smiljan, in the Austrian Empire (modern-day Croatia).",
+            "similarity_score": 0.2806,
+            "nli_label": "neutral",
+            "entailment_prob": 0.0001,
+            "contradiction_prob": 0.0005,
+            "neutral_prob": 0.9994,
+            "source_type": "document"
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_003",
+        "original_text": "She was the greatest human ever born.",
+        "normalized_claim": "She was the greatest human ever born.",
+        "start_offset": 65,
+        "end_offset": 102,
+        "claim_type": "subjective",
+        "verifiable": false,
+        "verdict": "Insufficient Evidence",
+        "confidence": null,
+        "confidence_calibrated": false,
+        "inference_reason": "NON_VERIFIABLE_CLAIM",
+        "evidence_source_used": "documents",
+        "explanation": "The statement 'She was the greatest human ever born.' is subjective or non-empirical in nature. Subjective opinions, value judgments, or stylistic commentary cannot be verified against objective factual evidence.",
+        "evidence_list": []
+      }
+    ]
+  },
+  "correction_run": {
+    "verification_id": "cbd881f4-20e5-4b7f-a2de-1dd420f58caf",
+    "original_answer": "Marie Curie discovered radium in 1898 and won five Nobel Prizes. She was the greatest human ever born.",
+    "corrected_answer": "Marie Curie discovered radium in 1898 and [Corrected: Marie Sklodowska Curie was a Polish and naturalized-French physicist and chemist.\nIn 1898, Marie and her husband Pierre Curie discovered the radioactive elements polonium and radium.\nMarie Curie was awarded two Nobel Prizes: the 1903 Nobel Prize in Physics and the 1911 Nobel Prize in Chemistry.\nShe was born in Warsaw, Poland on 7 November 1867 and died in 1934 in France.] She was the greatest human ever born.",
+    "claims_corrected": 1,
+    "unsupported_removed": 2,
+    "reverified_claims": [
+      {
+        "claim_id": "claim_001",
+        "original_text": "Marie Curie discovered radium in 1898 and [Corrected: Marie Sklodowska Curie was a Polish and naturalized-French physicist and chemist.",
+        "normalized_claim": "Marie Curie discovered radium in 1898 and [Corrected: Marie Sklodowska Curie was a Polish and naturalized-French physicist and chemist.",
+        "start_offset": 0,
+        "end_offset": 135,
+        "claim_type": "factual",
+        "verifiable": true,
+        "verdict": "Conflicting Evidence",
+        "confidence": 0.9969,
+        "confidence_calibrated": true,
+        "inference_reason": "CONFLICTING_SOURCES",
+        "evidence_source_used": "documents",
+        "explanation": "Discrepancy identified between indexed documents. 'marie_curie_reference.txt' provides supporting evidence, whereas 'BenchmarkRef_4' presents contradicting statements. Manual review of conflicting source material is recommended.",
+        "evidence_list": [
+          {
+            "chunk_id": "cc2a38f9-993d-40c4-840e-1a8fefb4b7ca",
+            "document_name": "marie_curie_reference.txt",
+            "page_number": 1,
+            "passage_text": "Marie Sklodowska Curie was a Polish and naturalized-French physicist and chemist.\nIn 1898, Marie and her husband Pierre Curie discovered the radioactive elements polonium and radium.\nMarie Curie was awarded two Nobel Prizes: the 1903 Nobel Prize in Physics and the 1911 Nobel Prize in Chemistry.\nShe was born in Warsaw, Poland on 7 November 1867 and died in 1934 in France.",
+            "similarity_score": 0.8528,
+            "nli_label": "entailment",
+            "entailment_prob": 0.9939,
+            "contradiction_prob": 0.002,
+            "neutral_prob": 0.0041,
+            "source_type": "document"
+          },
+          {
+            "chunk_id": "eval_chunk_4",
+            "document_name": "BenchmarkRef_4",
+            "page_number": 1,
+            "passage_text": "Nikola Tesla was an inventor born on 10 July 1856 in Smiljan, in the Austrian Empire (modern-day Croatia).",
+            "similarity_score": 0.3567,
+            "nli_label": "contradiction",
+            "entailment_prob": 0.0,
+            "contradiction_prob": 0.9997,
+            "neutral_prob": 0.0003,
+            "source_type": "document"
+          },
+          {
+            "chunk_id": "eval_chunk_9",
+            "document_name": "BenchmarkRef_9",
+            "page_number": 1,
+            "passage_text": "In 1928, Scottish physician and microbiologist Alexander Fleming discovered penicillin at St Mary's Hospital in London.",
+            "similarity_score": 0.3342,
+            "nli_label": "contradiction",
+            "entailment_prob": 0.0,
+            "contradiction_prob": 0.9998,
+            "neutral_prob": 0.0001,
+            "source_type": "document"
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_002",
+        "original_text": "In 1898, Marie and her husband Pierre Curie discovered the radioactive elements polonium and radium.",
+        "normalized_claim": "In 1898, Marie and her husband Pierre Curie discovered the radioactive elements polonium and radium.",
+        "start_offset": 136,
+        "end_offset": 236,
+        "claim_type": "factual",
+        "verifiable": true,
+        "verdict": "Contradicted",
+        "confidence": 0.9998,
+        "confidence_calibrated": true,
+        "inference_reason": "CONTRADICTORY_EVIDENCE",
+        "evidence_source_used": "documents",
+        "explanation": "Claim is Contradicted (confidence: 100.0%). Directly refuted by document 'BenchmarkRef_4' [DOCUMENT], page 1. Ground truth source states: \"Nikola Tesla was an inventor born on 10 July 1856 in Smiljan, in the Austrian Empire (modern-day Croatia)....\"",
+        "evidence_list": [
+          {
+            "chunk_id": "cc2a38f9-993d-40c4-840e-1a8fefb4b7ca",
+            "document_name": "marie_curie_reference.txt",
+            "page_number": 1,
+            "passage_text": "Marie Sklodowska Curie was a Polish and naturalized-French physicist and chemist.\nIn 1898, Marie and her husband Pierre Curie discovered the radioactive elements polonium and radium.\nMarie Curie was awarded two Nobel Prizes: the 1903 Nobel Prize in Physics and the 1911 Nobel Prize in Chemistry.\nShe was born in Warsaw, Poland on 7 November 1867 and died in 1934 in France.",
+            "similarity_score": 0.8228,
+            "nli_label": "neutral",
+            "entailment_prob": 0.0518,
+            "contradiction_prob": 0.0021,
+            "neutral_prob": 0.9461,
+            "source_type": "document"
+          },
+          {
+            "chunk_id": "eval_chunk_3",
+            "document_name": "BenchmarkRef_3",
+            "page_number": 1,
+            "passage_text": "Albert Einstein was awarded the 1921 Nobel Prize in Physics for his explanation of the photoelectric effect.",
+            "similarity_score": 0.261,
+            "nli_label": "contradiction",
+            "entailment_prob": 0.0,
+            "contradiction_prob": 0.9992,
+            "neutral_prob": 0.0007,
+            "source_type": "document"
+          },
+          {
+            "chunk_id": "eval_chunk_4",
+            "document_name": "BenchmarkRef_4",
+            "page_number": 1,
+            "passage_text": "Nikola Tesla was an inventor born on 10 July 1856 in Smiljan, in the Austrian Empire (modern-day Croatia).",
+            "similarity_score": 0.2552,
+            "nli_label": "contradiction",
+            "entailment_prob": 0.0,
+            "contradiction_prob": 0.9998,
+            "neutral_prob": 0.0002,
+            "source_type": "document"
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_003",
+        "original_text": "Marie Curie was awarded two Nobel Prizes: the 1903 Nobel Prize in Physics and the 1911 Nobel Prize in Chemistry.",
+        "normalized_claim": "Marie Curie was awarded two Nobel Prizes: the 1903 Nobel Prize in Physics and the 1911 Nobel Prize in Chemistry.",
+        "start_offset": 237,
+        "end_offset": 349,
+        "claim_type": "factual",
+        "verifiable": true,
+        "verdict": "Contradicted",
+        "confidence": 0.9992,
+        "confidence_calibrated": true,
+        "inference_reason": "CONTRADICTORY_EVIDENCE",
+        "evidence_source_used": "documents",
+        "explanation": "Claim is Contradicted (confidence: 99.9%). Directly refuted by document 'BenchmarkRef_4' [DOCUMENT], page 1. Ground truth source states: \"Nikola Tesla was an inventor born on 10 July 1856 in Smiljan, in the Austrian Empire (modern-day Croatia)....\"",
+        "evidence_list": [
+          {
+            "chunk_id": "cc2a38f9-993d-40c4-840e-1a8fefb4b7ca",
+            "document_name": "marie_curie_reference.txt",
+            "page_number": 1,
+            "passage_text": "Marie Sklodowska Curie was a Polish and naturalized-French physicist and chemist.\nIn 1898, Marie and her husband Pierre Curie discovered the radioactive elements polonium and radium.\nMarie Curie was awarded two Nobel Prizes: the 1903 Nobel Prize in Physics and the 1911 Nobel Prize in Chemistry.\nShe was born in Warsaw, Poland on 7 November 1867 and died in 1934 in France.",
+            "similarity_score": 0.7633,
+            "nli_label": "neutral",
+            "entailment_prob": 0.002,
+            "contradiction_prob": 0.0036,
+            "neutral_prob": 0.9944,
+            "source_type": "document"
+          },
+          {
+            "chunk_id": "eval_chunk_3",
+            "document_name": "BenchmarkRef_3",
+            "page_number": 1,
+            "passage_text": "Albert Einstein was awarded the 1921 Nobel Prize in Physics for his explanation of the photoelectric effect.",
+            "similarity_score": 0.4614,
+            "nli_label": "contradiction",
+            "entailment_prob": 0.0,
+            "contradiction_prob": 0.9981,
+            "neutral_prob": 0.0019,
+            "source_type": "document"
+          },
+          {
+            "chunk_id": "eval_chunk_9",
+            "document_name": "BenchmarkRef_9",
+            "page_number": 1,
+            "passage_text": "In 1928, Scottish physician and microbiologist Alexander Fleming discovered penicillin at St Mary's Hospital in London.",
+            "similarity_score": 0.2664,
+            "nli_label": "contradiction",
+            "entailment_prob": 0.0001,
+            "contradiction_prob": 0.9981,
+            "neutral_prob": 0.0018,
+            "source_type": "document"
+          },
+          {
+            "chunk_id": "eval_chunk_4",
+            "document_name": "BenchmarkRef_4",
+            "page_number": 1,
+            "passage_text": "Nikola Tesla was an inventor born on 10 July 1856 in Smiljan, in the Austrian Empire (modern-day Croatia).",
+            "similarity_score": 0.2596,
+            "nli_label": "contradiction",
+            "entailment_prob": 0.0,
+            "contradiction_prob": 0.9992,
+            "neutral_prob": 0.0008,
+            "source_type": "document"
+          }
+        ]
+      },
+      {
+        "claim_id": "claim_004",
+        "original_text": "She was born in Warsaw, Poland on 7 November 1867 and died in 1934 in France.] She was the greatest human ever born.",
+        "normalized_claim": "She was born in Warsaw, Poland on 7 November 1867 and died in 1934 in France.] She was the greatest human ever born.",
+        "start_offset": 350,
+        "end_offset": 466,
+        "claim_type": "subjective",
+        "verifiable": false,
+        "verdict": "Insufficient Evidence",
+        "confidence": null,
+        "confidence_calibrated": false,
+        "inference_reason": "NON_VERIFIABLE_CLAIM",
+        "evidence_source_used": "documents",
+        "explanation": "The statement 'She was born in Warsaw, Poland on 7 November 1867 and died in 1934 in France.] She was the greatest human ever born.' is subjective or non-empirical in nature. Subjective opinions, value judgments, or stylistic commentary cannot be verified against objective factual evidence.",
+        "evidence_list": []
+      }
+    ],
+    "is_fully_supported": false,
+    "newly_introduced_unsupported": 3,
+    "explanation": "Corrected 1 contradicted statement(s) using verified evidence. Re-verification of revised answer confirmed 0 supported claim(s) and 2 contradictions."
+  },
+  "evaluation_experiment": {
+    "id": "ef20ef8e-df85-429b-bbf0-da227305b9ca",
+    "name": "FEVER (FEVER Retrieval)",
+    "benchmark_name": "FEVER",
+    "model_name": "qwen3:8b",
+    "total_samples": 10,
+    "accuracy": 0.4,
+    "precision": 0.1333,
+    "recall": 0.3333,
+    "f1_score": 0.1905,
+    "retrieval_recall_at_k": 0.1667,
+    "confusion_matrix": {
+      "Contradicted": {
+        "Contradicted": 4,
+        "Insufficient Evidence": 0,
+        "Supported": 0
+      },
+      "Insufficient Evidence": {
+        "Contradicted": 4,
+        "Insufficient Evidence": 0,
+        "Supported": 0
+      },
+      "Supported": {
+        "Contradicted": 2,
+        "Insufficient Evidence": 0,
+        "Supported": 0
+      }
+    },
+    "metrics": {
+      "labels": [
+        "Contradicted",
+        "Insufficient Evidence",
+        "Supported"
+      ],
+      "evidence_source": "fever",
+      "per_class": {
+        "Contradicted": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f1": 0.5714
+        },
+        "Insufficient Evidence": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "Supported": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "samples_with_evidence": 6,
+      "retrieval_hits": 1
+    },
+    "latency_per_sample_ms": 292.6,
+    "created_at": "2026-10-17T18:45:52.487402"
+  },
+  "history_count": 20
+}

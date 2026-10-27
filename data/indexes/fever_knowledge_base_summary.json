@@ -1,0 +1,9 @@
+{
+  "index_name": "fever_knowledge_base",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "total_articles_referenced": 30,
+  "articles_resolved": 30,
+  "articles_unresolved": 0,
+  "total_vectors_indexed": 570,
+  "rebuilt_at": "2026-10-16T17:44:35.561811"
+}

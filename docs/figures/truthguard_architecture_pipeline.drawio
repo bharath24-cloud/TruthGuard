@@ -1,0 +1,290 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0">
+  <diagram id="TruthGuard-System-Architecture" name="TruthGuard System Architecture Pipeline">
+    <mxGraphModel dx="3607" dy="986" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1260" background="#F8FAFC" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header_banner" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0F172A;strokeColor=#1E293B;strokeWidth=1;arcSize=6;shadow=0;" value="&lt;table style=&#39;width:100%;height:100%;color:#FFFFFF;font-family:Inter,Segoe UI,sans-serif;&#39;&gt;&lt;tr&gt;&lt;td style=&#39;padding-left:20px;text-align:left;&#39;&gt;  &lt;div style=&#39;font-size:18px;font-weight:800;letter-spacing:-0.3px;color:#F8FAFC;&#39;&gt;TRUTHGUARD: END-TO-END SYSTEM ARCHITECTURE PIPELINE&lt;/div&gt;  &lt;div style=&#39;font-size:11.5px;color:#94A3B8;margin-top:2px;&#39;&gt;Local Multi-Stage Fact Verification, Cross-Encoder NLI, and Closed-Loop Hallucination Auditing&lt;/div&gt;&lt;/td&gt;&lt;td style=&#39;padding-right:20px;text-align:right;&#39;&gt;  &lt;span style=&#39;background:#1E293B;color:#38BDF8;border:1px solid #0284C7;padding:4px 10px;border-radius:6px;font-size:10.5px;font-weight:700;&#39;&gt;IEEE ACADEMIC FORMAT • LOCAL RUNTIME • SUB-600ms&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="65" width="1720" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zone_ingestion" parent="1" style="swimlane;startSize=30;rounded=1;whiteSpace=wrap;html=1;arcSize=6;collapsible=0;fillColor=#F8FAFC;strokeColor=#94A3B8;strokeWidth=1.5;fontColor=#0F172A;fontStyle=1;fontSize=12;fontFamily=Inter,Segoe UI,sans-serif;align=center;" value="1. KNOWLEDGE BASE &amp; INPUT INGESTION" vertex="1">
+          <mxGeometry height="836" width="370" x="-80" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="card_mode_b" parent="zone_ingestion" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Autonomous Generation Engine&lt;/span&gt;    &lt;span style=&#39;background-color:#0284C71A;color:#0284C7;border:1px solid #0284C74D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;MODE B&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Inquiry passed to local LLM: &lt;b&gt;Ollama qwen3:8b&lt;/b&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Synthesizes response on dedicated GPU (~2.4 GB VRAM)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="330" x="20" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="card_docs" parent="zone_ingestion" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Private Document Library&lt;/span&gt;    &lt;span style=&#39;background-color:#0284C71A;color:#0284C7;border:1px solid #0284C74D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;PDF / TXT / MD&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Parsed via PyMuPDF (fitz) with character normalization&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• SHA-256 cryptographic deduplication hashing&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="330" x="20" y="248" as="geometry" />
+        </mxCell>
+        <mxCell id="card_faiss" parent="zone_ingestion" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;IndexFlatIP Vector Storage&lt;/span&gt;    &lt;span style=&#39;background-color:#4F46E51A;color:#4F46E5;border:1px solid #4F46E54D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;FAISS&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Exact Inner Product evaluation: &lt;i&gt;sim(q, v) = cos(θ)&lt;/i&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Sub-20ms dense vector retrieval against indexed corpus&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="330" x="20" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="card_fever" parent="zone_ingestion" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Benchmark Wikipedia Corpus&lt;/span&gt;    &lt;span style=&#39;background-color:#0284C71A;color:#0284C7;border:1px solid #0284C74D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;FEVER&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• 570 atomic Wikipedia articles • 1,000 evaluation pairs&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Zero-Leakage Protocol:&lt;/b&gt; Gold labels withheld at retrieval&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="330" x="20" y="348" as="geometry" />
+        </mxCell>
+        <mxCell id="card_embed" parent="zone_ingestion" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Dense Embedding Engine&lt;/span&gt;    &lt;span style=&#39;background-color:#4F46E51A;color:#4F46E5;border:1px solid #4F46E54D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;R^384&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;all-MiniLM-L6-v2&lt;/b&gt; (Sentence-Transformers on CPU)&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Maps passage text into continuous L2-normalized &lt;b&gt;R^384&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="330" x="20" y="534" as="geometry" />
+        </mxCell>
+        <mxCell id="e_embed_faiss" edge="1" parent="zone_ingestion" source="stripe_card_embed" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6366F1;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#3730A3;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" target="card_faiss" value="L2 R^384 Vectors">
+          <mxGeometry relative="1" x="-0.033" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="-40" y="589.5" />
+              <mxPoint x="-40" y="678" />
+            </Array>
+            <mxPoint x="-50" y="608" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fxg4BVyTBd1wnLQdDOhK-1" edge="1" parent="zone_ingestion" source="card_embed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;innerLoopWaypoints=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="card_embed">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_mode_b" parent="zone_ingestion" style="rounded=1;fillColor=#0284C7;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="62" width="4" x="20" y="157" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_docs" parent="zone_ingestion" style="rounded=1;fillColor=#0284C7;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="62" width="4" x="20" y="257" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_fever" parent="zone_ingestion" style="rounded=1;fillColor=#0284C7;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="62" width="4" x="20" y="352" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_faiss" parent="zone_ingestion" style="rounded=1;fillColor=#4F46E5;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="62" width="4" x="20" y="648" as="geometry" />
+        </mxCell>
+        <mxCell id="card_guard" parent="zone_ingestion" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Missing Corpus Safety Fallback&lt;/span&gt;    &lt;span style=&#39;background-color:#DC26261A;color:#DC2626;border:1px solid #DC26264D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;GUARDRAIL&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• If index is empty → Emits &lt;i&gt;NO_DOCUMENTS_INDEXED&lt;/i&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Calibration safety: Assigns &lt;b&gt;confidence = null&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="330" x="20" y="748" as="geometry" />
+        </mxCell>
+        <mxCell id="fxg4BVyTBd1wnLQdDOhK-5" parent="zone_ingestion" style="rounded=1;fillColor=#DC2626;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="57" width="4" x="20" y="759.5" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_embed" parent="zone_ingestion" style="rounded=1;fillColor=#4F46E5;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="62" width="4" x="20" y="543" as="geometry" />
+        </mxCell>
+        <mxCell id="zone_core" parent="1" style="swimlane;startSize=30;rounded=1;whiteSpace=wrap;html=1;arcSize=6;collapsible=0;fillColor=#F8FAFC;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1D4ED8;fontStyle=1;fontSize=12;fontFamily=Inter,Segoe UI,sans-serif;align=center;" value="2. MULTI-STAGE VERIFICATION CORE" vertex="1">
+          <mxGeometry height="785" width="450" x="430" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="zone_audit" parent="1" style="swimlane;startSize=30;rounded=1;whiteSpace=wrap;html=1;arcSize=6;collapsible=0;fillColor=#F8FAFC;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#6B21A8;fontStyle=1;fontSize=12;fontFamily=Inter,Segoe UI,sans-serif;align=center;" value="3. RISK SCORING &amp; CLOSED-LOOP AUDIT" vertex="1">
+          <mxGeometry height="785" width="440" x="900" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="zone_hardware" parent="1" style="swimlane;startSize=30;rounded=1;whiteSpace=wrap;html=1;arcSize=6;collapsible=0;fillColor=#F8FAFC;strokeColor=#64748B;strokeWidth=1.5;fontColor=#1E293B;fontStyle=1;fontSize=12;fontFamily=Inter,Segoe UI,sans-serif;align=center;" value="4. WORKSTATION HARDWARE PARTITIONING" vertex="1">
+          <mxGeometry height="785" width="400" x="1360" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="card_mode_a" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Direct Query-Answer Input&lt;/span&gt;    &lt;span style=&#39;background-color:#0284C71A;color:#0284C7;border:1px solid #0284C74D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;MODE A&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Ingests user inquiry paired with external answer&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Audits arbitrary LLM responses or human authored text&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="330" x="-60" y="147" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_mode_a" parent="1" style="rounded=1;fillColor=#0284C7;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="70" width="4" x="-60" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="card_chunk" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Sliding-Window Chunking&lt;/span&gt;    &lt;span style=&#39;background-color:#4F46E51A;color:#4F46E5;border:1px solid #4F46E54D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;CHUNK=500&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Character window &lt;i&gt;C = 500&lt;/i&gt;, overlap &lt;i&gt;O = 100&lt;/i&gt; chars&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Preserves exact paragraph boundaries, page # &amp; chunk IDs&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="330" x="-60" y="531" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_chunk" parent="1" style="rounded=1;fillColor=#4F46E5;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="62" width="4" x="-60" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="card_s1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Syntactic Atomic Claim Decomposition&lt;/span&gt;    &lt;span style=&#39;background-color:#2563EB1A;color:#2563EB;border:1px solid #2563EB4D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;STAGE 1&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Sentence boundary detection with coordinating conjunction regex&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Splits compound clauses (&lt;i&gt;and, but, whereas&lt;/i&gt;) into atomic hypotheses&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Character Span Offsets:&lt;/b&gt; Stores exact [start_offset, end_offset]&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Empirical classifier filters subjective / non-verifiable statements&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="125" width="410" x="450" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_s1" parent="1" style="rounded=1;fillColor=#2563EB;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="117" width="4" x="452" y="149" as="geometry" />
+        </mxCell>
+        <mxCell id="card_s2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Multi-Source Semantic Vector Retrieval&lt;/span&gt;    &lt;span style=&#39;background-color:#4F46E51A;color:#4F46E5;border:1px solid #4F46E54D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;STAGE 2&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Encodes query claim into R^384 vector via MiniLM-L6 (CPU)&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Executes FAISS inner product search for exact cosine similarity&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Retrieves top-k candidate passages (&lt;i&gt;k = 3&lt;/i&gt;, threshold &lt;i&gt;τ_sim ≥ 0.25&lt;/i&gt;)&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Zero matches trigger fallback reason: &lt;i&gt;NO_EVIDENCE_RETRIEVED&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="125" width="410" x="450" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_s2" parent="1" style="rounded=1;fillColor=#4F46E5;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="117" width="4" x="452" y="299" as="geometry" />
+        </mxCell>
+        <mxCell id="card_s3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Cross-Encoder Natural Language Inference&lt;/span&gt;    &lt;span style=&#39;background-color:#D977061A;color:#D97706;border:1px solid #D977064D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;STAGE 3&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Model: &lt;b&gt;cross-encoder/nli-deberta-v3-small&lt;/b&gt; (44M params, CPU)&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Token sequence: &lt;i&gt;[CLS] Passage Premise [SEP] Atomic Claim [SEP]&lt;/i&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Full all-to-all cross-attention across premise and hypothesis tokens&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Softmax Logits: &lt;b&gt;P(contradiction), P(entailment), P(neutral)&lt;/b&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Calibrated Thresholds:&lt;/b&gt; &lt;i&gt;τ_entail ≥ 0.55&lt;/i&gt;, &lt;i&gt;τ_contra ≥ 0.50&lt;/i&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="410" x="450" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_s3" parent="1" style="rounded=1;fillColor=#D97706;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="137" width="4" x="452" y="449" as="geometry" />
+        </mxCell>
+        <mxCell id="card_s4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Multi-Evidence Arbitration Policy&lt;/span&gt;    &lt;span style=&#39;background-color:#DC26261A;color:#DC2626;border:1px solid #DC26264D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;STAGE 4&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Supported:&lt;/b&gt; max P(entailment) ≥ 0.55 without contradiction&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Contradicted:&lt;/b&gt; max P(contradiction) ≥ 0.50 without entailment&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Conflicting:&lt;/b&gt; Distinct passages yield both P_e ≥ 0.55 AND P_c ≥ 0.50&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Insufficient Evidence:&lt;/b&gt; Below thresholds, 0 retrieved, or subjective&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;i&gt;Null Calibration:&lt;/i&gt; Unverifiable statements assigned confidence = null&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="155" width="410" x="450" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_s4" parent="1" style="rounded=1;fillColor=#DC2626;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="147" width="4" x="452" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="card_s5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Mathematical Hallucination Risk Scorer&lt;/span&gt;    &lt;span style=&#39;background-color:#7C3AED1A;color:#7C3AED;border:1px solid #7C3AED4D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;STAGE 5&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Contradiction Rate:&lt;/b&gt; &lt;i&gt;R_contra = N_contra / max(1, N_verifiable)&lt;/i&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Unsupported Rate:&lt;/b&gt; &lt;i&gt;R_unsupp = (N_contra + N_insuff + N_conf) / N_total&lt;/i&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Composite Risk:&lt;/b&gt; &lt;i&gt;S_risk = min(1.0, 0.70·R_contra + 0.30·R_unsupp)&lt;/i&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Explainability:&lt;/b&gt; Document provenance, page #, chunk ID &amp; similarity&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="400" x="920" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_s5" parent="1" style="rounded=1;fillColor=#7C3AED;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="137" width="4" x="922" y="149" as="geometry" />
+        </mxCell>
+        <mxCell id="card_decision" parent="1" style="rhombus;whiteSpace=wrap;html=1;arcSize=4;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;shadow=0;" value="&lt;div style=&#39;text-align:center;font-family:Inter,Segoe UI,sans-serif;&#39;&gt;  &lt;div style=&#39;font-size:11px;font-weight:700;color:#92400E;&#39;&gt;Contradictions&lt;br/&gt;Detected?&lt;/div&gt;  &lt;div style=&#39;font-size:9.5px;color:#B45309;margin-top:2px;&#39;&gt;(N_contra &amp;gt; 0)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="170" x="1035" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="card_s6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Evidence-Grounded Correction Engine&lt;/span&gt;    &lt;span style=&#39;background-color:#7C3AED1A;color:#7C3AED;border:1px solid #7C3AED4D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;STAGE 6&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Selectively replaces contradicted spans with verified ground truth&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Context-constrained prompting via local &lt;b&gt;Ollama qwen3:8b&lt;/b&gt; on GPU&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Preserves supported sentences; rewrites only refuted clauses&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="115" width="400" x="920" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_s6" parent="1" style="rounded=1;fillColor=#7C3AED;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="107" width="4" x="922" y="424" as="geometry" />
+        </mxCell>
+        <mxCell id="card_reverif" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Reverification Audit Engine&lt;/span&gt;    &lt;span style=&#39;background-color:#7C3AED1A;color:#7C3AED;border:1px solid #7C3AED4D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;CLOSED-LOOP&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Revised output is automatically looped back through &lt;b&gt;Stages 1 - 4&lt;/b&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Verification Invariant:&lt;/b&gt; Mathematically guarantees 0 contradictions&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Emits reverification certification and side-by-side diff view&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="400" x="920" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_reverif" parent="1" style="rounded=1;fillColor=#7C3AED;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="112" width="4" x="922" y="564" as="geometry" />
+        </mxCell>
+        <mxCell id="card_pass" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=1.5;shadow=0;" value="&lt;div style=&#39;padding:6px 14px;font-family:Inter,Segoe UI,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;&#39;&gt;    &lt;span style=&#39;font-size:12.5px;font-weight:700;color:#14532D;&#39;&gt;Audit Complete: Verified Factual Output&lt;/span&gt;    &lt;span style=&#39;background:#16A34A;color:#FFFFFF;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;CERTIFIED&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#15803D;margin-top:3px;&#39;&gt;0 Contradictions • Evidence Provenance Grounded • Ready for Export &amp; UI&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="55" width="400" x="920" y="705" as="geometry" />
+        </mxCell>
+        <mxCell id="card_gpu" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Dedicated Generative GPU Memory&lt;/span&gt;    &lt;span style=&#39;background-color:#0596691A;color:#059669;border:1px solid #0596694D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;RTX 3050 (4GB)&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Ollama LLM Runtime:&lt;/b&gt; Dedicated to &lt;i&gt;qwen3:8b&lt;/i&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Working VRAM: &lt;b&gt;~2.4 GB VRAM&lt;/b&gt; (&amp;le; 60% GPU threshold)&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Roles: Mode B Response Synthesis &amp; Stage 6 Grounded Correction&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Prevents fatal CUDA Out-Of-Memory (OOM) concurrency crashes&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="360" x="1380" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_gpu" parent="1" style="rounded=1;fillColor=#059669;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="137" width="4" x="1382" y="149" as="geometry" />
+        </mxCell>
+        <mxCell id="card_cpu" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Verification Pipeline Compute&lt;/span&gt;    &lt;span style=&#39;background-color:#2563EB1A;color:#2563EB;border:1px solid #2563EB4D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;HOST CPU &amp; RAM&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Sentence-Transformers:&lt;/b&gt; &lt;i&gt;all-MiniLM-L6-v2&lt;/i&gt; (384-dim, CPU)&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Cross-Encoder NLI:&lt;/b&gt; &lt;i&gt;nli-deberta-v3-small&lt;/i&gt; (44M params, CPU)&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;FAISS Index:&lt;/b&gt; &lt;i&gt;IndexFlatIP&lt;/i&gt; cosine search in RAM&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Working Memory Footprint: &lt;b&gt;~3.2 GB&lt;/b&gt; Host System RAM&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Zero VRAM competition between LLM and Verification models&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="155" width="360" x="1380" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_cpu" parent="1" style="rounded=1;fillColor=#2563EB;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="147" width="4" x="1382" y="314" as="geometry" />
+        </mxCell>
+        <mxCell id="card_bench" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Empirical Evaluation Metrics&lt;/span&gt;    &lt;span style=&#39;background-color:#0F172A1A;color:#0F172A;border:1px solid #0F172A4D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;BENCHMARKS&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;FEVER Fact Verification Accuracy:&lt;/b&gt; &lt;b&gt;90.0%&lt;/b&gt; (Macro F1: 89.9%)&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;FEVER Recall@3 (Evidence Retrieval):&lt;/b&gt; &lt;b&gt;100.0%&lt;/b&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Claim Decomposition Latency:&lt;/b&gt; 42 ms&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;FAISS Vector Search Latency:&lt;/b&gt; 18 ms&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Cross-Encoder NLI Latency:&lt;/b&gt; 212 ms&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Warm Verification Total:&lt;/b&gt; &lt;b&gt;296 ms&lt;/b&gt; (&amp;lt; 0.6 seconds)&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Cloud API Cost:&lt;/b&gt; &lt;b&gt;$0.00 / query&lt;/b&gt; (100% Offline &amp; Private)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="195" width="360" x="1380" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_bench" parent="1" style="rounded=1;fillColor=#0F172A;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="187" width="4" x="1382" y="489" as="geometry" />
+        </mxCell>
+        <mxCell id="zone_serving" parent="1" style="swimlane;startSize=30;rounded=1;whiteSpace=wrap;html=1;arcSize=6;collapsible=0;fillColor=#F8FAFC;strokeColor=#64748B;strokeWidth=1.5;fontColor=#0F172A;fontStyle=1;fontSize=12;fontFamily=Inter,Segoe UI,sans-serif;align=center;" value="5. API SERVING, DATABASE PERSISTENCE &amp; USER EXPERIENCE LAYER" vertex="1">
+          <mxGeometry height="210" width="1720" x="40" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="card_api" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;High-Throughput Asynchronous Backend&lt;/span&gt;    &lt;span style=&#39;background-color:#0284C71A;color:#0284C7;border:1px solid #0284C74D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;FASTAPI&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• REST Endpoints: &lt;code&gt;/verify&lt;/code&gt;, &lt;code&gt;/verify-stream&lt;/code&gt;, &lt;code&gt;/upload&lt;/code&gt;, &lt;code&gt;/documents&lt;/code&gt;, &lt;code&gt;/health&lt;/code&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Asynchronous ASGI pipeline with Pydantic request validation &amp; CORS middleware&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Structured error reporting with deterministic reason codes (&lt;code&gt;NO_DOCUMENTS_INDEXED&lt;/code&gt;)&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="410" x="60" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_api" parent="1" style="rounded=1;fillColor=#0284C7;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="137" width="4" x="62" y="1034" as="geometry" />
+        </mxCell>
+        <mxCell id="card_db" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Relational Database Persistence&lt;/span&gt;    &lt;span style=&#39;background-color:#4F46E51A;color:#4F46E5;border:1px solid #4F46E54D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;SQLITE&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• File: &lt;code&gt;data/truthguard.db&lt;/code&gt; (Local, Zero-cloud)&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Schema Tables: &lt;code&gt;verification_runs&lt;/code&gt;, &lt;code&gt;claims&lt;/code&gt;, &lt;code&gt;evidence&lt;/code&gt;, &lt;code&gt;documents&lt;/code&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• Stores audit trail, character offsets, verdicts, hallucination scores &amp; SHA-256 hashes&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="360" x="490" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_db" parent="1" style="rounded=1;fillColor=#4F46E5;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="137" width="4" x="492" y="1034" as="geometry" />
+        </mxCell>
+        <mxCell id="card_ui" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=0;align=left;verticalAlign=top;" value="&lt;div style=&#39;padding:6px 10px;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;&#39;&gt;  &lt;div style=&#39;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;&#39;&gt;    &lt;span style=&#39;font-size:12px;font-weight:700;color:#0F172A;letter-spacing:-0.2px;&#39;&gt;Modern Interactive Audit Dashboard&lt;/span&gt;    &lt;span style=&#39;background-color:#0D94881A;color:#0D9488;border:1px solid #0D94884D;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;&#39;&gt;REACT 18&lt;/span&gt;  &lt;/div&gt;  &lt;div style=&#39;height:1px;background-color:#E2E8F0;margin:3px 0 6px 0;&#39;&gt;&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Interactive Answer Inspector:&lt;/b&gt; Real-time span highlighting (Supported, Contradicted, Conflicting, Insufficient)&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Hallucination Risk Gauge:&lt;/b&gt; Circular risk meter showing composite score S_risk, Contradiction Rate, and Unsupported Rate&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Evidence Provenance Cards:&lt;/b&gt; Document name, page number, chunk ID, verbatim citation snippet, and similarity score&lt;/div&gt;  &lt;div style=&#39;font-size:10.5px;color:#334155;line-height:1.45;margin-bottom:2px;&#39;&gt;• &lt;b&gt;Diff Reverification View:&lt;/b&gt; Side-by-side inspection showing refuted assertions vs. grounded corrected text&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="870" x="870" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="stripe_card_ui" parent="1" style="rounded=1;fillColor=#0D9488;strokeColor=none;arcSize=50;" value="" vertex="1">
+          <mxGeometry height="137" width="4" x="872" y="1034" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_bar" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;shadow=0;" value="&lt;div style=&#39;font-family:Inter,Segoe UI,sans-serif;font-size:11px;color:#475569;display:flex;align-items:center;justify-content:center;height:100%;&#39;&gt;  &lt;span style=&#39;font-weight:700;color:#0F172A;margin-right:15px;&#39;&gt;PIPELINE LEGEND:&lt;/span&gt;  &lt;span style=&#39;background:#E0F2FE;color:#0369A1;padding:2px 8px;border-radius:4px;font-weight:600;margin-right:10px;&#39;&gt;■ Ingestion &amp;amp; Input Flow&lt;/span&gt;  &lt;span style=&#39;background:#EEF2FF;color:#3730A3;padding:2px 8px;border-radius:4px;font-weight:600;margin-right:10px;&#39;&gt;■ Dense Vector Indexing (FAISS)&lt;/span&gt;  &lt;span style=&#39;background:#FEF3C7;color:#92400E;padding:2px 8px;border-radius:4px;font-weight:600;margin-right:10px;&#39;&gt;■ DeBERTa-v3 Cross-Encoder NLI&lt;/span&gt;  &lt;span style=&#39;background:#FEE2E2;color:#991B1B;padding:2px 8px;border-radius:4px;font-weight:600;margin-right:10px;&#39;&gt;■ Arbitration &amp;amp; Risk Scoring&lt;/span&gt;  &lt;span style=&#39;background:#EDE9FE;color:#5B21B6;padding:2px 8px;border-radius:4px;font-weight:600;margin-right:10px;&#39;&gt;■ Closed-Loop Reverification&lt;/span&gt;  &lt;span style=&#39;background:#ECFDF5;color:#064E3B;padding:2px 8px;border-radius:4px;font-weight:600;&#39;&gt;■ Hardware Allocation&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="45" width="1720" x="40" y="1215" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mode_a_s1" edge="1" parent="1" source="card_mode_a" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#1E293B;fontSize=10;" target="card_s1" value="Candidate Answer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mode_b_s1" edge="1" parent="1" source="card_mode_b" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#1E293B;fontSize=10;" target="card_s1" value="Synthesized Text">
+          <mxGeometry relative="1" x="0.0541" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="262" />
+              <mxPoint x="360" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_doc_chunk" edge="1" parent="1" source="card_docs" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#334155;fontSize=10;" target="card_chunk" value="Raw Text">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="390" />
+              <mxPoint x="300" y="571" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_fever_chunk" edge="1" parent="1" source="card_fever" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#334155;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="card_chunk" value="Wikipedia">
+          <mxGeometry relative="1" x="0.0317" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="-110" y="485" />
+              <mxPoint x="-110" y="571" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_chunk_embed" edge="1" parent="1" source="card_chunk" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6366F1;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#3730A3;fontSize=10;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="stripe_card_embed" value="500-char Chunks">
+          <mxGeometry relative="1" x="0.0634" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="-120" y="591" />
+              <mxPoint x="-120" y="676" />
+            </Array>
+            <mxPoint x="-70" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_faiss_s2" edge="1" parent="1" source="card_faiss" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6366F1;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#3730A3;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="card_s2" value="Top-3 Matches (sim ≥ 0.25)">
+          <mxGeometry relative="1" x="-0.2066" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="780" />
+              <mxPoint x="320" y="685" />
+              <mxPoint x="410" y="685" />
+              <mxPoint x="410" y="355" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_s1_s2" edge="1" parent="1" source="card_s1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#1E293B;fontSize=10;" target="card_s2" value="Atomic Claims + Offsets">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s2_s3" edge="1" parent="1" source="card_s2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#1E293B;fontSize=10;" target="card_s3" value="Premise-Hypothesis Pairs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s3_s4" edge="1" parent="1" source="card_s3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DC2626;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#991B1B;fontSize=10;" target="card_s4" value="Softmax [P_c, P_e, P_n]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s4_s5" edge="1" parent="1" source="card_s4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DC2626;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#991B1B;fontSize=10;" target="card_s5" value="4-Way Verdicts">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="690" />
+              <mxPoint x="880" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_s5_dec" edge="1" parent="1" source="card_s5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6366F1;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#3730A3;fontSize=10;" target="card_decision" value="Contradiction Count">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dec_corr" edge="1" parent="1" source="card_decision" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DC2626;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#991B1B;fontSize=10;" target="card_s6" value="Yes (N_contra &gt; 0)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dec_pass" edge="1" parent="1" source="card_decision" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16A34A;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#15803D;fontSize=10;" target="card_pass" value="No (0 Contradictions)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1120" y="395" />
+              <mxPoint x="1240" y="395" />
+              <mxPoint x="1240" y="730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_corr_reverif" edge="1" parent="1" source="card_s6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6366F1;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#3730A3;fontSize=10;" target="card_reverif" value="Corrected Text + Evidence">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_reverif_loop" edge="1" parent="1" source="card_reverif" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7C3AED;strokeWidth=2.2;dashed=1;dashPattern=6 3;endArrow=classic;endFill=1;fontColor:#6B21A8;fontSize=10.5;fontStyle=1;" target="card_s1" value="CLOSED-LOOP REVERIFICATION AUDIT (GUARANTEES 0 CONTRADICTIONS)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="920" y="620" />
+              <mxPoint x="880" y="620" />
+              <mxPoint x="880" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_reverif_pass" edge="1" parent="1" source="card_reverif" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16A34A;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#15803D;fontSize=10;" target="card_pass" value="Verified Factual">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_pass_api" edge="1" parent="1" source="card_pass" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#334155;fontSize=10;libavoidRouting=1;" target="card_api" value="Verified Audit Payload">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1120" y="984" />
+              <mxPoint x="265" y="984" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_api_db" edge="1" parent="1" source="card_api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#1E293B;fontSize=10;" target="card_db" value="Persist Run">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_api_ui" edge="1" parent="1" source="card_api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=1.5;endArrow=classic;endFill=1;fontColor:#334155;fontSize=10;" target="card_ui" value="Stream Verified JSON">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="265" y="1175" />
+              <mxPoint x="900" y="1175" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

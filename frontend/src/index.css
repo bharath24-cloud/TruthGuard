@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color-scheme: dark;
+  --bg-deep: #080910;
+  --surface: #11131B;
+  --surface-secondary: #171A25;
+  --violet: #8B5CF6;
+  --cool-blue: #7AA2FF;
+  --text-primary: #F4F4FA;
+  --text-secondary: #A2A6B8;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-focus: rgba(139, 92, 246, 0.35);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #080910;
+  color: #F4F4FA;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Truth Wisp Organic Liquid Keyframes */
+@keyframes wispFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(-1.2deg);
+  }
+}
+
+@keyframes wispRibbonVentral {
+  0%, 100% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  33% {
+    transform: rotate(2.5deg) skewX(1.8deg) translateY(1px);
+  }
+  66% {
+    transform: rotate(-2deg) skewX(-1.5deg) translateY(-1px);
+  }
+}
+
+@keyframes wispRibbonDorsal {
+  0%, 100% {
+    transform: rotate(0deg) skewY(0deg);
+  }
+  50% {
+    transform: rotate(-3deg) skewY(-2deg) translateY(2px);
+  }
+}
+
+@keyframes wispRibbonLateral {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(3.5deg) scale(1.03) translateY(-1px);
+  }
+}
+
+@keyframes wispInternalLight {
+  0%, 100% {
+    opacity: 0.65;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes wispMoteOrbit1 {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 0.2;
+  }
+  30% {
+    transform: translate(-14px, -18px);
+    opacity: 0.75;
+  }
+  70% {
+    transform: translate(-6px, -32px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 0.2;
+  }
+}
+
+@keyframes wispMoteOrbit2 {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 0.3;
+  }
+  40% {
+    transform: translate(18px, -12px);
+    opacity: 0.8;
+  }
+  80% {
+    transform: translate(10px, -24px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 0.3;
+  }
+}
+
+.animate-wisp-float {
+  animation: wispFloat 6s ease-in-out infinite;
+}
+
+.animate-wisp-ventral {
+  animation: wispRibbonVentral 5.5s ease-in-out infinite;
+  transform-origin: 92px 120px;
+}
+
+.animate-wisp-dorsal {
+  animation: wispRibbonDorsal 6.5s ease-in-out infinite;
+  transform-origin: 126px 110px;
+}
+
+.animate-wisp-lateral {
+  animation: wispRibbonLateral 4.8s ease-in-out infinite;
+  transform-origin: 68px 90px;
+}
+
+.animate-wisp-light {
+  animation: wispInternalLight 4s ease-in-out infinite;
+}
+
+.animate-wisp-mote-1 {
+  animation: wispMoteOrbit1 8s ease-in-out infinite;
+}
+
+.animate-wisp-mote-2 {
+  animation: wispMoteOrbit2 9.5s ease-in-out infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #080910;
+}
+::-webkit-scrollbar-thumb {
+  background: #191c28;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #252a3b;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-wisp-float,
+  .animate-wisp-ventral,
+  .animate-wisp-dorsal,
+  .animate-wisp-lateral,
+  .animate-wisp-light,
+  .animate-wisp-mote-1,
+  .animate-wisp-mote-2,
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "source_dataset": "FEVER",
+  "split": "paper_dev",
+  "raw_file": "C:\\Users\\sesha\\OneDrive\\Desktop\\TRUTHGUARD\\datasets\\fever\\raw\\paper_dev.jsonl",
+  "prepared_file": "C:\\Users\\sesha\\OneDrive\\Desktop\\TRUTHGUARD\\datasets\\fever\\prepared\\fever_paper_dev_1000.jsonl",
+  "sample_size": 1000,
+  "seed": 42,
+  "total_raw_lines_scanned": 9999,
+  "total_unique_items_found": 9742,
+  "duplicates_removed": 257,
+  "missing_evidence_count": 3247,
+  "class_distribution": {
+    "NOT_ENOUGH_INFO": 327,
+    "REFUTED": 355,
+    "SUPPORTED": 318
+  },
+  "unique_wikipedia_articles_referenced": 526,
+  "prepared_at": "2026-10-16T17:43:23.406546"
+}

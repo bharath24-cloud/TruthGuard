@@ -1,0 +1,32 @@
+[
+  {
+    "id": "tqa_001",
+    "claim": "Vaccines cause autism in children.",
+    "evidence": "Extensive scientific research involving millions of children has demonstrated no causal link between vaccines and autism.",
+    "label": "false"
+  },
+  {
+    "id": "tqa_002",
+    "claim": "Water boils at 100 degrees Celsius at standard atmospheric pressure.",
+    "evidence": "At standard atmospheric pressure (1 atm), the boiling point of pure water is 100 degrees Celsius (212 degrees Fahrenheit).",
+    "label": "true"
+  },
+  {
+    "id": "tqa_003",
+    "claim": "Humans only use 10 percent of their brains.",
+    "evidence": "Brain imaging research shows that humans use virtually every part of the brain, and most of the brain is active almost all the time.",
+    "label": "false"
+  },
+  {
+    "id": "tqa_004",
+    "claim": "The Earth orbits the Sun once approximately every 365.25 days.",
+    "evidence": "Earth takes roughly 365.256 days to complete one orbital revolution around the Sun.",
+    "label": "true"
+  },
+  {
+    "id": "tqa_005",
+    "claim": "Bulls get angry primarily at the color red.",
+    "evidence": "Bulls are dichromatic and largely color-blind to red; they react aggressively to the movement of the matador's cape rather than its color.",
+    "label": "false"
+  }
+]

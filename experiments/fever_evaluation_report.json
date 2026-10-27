@@ -1,0 +1,60 @@
+[
+  {
+    "id": "072ae7ba-ae48-4a9e-9d8c-8eeb96a243bf",
+    "name": "FEVER (FEVER Retrieval)",
+    "benchmark_name": "FEVER",
+    "model_name": "cross-encoder/nli-deberta-v3-small",
+    "total_samples": 15,
+    "accuracy": 0.4,
+    "precision": 0.1429,
+    "recall": 0.2857,
+    "f1_score": 0.1905,
+    "retrieval_recall_at_k": 0.1111,
+    "confusion_matrix": {
+      "Contradicted": {
+        "Contradicted": 6,
+        "Insufficient Evidence": 1,
+        "Supported": 0
+      },
+      "Insufficient Evidence": {
+        "Contradicted": 6,
+        "Insufficient Evidence": 0,
+        "Supported": 0
+      },
+      "Supported": {
+        "Contradicted": 2,
+        "Insufficient Evidence": 0,
+        "Supported": 0
+      }
+    },
+    "metrics": {
+      "labels": [
+        "Contradicted",
+        "Insufficient Evidence",
+        "Supported"
+      ],
+      "evidence_source": "fever",
+      "per_class": {
+        "Contradicted": {
+          "precision": 0.4286,
+          "recall": 0.8571,
+          "f1": 0.5714
+        },
+        "Insufficient Evidence": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "Supported": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "samples_with_evidence": 9,
+      "retrieval_hits": 1
+    },
+    "latency_per_sample_ms": 1288.55,
+    "created_at": "2026-10-16 17:45:36.651295"
+  }
+]

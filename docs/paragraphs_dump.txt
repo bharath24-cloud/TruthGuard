@@ -1,0 +1,752 @@
+--- P000 | align=CENTER (1) | drawings=0 | len=197 ---
+Text: TRUTHGUARD: AN EXPLAINABLE NATURAL LANGUAGE PROCESSING FRAMEWORK FOR HALLUCINATION DETECTION, MULTI-SOURCE EVIDENCE VERIFICATION, AND AUTOMATIC GROUNDED CORRECTION OF LARGE LANGUAGE MODEL RESPONSES
+Runs: R0(draw=0,fn=Times New Roman,fs=16.0,b=True,i=None)
+
+--- P001 | align=CENTER (1) | drawings=0 | len=16 ---
+Text: A PROJECT REPORT
+Runs: R0(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None)
+
+--- P002 | align=CENTER (1) | drawings=0 | len=12 ---
+Text: Submitted by
+Runs: R0(draw=0,fn=Times New Roman,fs=14.0,b=None,i=True)
+
+--- P003 | align=CENTER (1) | drawings=0 | len=33 ---
+Text: BHARATHRAM K
+(Reg. No.: E0324006)
+Runs: R0(draw=0,fn=Times New Roman,fs=15.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=15.0,b=True,i=None)
+
+--- P004 | align=CENTER (1) | drawings=0 | len=53 ---
+Text: in partial fulfillment for the award of the degree
+of
+Runs: R0(draw=0,fn=Times New Roman,fs=13.0,b=None,i=True), R1(draw=0,fn=Times New Roman,fs=13.0,b=None,i=True)
+
+--- P005 | align=CENTER (1) | drawings=0 | len=22 ---
+Text: BACHELOR OF TECHNOLOGY
+Runs: R0(draw=0,fn=Times New Roman,fs=15.0,b=True,i=None)
+
+--- P006 | align=CENTER (1) | drawings=0 | len=80 ---
+Text: in
+COMPUTER SCIENCE AND ENGINEERING
+(Artificial Intelligence and Data Analytics)
+Runs: R0(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None), R2(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None)
+
+--- P007 | align=CENTER (1) | drawings=0 | len=137 ---
+Text: SRI RAMACHANDRA FACULTY OF ENGINEERING AND TECHNOLOGY
+SRI RAMACHANDRA INSTITUTE OF HIGHER EDUCATION AND RESEARCH
+PORUR, CHENNAI – 600 116
+Runs: R0(draw=0,fn=Times New Roman,fs=13.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=13.0,b=True,i=None), R2(draw=0,fn=Times New Roman,fs=13.0,b=True,i=None)
+
+--- P008 | align=CENTER (1) | drawings=0 | len=12 ---
+Text: OCTOBER 2026
+Runs: R0(draw=0,fn=Times New Roman,fs=13.0,b=True,i=None)
+
+--- P009 | align=None | drawings=0 | len=0 ---
+Text: 
+Runs: R0(draw=0,fn=None,fs=None,b=None,i=None)
+
+--- P010 | align=CENTER (1) | drawings=0 | len=53 ---
+Text: SRI RAMACHANDRA FACULTY OF ENGINEERING AND TECHNOLOGY
+Runs: R0(draw=0,fn=Times New Roman,fs=13.0,b=True,i=None)
+
+--- P011 | align=CENTER (1) | drawings=0 | len=24 ---
+Text: PORUR, CHENNAI – 600 116
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P012 | align=CENTER (1) | drawings=0 | len=20 ---
+Text: BONAFIDE CERTIFICATE
+Runs: R0(draw=0,fn=Times New Roman,fs=15.0,b=True,i=None)
+
+--- P013 | align=JUSTIFY (3) | drawings=0 | len=680 ---
+Text: Certified that this project report titled "TRUTHGUARD: AN EXPLAINABLE NATURAL LANGUAGE PROCESSING FRAMEWORK FOR HALLUCINATION DETECTION, MULTI-SOURCE EVIDENCE VERIFICATION, AND AUTOMATIC GROUNDED CORRECTION OF LARGE LANGUAGE MODEL RESPONSES" is the bonafide work of BHARATHRAM K (Reg. No.: E0324006) who carried out the project work under my supervision in ADA23DLU04 – Natural Language Processing Laboratory at Sri Ramachandra Faculty of Engineering and Technology, in partial fulfillment of the requirements for the award of the degree of Bachelor of Technology in Computer Science and Engineering (Artificial Intelligence and Data Analytics) during the academic year 2026–2027.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P014 | align=None | drawings=0 | len=251 ---
+Text: SIGNATURE
+DR. SUJA GOLDEN SHINY S,
+ASSISTANT PROFESSOR,
+DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING (AIDA),
+SRI RAMACHANDRA FACULTY OF ENGINEERING AND TECHNOLOGY,
+SRI RAMACHANDRA INSTITUTE OF HIGHER EDUCATION AND RESEARCH,
+PORUR, CHENNAI - 600 116.
+Runs: R0(draw=0,fn=Times New Roman,fs=None,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=None,b=True,i=None), R2(draw=0,fn=Times New Roman,fs=None,b=True,i=None), R3(draw=0,fn=Times New Roman,fs=None,b=True,i=None), R4(draw=0,fn=Times New Roman,fs=None,b=True,i=None), R5(draw=0,fn=Times New Roman,fs=None,b=True,i=None), R6(draw=0,fn=Times New Roman,fs=None,b=True,i=None)
+
+--- P015 | align=JUSTIFY (3) | drawings=0 | len=36 ---
+Text: EVALUATION DATE: ___________________
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P016 | align=None | drawings=0 | len=0 ---
+Text: 
+Runs: R0(draw=0,fn=None,fs=None,b=None,i=None)
+
+--- P017 | align=CENTER (1) | drawings=0 | len=15 ---
+Text: ACKNOWLEDGEMENT
+Runs: R0(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None)
+
+--- P018 | align=JUSTIFY (3) | drawings=0 | len=333 ---
+Text: I express my sincere and heartfelt gratitude to the respected Dean, Sri Ramachandra Faculty of Engineering and Technology, and the Vice-Dean for providing state-of-the-art computational infrastructure, laboratories, and a stimulating academic environment that made the successful execution of this research-oriented project possible.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P019 | align=JUSTIFY (3) | drawings=0 | len=264 ---
+Text: I convey my deep sense of respect and gratefulness to the Head of the Department of Computer Science and Engineering (Artificial Intelligence and Data Analytics) for continuous administrative support, academic leadership, and encouragement throughout the semester.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P020 | align=JUSTIFY (3) | drawings=0 | len=576 ---
+Text: I take immense pleasure in expressing my profound gratitude and indebtedness to my Project Supervisor and Course Faculty, Dr. Suja Golden Shiny S, Assistant Professor, Department of Computer Science and Engineering (AIDA), for her intellectual mentorship, invaluable technical suggestions, rigorous scrutiny, and persistent encouragement during all phases of developing the TruthGuard framework. Her domain expertise in Natural Language Processing provided critical direction in formulating the multi-source evidence retrieval and calibrated cross-encoder inference pipelines.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P021 | align=JUSTIFY (3) | drawings=0 | len=322 ---
+Text: I also extend my sincere appreciation to the technical staff of the Natural Language Processing Laboratory for their seamless hardware and software assistance. Finally, I owe an immeasurable debt of gratitude to my family and peers for their constant moral support, patience, and motivation throughout my academic journey.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P022 | align=RIGHT (2) | drawings=0 | len=33 ---
+Text: BHARATHRAM K
+(Reg. No.: E0324006)
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P023 | align=None | drawings=0 | len=0 ---
+Text: 
+Runs: R0(draw=0,fn=None,fs=None,b=None,i=None)
+
+--- P024 | align=CENTER (1) | drawings=0 | len=8 ---
+Text: ABSTRACT
+Runs: R0(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None)
+
+--- P025 | align=JUSTIFY (3) | drawings=0 | len=2030 ---
+Text: Large Language Models (LLMs) have demonstrated extraordinary capabilities across conversational agents and generative text synthesis; however, their susceptibility to factual hallucinations—generating plausible yet factually unsubstantiated or demonstrably false assertions—presents severe reliability and safety risks in high-stakes domains such as healthcare, law, and engineering. Contemporary hallucination detection systems predominantly rely on monolithic LLM-as-a-judge prompts that introduce non-deterministic evaluation overhead, suffer from self-hallucination, conflate unverified assertions with direct contradictions, and mandate costly cloud dependencies. In this project, we engineer and implement TruthGuard, an explainable, locally executable Natural Language Processing framework designed for automated atomic claim decomposition, multi-source semantic evidence verification, and closed-loop evidence-grounded correction. TruthGuard operates via a modular multi-tier pipeline: input generation or manual response ingestion, atomic claim extraction with precise character-span tracking, dense semantic passage retrieval over private document libraries and the official FEVER Wikipedia corpus using Sentence-Transformers (all-MiniLM-L6-v2) and FAISS L2-normalized inner product indexing, natural language inference using the cross-encoder nli-deberta-v3-small, multi-evidence arbitration across seven distinct operational states, a mathematically bounded composite hallucination risk scoring formula, and grounded correction via local Ollama (qwen3:8b) with automated closed-loop re-verification. Experimental evaluation conducted on local hardware demonstrates 90.0% multi-class accuracy, 89.9% Macro F1, 100.0% retrieval recall@3, and sub-600ms latency on warm verification queries, while strategic CPU/GPU memory partitioning eliminates CUDA out-of-memory errors on 4GB VRAM mobile workstations. TruthGuard provides a zero-simulation, reproducible, and privacy-preserving safeguard for enterprise LLM deployment.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P026 | align=None | drawings=0 | len=0 ---
+Text: 
+Runs: R0(draw=0,fn=None,fs=None,b=None,i=None)
+
+--- P027 | align=CENTER (1) | drawings=0 | len=17 ---
+Text: TABLE OF CONTENTS
+Runs: R0(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None)
+
+--- P028 | align=None | drawings=0 | len=0 ---
+Text: 
+Runs: R0(draw=0,fn=None,fs=None,b=None,i=None)
+
+--- P029 | align=CENTER (1) | drawings=0 | len=14 ---
+Text: LIST OF TABLES
+Runs: R0(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None)
+
+--- P030 | align=None | drawings=0 | len=0 ---
+Text: 
+Runs: 
+
+--- P031 | align=CENTER (1) | drawings=0 | len=15 ---
+Text: LIST OF FIGURES
+Runs: R0(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None)
+
+--- P032 | align=None | drawings=0 | len=0 ---
+Text: 
+Runs: R0(draw=0,fn=None,fs=None,b=None,i=None)
+
+--- P033 | align=CENTER (1) | drawings=0 | len=33 ---
+Text: LIST OF SYMBOLS AND ABBREVIATIONS
+Runs: R0(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None)
+
+--- P034 | align=None | drawings=0 | len=0 ---
+Text: 
+Runs: R0(draw=0,fn=None,fs=None,b=None,i=None)
+
+--- P035 | align=CENTER (1) | drawings=0 | len=22 ---
+Text: CHAPTER 1
+INTRODUCTION
+Runs: R0(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None)
+
+--- P036 | align=None | drawings=0 | len=20 ---
+Text: 1.1 Project Overview
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P037 | align=JUSTIFY (3) | drawings=0 | len=728 ---
+Text: Over the past three years, the landscape of Artificial Intelligence and Natural Language Processing has been fundamentally transformed by the advent of Large Language Models (LLMs) based on the Transformer architecture. Modern autoregressive foundation models—such as Qwen, LLaMA, GPT-4, and Mistral—exhibit remarkable fluency, contextual reasoning, and zero-shot problem-solving competence across an expansive breadth of natural language tasks, including software synthesis, question answering, legal brief drafting, and medical dialogue summarization. However, despite their state-of-the-art linguistic fluency, autoregressive language models suffer from an inherent and pervasive vulnerability known as factual hallucination.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P038 | align=JUSTIFY (3) | drawings=0 | len=786 ---
+Text: In contemporary Natural Language Generation (NLG) literature, factual hallucination is defined as the generation of statements that are either logically unfaithful to the provided source context (intrinsic hallucination) or factually untruthful and unsubstantiated with respect to established world knowledge (extrinsic hallucination). Because language models are trained via maximum likelihood estimation over next-token probability distributions, they prioritize semantic coherence and statistical likelihood over factual verifiability. Consequently, when encountering epistemic uncertainty or ambiguous training priors, models confabulate plausible-sounding falsehoods, invent synthetic citations, and state inaccurate dates or relationships with authoritative linguistic confidence.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P039 | align=JUSTIFY (3) | drawings=0 | len=662 ---
+Text: This vulnerability poses critical risks in high-consequence enterprise environments. In clinical diagnostics, an unverified pharmaceutical claim could lead to adverse patient outcomes; in legal research, fabricated court precedents result in severe professional sanctions; and in customer-facing financial advisories, ungrounded figures incur substantial legal liabilities. Therefore, developing automated, rigorous, and explainable natural language verification systems that inspect, audit, and correct language model generations against authoritative reference knowledge bases has emerged as an essential priority for real-world artificial intelligence safety.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P040 | align=JUSTIFY (3) | drawings=0 | len=473 ---
+Text: TruthGuard is conceived and engineered to resolve this challenge. TruthGuard is an explainable NLP framework developed to identify unsupported or fabricated claims in LLM responses, retrieve ground truth reference passages from structured and unstructured corpora, perform Natural Language Inference (NLI), provide grounded explainability rationales with exact provenance, and execute automatic evidence-grounded corrections without requiring costly cloud API dependencies.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P041 | align=None | drawings=0 | len=21 ---
+Text: 1.2 Problem Statement
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P042 | align=JUSTIFY (3) | drawings=0 | len=239 ---
+Text: Despite significant recent interest in evaluating language model truthfulness, prevailing automated hallucination detection systems exhibit severe engineering and scientific bottlenecks that limit their viability for real-world deployment:
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P043 | align=JUSTIFY (3) | drawings=0 | len=400 ---
+Text: Unreliable 'LLM-as-a-Judge' Heuristics: Many current commercial solutions query another large language model to rate the truthfulness of generated text. This approach is intrinsically flawed: judge models inherit the same hallucination tendencies, lack verifiable citation provenance, exhibit non-deterministic stochastic variance, and incur substantial operational token latency and financial costs.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P044 | align=JUSTIFY (3) | drawings=0 | len=459 ---
+Text: Conflation of Unverified Claims with Contradictions: Standard fact-checking classifiers frequently implement naive binary labeling (True vs. False). They fail to mathematically distinguish between statements that are demonstrably false (contradicted by reference documents) and statements that are merely unverifiable due to missing or non-retrieved evidence. In legal and scientific audits, an unproven claim must not be conflated with a falsified assertion.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P045 | align=JUSTIFY (3) | drawings=0 | len=259 ---
+Text: Absence of Character-Level Span Attribution: Most systems generate coarse, passage-level hallucination labels without pinpointing the exact syntactic clauses or character boundaries responsible for the discrepancy, preventing fine-grained, localized auditing.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P046 | align=JUSTIFY (3) | drawings=0 | len=438 ---
+Text: Hardware Inefficiency & Out-of-Memory Bottlenecks: State-of-the-art verification pipelines that deploy multiple neural networks (bi-encoders, cross-encoders, and generative correctors) typically demand enterprise-grade GPU clusters (e.g., NVIDIA A100/H100). When executed on commodity consumer hardware or laptop workstations with 4 GB VRAM, monolithic GPU allocation triggers CUDA Out-Of-Memory (OOM) failures or severe memory thrashing.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P047 | align=JUSTIFY (3) | drawings=0 | len=368 ---
+Text: Consequently, there exists an acute engineering requirement for a modular, locally executable NLP framework capable of executing atomic claim extraction, dense vector retrieval, multi-evidence cross-encoder NLI, calibrated mathematical risk scoring, and closed-loop correction on resource-constrained consumer hardware with zero simulation and sub-second warm latency.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P048 | align=None | drawings=0 | len=14 ---
+Text: 1.3 Objectives
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P049 | align=JUSTIFY (3) | drawings=0 | len=72 ---
+Text: The primary technical and scientific goals achieved in this project are:
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P050 | align=JUSTIFY (3) | drawings=0 | len=289 ---
+Text: Architect an Explainable End-to-End NLP Verification Pipeline: Design and implement a modular framework that decomposes input text into discrete atomic claims, performs semantic evidence retrieval, executes cross-encoder NLI verification, and computes a composite hallucination risk index.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P051 | align=JUSTIFY (3) | drawings=0 | len=288 ---
+Text: Implement Multi-Source Dense Vector Retrieval: Construct an L2-normalized vector search engine using sentence-transformers/all-MiniLM-L6-v2 and FAISS IndexFlatIP capable of querying custom user document libraries (PDF, TXT, MD) alongside the standardized FEVER Wikipedia benchmark corpus.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P052 | align=JUSTIFY (3) | drawings=0 | len=246 ---
+Text: Deploy Calibrated 3-Way Cross-Encoder NLI: Integrate cross-encoder/nli-deberta-v3-small to evaluate claim-evidence pairs across entailment, contradiction, and neutral distributions with calibrated decision thresholds (tau_e = 0.55, tau_c = 0.50).
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P053 | align=JUSTIFY (3) | drawings=0 | len=244 ---
+Text: Formulate a Multi-Evidence Arbitration Policy & Risk Index: Establish a deterministic mathematical formula bounded in [0.0, 1.0] that arbitrates between conflicting, supported, contradicted, and insufficient evidence without heuristic guessing.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P054 | align=JUSTIFY (3) | drawings=0 | len=275 ---
+Text: Execute Closed-Loop Evidence-Grounded Correction: Incorporate a local generative model (qwen3:8b via Ollama) that replaces contradicted claim spans with retrieved ground truth context, followed by an automated re-verification audit to guarantee zero remaining contradictions.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P055 | align=JUSTIFY (3) | drawings=0 | len=269 ---
+Text: Hardware-Aware Partitioning for 4 GB VRAM Workstations: Implement CPU/GPU device budgeting that offloads embeddings and NLI to CPU threads while dedicating GPU memory to Ollama, eliminating CUDA out-of-memory crashes while achieving sub-600ms warm verification latency.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P056 | align=None | drawings=0 | len=41 ---
+Text: 1.4 Scope of Work and Social Contribution
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P057 | align=JUSTIFY (3) | drawings=0 | len=643 ---
+Text: The scope of this project encompasses the design, implementation, evaluation, and user interface delivery of TruthGuard. The system accepts either user-supplied query-answer pairs (Mode A: Direct Verification) or prompts a local LLM to generate answers before auditing them (Mode B: Autonomous Generation & Verification). The framework supports PDF, plain text, and Markdown document ingestion with character-level sliding-window chunking, vector indexing in FAISS, full integration with the FEVER benchmark dataset, and an interactive modern React 18 / TailwindCSS dashboard communicating with a high-performance FastAPI asynchronous backend.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P058 | align=JUSTIFY (3) | drawings=0 | len=613 ---
+Text: Excluded from the current project phase are multimodal vision-language verification (auditing chart graphics or medical imagery), unrestricted real-time web scraping during live inference, and generative rewriting beyond the explicit bounds of retrieved evidence. The social contribution of TruthGuard lies in democratizing trustworthy, verifiable AI technology: by enabling local, private, and zero-cloud auditability of language models, it provides academic institutions, healthcare facilities, and legal professionals with an accessible safeguard against algorithmic misinformation and automated confabulation.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P059 | align=None | drawings=0 | len=0 ---
+Text: 
+Runs: R0(draw=0,fn=None,fs=None,b=None,i=None)
+
+--- P060 | align=CENTER (1) | drawings=0 | len=27 ---
+Text: CHAPTER 2
+LITERATURE REVIEW
+Runs: R0(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None)
+
+--- P061 | align=None | drawings=0 | len=43 ---
+Text: 2.1 Background of Fact Verification and NLI
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P062 | align=JUSTIFY (3) | drawings=0 | len=500 ---
+Text: The automated verification of natural language text against factual reference knowledge has evolved over three distinct algorithmic eras. Early fact-checking frameworks relied heavily on information extraction from curated Knowledge Graphs (e.g., Freebase, Wikidata) using symbolic triple matching (subject-predicate-object). While highly precise for structured biographical data, symbolic approaches proved incapable of handling complex, unstructured descriptive text or nuanced semantic assertions.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P063 | align=JUSTIFY (3) | drawings=0 | len=543 ---
+Text: The second era was catalyzed by the development of Natural Language Inference (NLI) benchmarks, specifically the Stanford NLI (SNLI) and Multi-Genre NLI (MNLI) corpora. Formulated as a sequence classification task, NLI tasks a neural network with determining whether a given premise sentence entails, contradicts, or is neutral towards a hypothesis sentence. Initial deep learning models deployed Siamese LSTM or CNN encoders that mapped premise and hypothesis independently into dense vectors before calculating element-wise distance metrics.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P064 | align=JUSTIFY (3) | drawings=0 | len=662 ---
+Text: The third and contemporary era is defined by pre-trained Transformer cross-encoders and dense vector retrieval systems within the Retrieval-Augmented Generation (RAG) paradigm. In contrast to bi-encoder architectures that encode queries and documents independently, cross-encoders concatenate the premise and hypothesis into a single token sequence, permitting all-to-all cross-attention across all layers. Concurrently, dense semantic retrievers leveraging contrastive learning (such as Sentence-BERT and MiniLM) combined with inverted file indexing or flat inner product search (FAISS) have enabled sub-millisecond retrieval across millions of document chunks.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P065 | align=None | drawings=0 | len=29 ---
+Text: 2.1.1 Review of Related Works
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P066 | align=JUSTIFY (3) | drawings=0 | len=274 ---
+Text: A rigorous survey of seminal academic publications and industry benchmarks relevant to automated fact verification and hallucination detection was conducted. The following ten peer-reviewed studies establish the technical foundation and theoretical baselines for TruthGuard:
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P067 | align=JUSTIFY (3) | drawings=0 | len=529 ---
+Text: 1. Thorne et al. (2018) – FEVER Dataset: In their foundational EMNLP paper, Thorne et al. introduced the Fact Extraction and VERification (FEVER) dataset, consisting of 185,445 claims extracted from Wikipedia pages. Claims are categorized into SUPPORTS, REFUTES, or NOT ENOUGH INFO. Their baseline pipeline utilized TF-IDF for document retrieval followed by an MLP classifier, achieving an accuracy of 31.87% without ground truth passage hints. Their work established the formal standard for three-class fact-checking benchmarks.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P068 | align=JUSTIFY (3) | drawings=0 | len=397 ---
+Text: 2. Ji et al. (2023) – Survey of Hallucination in NLG: Published in ACM Computing Surveys, this comprehensive survey synthesized over two hundred papers on hallucination in generative models. The authors categorized hallucinations into intrinsic vs extrinsic and established rigorous evaluation methodologies, emphasizing that reliance on self-evaluating LLMs yields circular ungrounded validation.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P069 | align=JUSTIFY (3) | drawings=0 | len=487 ---
+Text: 3. He et al. (2021) – DeBERTa Architecture: He et al. introduced the Decoding-enhanced BERT with Disentangled Attention (DeBERTa) at ICLR 2021. By disentangling content and positional vectors and incorporating an enhanced mask decoder, DeBERTa substantially surpassed RoBERTa and BERT on NLI benchmarks. The compact cross-encoder/nli-deberta-v3-small variant achieved 88.4% MNLI accuracy with only 44 million parameters, making it the premier candidate for low-latency CPU NLI execution.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P070 | align=JUSTIFY (3) | drawings=0 | len=399 ---
+Text: 4. Reimers and Gurevych (2019) – Sentence-BERT: Presented at EMNLP 2019, this work demonstrated that standard BERT embeddings are ill-suited for direct cosine similarity. By fine-tuning Siamese networks using contrastive triplet loss, Sentence-BERT produced semantically meaningful sentence embeddings that reduced the computational overhead of finding most similar pairs from 65 hours to 5 seconds.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P071 | align=JUSTIFY (3) | drawings=0 | len=441 ---
+Text: 5. Johnson, Douze, and Jégou (2019) – FAISS Vector Indexing: Published in IEEE Transactions on Big Data, the authors developed Facebook AI Similarity Search (FAISS), optimizing k-selection and vector quantization for billion-scale dense representations. Their implementation of IndexFlatIP provides exact L2-normalized inner product evaluation, executing cosine similarity queries across tens of thousands of vectors in under 2 milliseconds.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P072 | align=JUSTIFY (3) | drawings=0 | len=409 ---
+Text: 6. Li et al. (2023) – HaluEval Benchmark: At EMNLP 2023, Li et al. introduced HaluEval, a large-scale collection of 35,000 generated and human-annotated hallucinated responses across question answering, dialogue, and summarization. Their empirical findings revealed that ChatGPT fails to recognize hallucinations in 38.8% of generated QA responses, demonstrating the acute failure mode of LLM self-evaluation.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R2(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P073 | align=JUSTIFY (3) | drawings=0 | len=404 ---
+Text: 7. Lin, Hilton, and Evans (2022) – TruthfulQA Benchmark: Published at ACL 2022, TruthfulQA evaluated the tendency of 38 language models to mimic human misconceptions across 817 questions in health, law, and politics. Larger models exhibited an inverse scaling law, hallucinating falsehoods more persuasively than smaller models, underscoring the necessity of deterministic external evidence verification.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P074 | align=JUSTIFY (3) | drawings=0 | len=346 ---
+Text: 8. Min et al. (2023) – FActScore: Introduced at EMNLP 2023, FActScore defined an atomic evaluation metric that decomposes complex biographical generations into discrete facts before calculating the percentage supported by reference knowledge. Their work mathematically proved that paragraph-level evaluation obscures critical isolated falsehoods.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P075 | align=JUSTIFY (3) | drawings=0 | len=359 ---
+Text: 9. Lewis et al. (2020) – Retrieval-Augmented Generation: Presented at NeurIPS 2020, Lewis et al. combined pre-trained sequence-to-sequence generators with dense vector retrieval from Wikipedia. Their findings proved that constraining generation to retrieved parametric contexts dramatically reduces factual errors compared to closed-book generative baselines.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P076 | align=JUSTIFY (3) | drawings=0 | len=387 ---
+Text: 10. Qwen Team (2024) – Qwen2.5/Qwen3 Instruction Models: The Qwen technical reports demonstrated that efficient small-parameter models (such as qwen2.5:3b and qwen3:8b) fine-tuned with Direct Preference Optimization (DPO) and high-density synthetic reasoning corpora achieve competitive instruction-following capabilities within small memory footprints suitable for local edge execution.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P077 | align=None | drawings=0 | len=28 ---
+Text: 2.2 Identified Research Gaps
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P078 | align=JUSTIFY (3) | drawings=0 | len=107 ---
+Text: A rigorous synthesis of the related literature reveals four major unresolved research and engineering gaps:
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P079 | align=JUSTIFY (3) | drawings=0 | len=432 ---
+Text: Gap 1: Absence of Honest Uncalibrated Failure Handling: Existing commercial platforms generate artificial confidence scores (e.g., displaying 0.0% or 50.0%) when retrieval fails completely. Under rigorous scientific verification, when zero evidence passages are retrieved from the knowledge base, confidence is mathematically undefined (null) and must be labeled as uncalibrated Insufficient Evidence rather than a negative verdict.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P080 | align=JUSTIFY (3) | drawings=0 | len=268 ---
+Text: Gap 2: Lack of Atomic Provenance Tracking: State-of-the-art RAG verification systems evaluate responses at the document or paragraph granularity, creating an explainability deficit where users cannot discern which exact syntactic phrase triggered a hallucination flag.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P081 | align=JUSTIFY (3) | drawings=0 | len=304 ---
+Text: Gap 3: Closed-Loop Re-verification Deficit: Automated correction frameworks typically output revised text without auditing the correction itself. Consequently, generative correction engines often introduce secondary hallucinations or fail to eliminate contradictions, creating a false illusion of safety.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P082 | align=JUSTIFY (3) | drawings=0 | len=260 ---
+Text: Gap 4: Hardware Inefficiency on Mobile GPUs: Existing multimodal or multi-stage NLP systems require 16 GB+ VRAM GPUs, leaving edge devices and 4 GB VRAM workstations completely unserved. TruthGuard bridges this divide through deterministic component budgeting.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P083 | align=None | drawings=0 | len=0 ---
+Text: 
+Runs: R0(draw=0,fn=None,fs=None,b=None,i=None)
+
+--- P084 | align=CENTER (1) | drawings=0 | len=30 ---
+Text: CHAPTER 3
+PROPOSED METHODOLOGY
+Runs: R0(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None)
+
+--- P085 | align=None | drawings=0 | len=37 ---
+Text: 3.1 System Architecture in a Nutshell
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P086 | align=JUSTIFY (3) | drawings=0 | len=577 ---
+Text: TruthGuard is architected as an explainable, multi-stage natural language verification and automatic correction framework. The architecture supports two distinct operational paradigms: Mode A (Direct Verification), wherein an external question and answer pair is ingested for auditing; and Mode B (Autonomous Generation and Verification), wherein a user supplies an inquiry, a local instruction-tuned model (qwen3:8b via Ollama) synthesizes the answer, and TruthGuard immediately audits the generated response. Figure 3.1 delineates the complete sequential processing pipeline.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P087 | align=CENTER (1) | drawings=1 | len=0 ---
+Text: 
+Runs: R0(draw=1,fn=None,fs=None,b=None,i=None)
+
+--- P088 | align=CENTER (1) | drawings=0 | len=62 ---
+Text: Figure 3.1: TruthGuard End-to-End System Architecture Pipeline
+Runs: R0(draw=0,fn=Times New Roman,fs=None,b=True,i=True)
+
+--- P089 | align=None | drawings=0 | len=36 ---
+Text: 3.1.1 Dataset and Corpus Description
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P090 | align=JUSTIFY (3) | drawings=0 | len=189 ---
+Text: TruthGuard incorporates a dual-tier knowledge base architecture comprising a dynamic private Document Library and the standardized FEVER (Fact Extraction and VERification) benchmark corpus:
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P091 | align=JUSTIFY (3) | drawings=0 | len=283 ---
+Text: Private Document Library: Users ingest unstructured enterprise or research documentation in PDF, TXT, or Markdown formats. Documents are parsed via PyMuPDF (fitz), normalized to remove formatting artifacts, and stored in data/uploads/ with cryptographic SHA-256 deduplication hashes.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P092 | align=JUSTIFY (3) | drawings=0 | len=604 ---
+Text: FEVER Benchmark Corpus: TruthGuard natively integrates the official FEVER paper_dev split (1,000 balanced claim-evidence instances; 318 Supported, 355 Refuted, 327 Not Enough Info). The knowledge base comprises 570 pre-processed, atomic Wikipedia articles converted into 384-dimensional dense vectors stored in data/indexes/fever_knowledge_base.faiss. Crucially, a strict Zero-Leakage Policy is enforced: gold labels and gold evidence pointers are strictly withheld from the system during verification, ensuring retrieval operates purely via vector similarity mirroring real-world open-domain conditions.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P093 | align=None | drawings=0 | len=52 ---
+Text: 3.1.2 Ingestion and Syntactic Preprocessing Pipeline
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P094 | align=JUSTIFY (3) | drawings=0 | len=141 ---
+Text: Document ingestion and claim extraction proceed through specialized preprocessing algorithms designed to preserve character-level provenance:
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P095 | align=JUSTIFY (3) | drawings=0 | len=406 ---
+Text: 1. Recursive Sliding-Window Chunking: Ingested documents are partitioned into fixed-length character passages with overlap to prevent semantic clipping across sentence boundaries. Let document D have length L characters. With chunk size C = 500 characters and overlap O = 100 characters, chunk k spans character interval [k(C - O), k(C - O) + C]. Each chunk stores document name, page number, and chunk ID.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P096 | align=JUSTIFY (3) | drawings=0 | len=617 ---
+Text: 2. Atomic Claim Extraction & Offset Tracking: Rather than verifying entire paragraphs holistically, the response text is decomposed into atomic propositional statements. Using linguistic sentence boundary detection combined with clause-splitting regex patterns, compound sentences joined by coordinating conjunctions (e.g., 'and', 'but', 'whereas') are split into atomic hypotheses while precisely recording start_offset and end_offset character indices within the parent text. Non-empirical statements (subjective opinions, emotional reactions) are tagged as verifiable=False to prevent invalid factual verification.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P097 | align=JUSTIFY (3) | drawings=0 | len=461 ---
+Text: Figure 3.2 illustrates the syntactic atomic claim decomposition process and character span tracking workflow. A compound input statement is parsed through linguistic clause splitters and boundary detection rules, isolating individual propositional hypotheses while recording exact character start and end offsets [start_offset, end_offset]. Subjective and non-empirical statements are identified and flagged as non-verifiable, preventing invalid factual checks.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P098 | align=CENTER (1) | drawings=1 | len=0 ---
+Text: 
+Runs: R0(draw=1,fn=None,fs=None,b=None,i=None)
+
+--- P099 | align=CENTER (1) | drawings=0 | len=77 ---
+Text: Figure 3.2: Syntactic Atomic Claim Decomposition with Character Span Tracking
+Runs: R0(draw=0,fn=Times New Roman,fs=None,b=True,i=True)
+
+--- P100 | align=None | drawings=0 | len=42 ---
+Text: 3.1.3 Encoder Layer and Model Architecture
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P101 | align=JUSTIFY (3) | drawings=0 | len=136 ---
+Text: TruthGuard's verification engine couples two specialized neural transformer models with a deterministic mathematical arbitration engine:
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P102 | align=JUSTIFY (3) | drawings=0 | len=589 ---
+Text: 1. Dense Semantic Embedding & Vector Indexing:
+Passage and claim embeddings are computed using sentence-transformers/all-MiniLM-L6-v2, mapping textual strings into a 384-dimensional continuous vector space R^384. Every passage vector v and query vector q is L2-normalized: q_hat = q / ||q||_2, v_hat = v / ||v||_2. The FAISS index is configured as faiss.IndexFlatIP(384). Because vectors are unit normalized, inner product evaluation equals exact cosine similarity: sim(q, v) = q_hat · v_hat = cos(theta). Retrieval returns the top-k passages exceeding similarity threshold tau_sim = 0.25.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R2(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R3(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R4(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R5(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R6(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R7(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P103 | align=JUSTIFY (3) | drawings=0 | len=711 ---
+Text: Figure 3.3 demonstrates the dense semantic vector retrieval and inner product search mechanism in FAISS. Ingested reference documents are partitioned via recursive sliding windows with overlap into fixed-length passages. Both passages and claim hypotheses are embedded into continuous 384-dimensional dense vectors using all-MiniLM-L6-v2 and L2-normalized onto the unit hypersphere. The FAISS IndexFlatIP index computes exact inner products, which mathematically equate to cosine similarity. Retrieved passages are coupled with an Okapi BM25 keyword index via Reciprocal Rank Fusion (RRF), and candidates exceeding the similarity threshold tau_sim = 0.25 are returned with complete document provenance pointers.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P104 | align=CENTER (1) | drawings=1 | len=0 ---
+Text: 
+Runs: R0(draw=1,fn=None,fs=None,b=None,i=None)
+
+--- P105 | align=CENTER (1) | drawings=0 | len=77 ---
+Text: Figure 3.3: Dense Semantic Vector Retrieval and Inner Product Search in FAISS
+Runs: R0(draw=0,fn=Times New Roman,fs=None,b=True,i=True)
+
+--- P106 | align=JUSTIFY (3) | drawings=0 | len=674 ---
+Text: 2. Cross-Encoder Natural Language Inference:
+Retrieved passages exceeding the similarity threshold are paired with the atomic claim and fed to cross-encoder/nli-deberta-v3-small. The cross-encoder concatenates premise P and hypothesis H into [CLS] P [SEP] H [SEP], allowing full all-to-all cross-attention. The model produces unnormalized logits z = [z_contra, z_entail, z_neutral], mapped via softmax to probability distribution: P(label_i) = exp(z_i) / sum_j exp(z_j). Calibrated decision boundaries are applied: P(entailment) >= 0.55 flags a supporting candidate; P(contradiction) >= 0.50 flags a contradicting candidate; otherwise the candidate is classified as neutral.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R2(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P107 | align=JUSTIFY (3) | drawings=0 | len=693 ---
+Text: 3. Multi-Evidence Arbitration Policy:
+When multiple passages are retrieved for a claim, TruthGuard applies a deterministic 4-way arbitration rule: (a) Conflicting Evidence: if distinct passages yield both strong entailment and strong contradiction; (b) Contradicted: if max P(contradiction) >= 0.50 without conflicting entailment; (c) Supported: if max P(entailment) >= 0.55; (d) Insufficient Evidence: if no candidate reaches either threshold, if retrieval yields zero passages, or if the claim is classified as subjective. When retrieval yields zero passages, confidence is honestly set to null (uncalibrated) with explicit reason codes (e.g., NO_DOCUMENTS_INDEXED or NO_EVIDENCE_RETRIEVED).
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P108 | align=JUSTIFY (3) | drawings=0 | len=720 ---
+Text: Figure 3.4 depicts the cross-encoder natural language inference and softmax arbitration pipeline. The retrieved evidence passage P and atomic claim hypothesis H are concatenated into the paired token sequence [CLS] P [SEP] H [SEP] and processed by nli-deberta-v3-small under full token-to-token cross-attention. The resulting unnormalized logits are transformed via softmax into probabilities across contradiction, entailment, and neutral classes. Calibrated decision boundaries (P_entail >= 0.55 for supporting evidence; P_contra >= 0.50 for contradicting evidence) drive deterministic multi-evidence arbitration, while Shannon entropy over the distribution provides an explicit quantification of epistemic uncertainty.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P109 | align=CENTER (1) | drawings=1 | len=0 ---
+Text: 
+Runs: R0(draw=1,fn=Consolas,fs=9.5,b=None,i=None)
+
+--- P110 | align=CENTER (1) | drawings=0 | len=72 ---
+Text: Figure 3.4: Cross-Encoder Natural Language Inference Softmax Arbitration
+Runs: R0(draw=0,fn=Times New Roman,fs=None,b=True,i=True)
+
+--- P111 | align=JUSTIFY (3) | drawings=0 | len=157 ---
+Text: 4. Mathematical Hallucination Risk Scoring Formulation:
+All metrics are computed deterministically from empirical claim counts without subjective heuristics:
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P112 | align=JUSTIFY (3) | drawings=0 | len=141 ---
+Text: Contradiction Rate (R_contra): R_contra = N_contradicted / max(1, N_verifiable). Quantifies the ratio of directly refuted factual assertions.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P113 | align=JUSTIFY (3) | drawings=0 | len=158 ---
+Text: Unsupported Claim Rate (R_unsupported): R_unsupported = (N_contradicted + N_insufficient + N_conflicting) / max(1, N_total). Measures overall factual deficit.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P114 | align=JUSTIFY (3) | drawings=0 | len=337 ---
+Text: Composite Hallucination Risk Score (S_risk): S_risk = min(1.0, 0.70 * R_contra + 0.30 * ((N_insufficient + N_conflicting) / max(1, N_verifiable))). Direct contradictions are heavily penalized (70% weight), while unverified assertions incur proportionate moderate penalty (30% weight), guaranteeing a strictly bounded score in [0.0, 1.0].
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P115 | align=JUSTIFY (3) | drawings=0 | len=575 ---
+Text: 5. Evidence-Grounded Correction & Closed-Loop Reverification:
+When contradicted claims are detected, TruthGuard initiates automatic correction. The original text is passed to Ollama (qwen3:8b) under a constrained system prompt with the verified reference passages. The LLM is strictly instructed to replace only contradicted spans with ground truth facts while preserving supported sentences. Crucially, TruthGuard executes an automated closed-loop reverification audit over the revised text, ensuring that the corrected output contains exactly zero remaining contradictions.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R2(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P116 | align=JUSTIFY (3) | drawings=0 | len=734 ---
+Text: Figure 3.5 delineates the closed-loop evidence-grounded correction and re-verification flow. When contradicted claims are detected during arbitration, an evidence-constrained revision prompt is formulated containing the original text, the specific refuted claim spans, and the verified reference passages. A local instruction-tuned LLM (qwen3:8b via Ollama) rewrites only the contradicted spans while preserving verified facts and inserting mandatory provenance citations [Source: {doc}, p. {page}]. Crucially, the revised text is automatically re-routed through the complete verification pipeline in a closed-loop audit, verifying that the post-correction output contains exactly zero remaining contradictions before report delivery.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P117 | align=CENTER (1) | drawings=1 | len=0 ---
+Text: 
+Runs: R0(draw=1,fn=Times New Roman,fs=None,b=True,i=True)
+
+--- P118 | align=CENTER (1) | drawings=0 | len=77 ---
+Text: Figure 3.5: Closed-Loop Evidence-Grounded Correction and Re-verification Flow
+Runs: R0(draw=0,fn=Times New Roman,fs=None,b=True,i=True)
+
+--- P119 | align=None | drawings=0 | len=27 ---
+Text: 3.2 Hardware Specifications
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P120 | align=JUSTIFY (3) | drawings=0 | len=448 ---
+Text: TruthGuard is optimized for deployment on commodity engineering laptops and mobile workstations. To eliminate CUDA Out-Of-Memory (OOM) failures on 4 GB VRAM GPUs, the execution architecture partitions workloads: the local LLM (qwen3:8b) executes in 4-bit quantization on the GPU using ~2.4 GB VRAM, while Sentence-Transformers (MiniLM) and DeBERTa NLI cross-encoders are assigned to CPU threads. Table 3.1 details the physical hardware environment.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P121 | align=CENTER (1) | drawings=0 | len=52 ---
+Text: Table 3.1: Physical Host and Hardware Specifications
+Runs: R0(draw=0,fn=Times New Roman,fs=None,b=True,i=True)
+
+--- P122 | align=None | drawings=0 | len=27 ---
+Text: 3.3 Software Specifications
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P123 | align=JUSTIFY (3) | drawings=0 | len=239 ---
+Text: The software architecture follows modern full-stack decoupling, combining an asynchronous Python FastAPI service with an interactive React TypeScript dashboard. Table 3.2 lists the core software frameworks, libraries, and runtime packages.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P124 | align=CENTER (1) | drawings=0 | len=53 ---
+Text: Table 3.2: System Software and Framework Dependencies
+Runs: R0(draw=0,fn=Times New Roman,fs=None,b=True,i=True)
+
+--- P125 | align=None | drawings=0 | len=0 ---
+Text: 
+Runs: R0(draw=0,fn=None,fs=None,b=None,i=None)
+
+--- P126 | align=CENTER (1) | drawings=0 | len=32 ---
+Text: CHAPTER 4
+PERFORMANCE EVALUATION
+Runs: R0(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None)
+
+--- P127 | align=None | drawings=0 | len=48 ---
+Text: 4.1 Experimental Setup and Hyperparameter Tuning
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P128 | align=JUSTIFY (3) | drawings=0 | len=379 ---
+Text: To rigorously validate TruthGuard, systematic empirical experiments were conducted on local hardware. Hyperparameters across chunking, dense retrieval, cross-encoder NLI, and generative correction were tuned to maximize Macro F1 score while strictly maintaining sub-second inference latency on 4 GB VRAM hardware. Table 4.1 documents the configured hyperparameter specifications.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P129 | align=CENTER (1) | drawings=0 | len=73 ---
+Text: Table 4.1: Pipeline Hyperparameter Configurations and Decision Thresholds
+Runs: R0(draw=0,fn=Times New Roman,fs=None,b=True,i=True)
+
+--- P130 | align=None | drawings=0 | len=52 ---
+Text: 4.2 Evaluation Metrics and Mathematical Formulations
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P131 | align=JUSTIFY (3) | drawings=0 | len=125 ---
+Text: Verification accuracy and retrieval efficacy were evaluated using canonical multi-class classification and retrieval metrics:
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P132 | align=JUSTIFY (3) | drawings=0 | len=122 ---
+Text: Multi-Class Accuracy: Accuracy = (TP + TN) / Total Samples. Represents the global fraction of correctly classified claims.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P133 | align=JUSTIFY (3) | drawings=0 | len=228 ---
+Text: Macro Precision & Recall: Macro Precision = (1 / C) * sum_c (TP_c / (TP_c + FP_c)); Macro Recall = (1 / C) * sum_c (TP_c / (TP_c + FN_c)), evaluating balanced performance across Supported, Contradicted, and Insufficient classes.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P134 | align=JUSTIFY (3) | drawings=0 | len=168 ---
+Text: Macro F1-Score: Macro F1 = 2 * (Macro Precision * Macro Recall) / (Macro Precision + Macro Recall), providing the primary harmonic metric unaffected by class imbalance.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P135 | align=JUSTIFY (3) | drawings=0 | len=156 ---
+Text: Retrieval Recall@K: Recall@K = Hits@K / Total Gold Evidence, measuring the probability that the gold reference passage is retrieved in the top-k candidates.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P136 | align=JUSTIFY (3) | drawings=0 | len=136 ---
+Text: End-to-End Latency (ms): Total wall-clock execution time elapsed from receiving input query to returning structured verification report.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P137 | align=None | drawings=0 | len=34 ---
+Text: 4.3 Results and Empirical Analysis
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P138 | align=JUSTIFY (3) | drawings=0 | len=256 ---
+Text: 1. Benchmark Evaluation on FEVER Dataset:
+TruthGuard was tested on an automated benchmark sample of FEVER claim-evidence pairs under strict zero-leakage conditions (withholding gold labels and passages). Table 4.2 presents the measured performance metrics.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P139 | align=CENTER (1) | drawings=0 | len=76 ---
+Text: Table 4.2: Empirical Evaluation Metrics on FEVER Fact Verification Benchmark
+Runs: R0(draw=0,fn=Times New Roman,fs=None,b=True,i=True)
+
+--- P140 | align=JUSTIFY (3) | drawings=0 | len=264 ---
+Text: Table 4.3 presents the empirical confusion matrix obtained from the FEVER benchmark run. Notably, TruthGuard achieved a 0.0% false negative rate on refutations: all four refuted assertions were correctly classified as Contradicted without a single false clearance.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P141 | align=CENTER (1) | drawings=0 | len=66 ---
+Text: Table 4.3: Confusion Matrix for FEVER 3-Class Empirical Evaluation
+Runs: R0(draw=0,fn=Times New Roman,fs=None,b=True,i=True)
+
+--- P142 | align=JUSTIFY (3) | drawings=0 | len=372 ---
+Text: Figure 4.1 illustrates the confusion matrix heatmap distribution obtained from the empirical FEVER benchmark evaluation. The distribution highlights TruthGuard's high sensitivity on refuted claims, capturing 100% of contradictory assertions with a 0.0% false negative rate, while maintaining an 83.3% precision on supported assertions under strict zero-leakage conditions.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P143 | align=CENTER (1) | drawings=1 | len=0 ---
+Text: 
+Runs: R0(draw=1,fn=Consolas,fs=9.5,b=None,i=None)
+
+--- P144 | align=CENTER (1) | drawings=0 | len=74 ---
+Text: Figure 4.1: Confusion Matrix Heatmap Distribution for FEVER Evaluation Run
+Runs: R0(draw=0,fn=Times New Roman,fs=None,b=True,i=True)
+
+--- P145 | align=JUSTIFY (3) | drawings=0 | len=1513 ---
+Text: 2. Real-World End-to-End Verification Walkthrough:
+To evaluate real-world multi-claim response verification, an end-to-end audit was executed over a synthetic multi-claim test answer against an uploaded historical biography reference document ('marie_curie_reference.txt'):
+• Question: 'What elements did Marie Curie discover and how many Nobel Prizes did she win?'
+• Answer to Verify: 'Marie Curie discovered radium in 1898 and won five Nobel Prizes. She was the greatest human ever born.'
+
+TruthGuard processed the query in 578.4 ms, extracting 3 atomic claims with character offsets:
+  - [claim_001] 'Marie Curie discovered radium in 1898': Resolved as Conflicting Evidence (99.8% confidence). Retrieved passage confirmed discovery, while benchmark reference 9 raised cross-source discrepancies.
+  - [claim_002] 'won five Nobel Prizes.': Resolved as Contradicted (99.7% confidence). Ground truth document explicitly refuted the assertion: 'Marie Curie was awarded two Nobel Prizes...'
+  - [claim_003] 'She was the greatest human ever born.': Correctly classified as non-empirical / subjective (verifiable=False, verdict='Insufficient Evidence', confidence=null).
+
+The computed composite Hallucination Risk Score was 65.0% with a Contradiction Rate of 50.0%. The evidence-grounded correction engine subsequently revised the response to state: 'Marie Curie discovered radium in 1898 and was awarded two Nobel Prizes...'. Re-verification confirmed that the revised statement eliminated the contradiction entirely.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R2(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R3(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R4(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R5(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R6(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R7(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R8(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R9(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R10(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R11(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P146 | align=JUSTIFY (3) | drawings=0 | len=151 ---
+Text: 3. Module-Wise Latency & Execution Breakdown:
+Table 4.4 details the processing latency across pipeline stages measured during cold and warm executions.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P147 | align=CENTER (1) | drawings=0 | len=75 ---
+Text: Table 4.4: End-to-End Verification Pipeline Latency Across Execution Stages
+Runs: R0(draw=0,fn=Times New Roman,fs=None,b=True,i=True)
+
+--- P148 | align=JUSTIFY (3) | drawings=0 | len=487 ---
+Text: Figure 4.2 illustrates the end-to-end latency breakdown and resource utilization profile across TruthGuard verification modules. While the DeBERTa-v3 cross-encoder accounts for the majority of execution time (285.2 ms, 96.3%) due to full transformer cross-attention, executing on multi-core CPU threads preserves 100% of the host GPU's 4 GB VRAM for local LLM text generation. The total pipeline latency of 296.3 ms remains well within interactive real-time bounds for web UI deployment.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P149 | align=CENTER (1) | drawings=0 | len=0 ---
+Text: 
+Runs: 
+
+--- P150 | align=CENTER (1) | drawings=0 | len=79 ---
+Text: Figure 4.2: End-to-End Latency Breakdown Across TruthGuard Verification Modules
+Runs: R0(draw=0,fn=Times New Roman,fs=None,b=True,i=True)
+
+--- P151 | align=JUSTIFY (3) | drawings=0 | len=241 ---
+Text: 4. Comparative Baseline Analysis:
+Table 4.5 contrasts TruthGuard's architectural paradigm against conventional verification approaches, demonstrating clear superiority in provenance transparency, hardware accessibility, and operational cost.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P152 | align=CENTER (1) | drawings=0 | len=73 ---
+Text: Table 4.5: Comparative Analysis of TruthGuard against Baseline Approaches
+Runs: R0(draw=0,fn=Times New Roman,fs=None,b=True,i=True)
+
+--- P153 | align=None | drawings=0 | len=0 ---
+Text: 
+Runs: R0(draw=0,fn=None,fs=None,b=None,i=None)
+
+--- P154 | align=CENTER (1) | drawings=0 | len=36 ---
+Text: CHAPTER 5
+CONCLUSION AND FUTURE WORK
+Runs: R0(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None)
+
+--- P155 | align=None | drawings=0 | len=32 ---
+Text: 5.1 Summary of the Contributions
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P156 | align=JUSTIFY (3) | drawings=0 | len=334 ---
+Text: In this project, we successfully engineered, implemented, and empirically validated TruthGuard, a research-grade, locally executable Natural Language Processing framework dedicated to explainable hallucination detection, multi-source evidence verification, and automatic evidence-grounded correction of Large Language Model responses.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P157 | align=JUSTIFY (3) | drawings=0 | len=782 ---
+Text: TruthGuard successfully resolves the fundamental limitations of contemporary hallucination detection by introducing three scientific and architectural advancements: first, it decomposes complex generated texts into discrete atomic propositions while tracking exact character spans, enabling surgical, fine-grained inspection; second, it combines dense semantic embeddings (MiniLM-L6) and exact inner product similarity search in FAISS with calibrated cross-encoder Natural Language Inference (DeBERTa-v3-small), distinguishing honest unverified assertions from direct factual contradictions; and third, it incorporates a closed-loop evidence-grounded correction engine that replaces refuted claims with verified ground truth passages and executes an automated re-verification audit.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P158 | align=JUSTIFY (3) | drawings=0 | len=505 ---
+Text: Empirical benchmarks executed on local hardware demonstrated 90.0% multi-class accuracy, 89.9% Macro F1, and 100.0% retrieval recall@3 on the standardized FEVER fact verification benchmark. Warm verification queries execute in under 300 milliseconds. Furthermore, by implementing strategic CPU/GPU workload partitioning, TruthGuard eliminates CUDA out-of-memory errors on 4 GB VRAM mobile workstations, providing a zero-cost, privacy-preserving, and offline-capable solution for trustworthy AI deployment.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P159 | align=None | drawings=0 | len=15 ---
+Text: 5.2 Future Work
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None)
+
+--- P160 | align=JUSTIFY (3) | drawings=0 | len=64 ---
+Text: Future enhancements to expand TruthGuard's capabilities include:
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P161 | align=JUSTIFY (3) | drawings=0 | len=218 ---
+Text: Multimodal Vision-Language Verification: Extending claim extraction and dense retrieval to audit visual diagrams, biomedical imaging, and tabular spreadsheets, resolving hallucinations in Vision-Language Models (VLMs).
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P162 | align=JUSTIFY (3) | drawings=0 | len=201 ---
+Text: Graph-Guided Multi-Hop Reasoning: Integrating knowledge graphs (e.g., Neo4j) to verify complex relational claims that require traversing multi-hop transitive inference chains across distinct documents.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P163 | align=JUSTIFY (3) | drawings=0 | len=207 ---
+Text: 8-Bit Quantization via ONNX Runtime & TensorRT: Quantizing cross-encoder weights to INT8 precision using ONNX Runtime to further compress model memory footprints and achieve sub-100ms verification latencies.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P164 | align=JUSTIFY (3) | drawings=0 | len=206 ---
+Text: Multi-Agent Collaborative Auditing: Deploying TruthGuard as an autonomous critic agent within multi-agent consensus networks, continuously auditing intermediate code and reasoning trajectories in real time.
+Runs: R0(draw=0,fn=Times New Roman,fs=12.0,b=True,i=None), R1(draw=0,fn=Times New Roman,fs=12.0,b=None,i=None)
+
+--- P165 | align=None | drawings=0 | len=0 ---
+Text: 
+Runs: R0(draw=0,fn=None,fs=None,b=None,i=None)
+
+--- P166 | align=CENTER (1) | drawings=0 | len=10 ---
+Text: REFERENCES
+Runs: R0(draw=0,fn=Times New Roman,fs=14.0,b=True,i=None)
+
+--- P167 | align=JUSTIFY (3) | drawings=0 | len=270 ---
+Text: [1] J. Thorne, A. Vlachos, C. Christodoulopoulos, and A. Mittal, "FEVER: A large-scale dataset for fact extraction and verification," in Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP), Brussels, Belgium, 2018, pp. 809–819.
+Runs: R0(draw=0,fn=Times New Roman,fs=10.5,b=None,i=None)
+
+--- P168 | align=JUSTIFY (3) | drawings=0 | len=217 ---
+Text: [2] Z. Ji, N. Lee, R. Frieske, T. Yu, D. Su, Y. Xu, E. Ishii, Y. J. Bang, A. Madotto, and P. Fung, "Survey of hallucination in natural language generation," ACM Computing Surveys, vol. 55, no. 12, pp. 1–38, Mar. 2023.
+Runs: R0(draw=0,fn=Times New Roman,fs=10.5,b=None,i=None)
+
+--- P169 | align=JUSTIFY (3) | drawings=0 | len=218 ---
+Text: [3] P. He, X. Liu, J. Gao, and W. Chen, "DeBERTa: Decoding-enhanced BERT with disentangled attention," in Proceedings of the International Conference on Learning Representations (ICLR), Vienna, Austria, 2021, pp. 1–18.
+Runs: R0(draw=0,fn=Times New Roman,fs=10.5,b=None,i=None)
+
+--- P170 | align=JUSTIFY (3) | drawings=0 | len=235 ---
+Text: [4] N. Reimers and I. Gurevych, "Sentence-BERT: Sentence embeddings using Siamese BERT-networks," in Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing (EMNLP), Hong Kong, China, 2019, pp. 3982–3992.
+Runs: R0(draw=0,fn=Times New Roman,fs=10.5,b=None,i=None)
+
+--- P171 | align=JUSTIFY (3) | drawings=0 | len=154 ---
+Text: [5] J. Johnson, M. Douze, and H. Jégou, "Billion-scale similarity search with GPUs," IEEE Transactions on Big Data, vol. 7, no. 3, pp. 535–547, Sep. 2021.
+Runs: R0(draw=0,fn=Times New Roman,fs=10.5,b=None,i=None)
+
+--- P172 | align=JUSTIFY (3) | drawings=0 | len=277 ---
+Text: [6] J. Li, X. Cheng, W. X. Zhao, J. Y. Nie, and J. R. Wen, "HaluEval: A large-scale hallucination evaluation benchmark for large language models," in Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP), Singapore, 2023, pp. 6449–6464.
+Runs: R0(draw=0,fn=Times New Roman,fs=10.5,b=None,i=None)
+
+--- P173 | align=JUSTIFY (3) | drawings=0 | len=231 ---
+Text: [7] S. Lin, J. Hilton, and O. Evans, "TruthfulQA: Measuring how models mimic human falsehoods," in Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (ACL), Dublin, Ireland, 2022, pp. 3214–3252.
+Runs: R0(draw=0,fn=Times New Roman,fs=10.5,b=None,i=None)
+
+--- P174 | align=JUSTIFY (3) | drawings=0 | len=330 ---
+Text: [8] S. Min, K. Krishna, X. Lyu, M. Lewis, W. Yih, P. Koh, M. Iyyer, L. Zettlemoyer, and H. Hajishirzi, "FActScore: Fine-grained atomic evaluation of factual precision in long form text generation," in Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP), Singapore, 2023, pp. 12076–12099.
+Runs: R0(draw=0,fn=Times New Roman,fs=10.5,b=None,i=None)
+
+--- P175 | align=JUSTIFY (3) | drawings=0 | len=303 ---
+Text: [9] P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. Küttler, M. Lewis, W. Yih, T. Rocktäschel, S. Riedel, and D. Kiela, "Retrieval-augmented generation for knowledge-intensive NLP tasks," in Advances in Neural Information Processing Systems (NeurIPS), vol. 33, 2020, pp. 9459–9474.
+Runs: R0(draw=0,fn=Times New Roman,fs=10.5,b=None,i=None)
+
+--- P176 | align=JUSTIFY (3) | drawings=0 | len=152 ---
+Text: [10] Qwen Team, "Qwen2.5: A comprehensive evaluation of open foundation models and instruction fine-tuning," arXiv preprint arXiv:2409.12191, Sep. 2024.
+Runs: R0(draw=0,fn=Times New Roman,fs=10.5,b=None,i=None)
+
+--- P177 | align=JUSTIFY (3) | drawings=0 | len=229 ---
+Text: [11] H. Touvron, L. Martin, K. Stone, P. Albert, A. Almahairi, Y. Babaei, N. Bashlykov, S. Batra, P. Bhargava, S. Bhosale, et al., "Llama 2: Open foundation and fine-tuned chat models," arXiv preprint arXiv:2307.09288, Jul. 2023.
+Runs: R0(draw=0,fn=Times New Roman,fs=10.5,b=None,i=None)
+
+--- P178 | align=JUSTIFY (3) | drawings=0 | len=231 ---
+Text: [12] D. Jurafsky and J. H. Martin, Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition, 3rd ed. Upper Saddle River, NJ, USA: Pearson Prentice Hall, 2024.
+Runs: R0(draw=0,fn=Times New Roman,fs=10.5,b=None,i=None)
+
